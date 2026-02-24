@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>The Instrument Check — Conscious Motivation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Libre+Franklin:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+  :root {
+    --bg: #080808;
+    --surface: #111110;
+    --border: #2a2520;
+    --text-primary: #e8e4df;
+    --text-mid: #a09890;
+    --accent: #c4875a;
+    --body-color: #8bc49a;
+    --mind-color: #7a9ec4;
+    --emotions-color: #c4875a;
+    --spirit-color: #b894c4;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-ui: 'Libre Franklin', -apple-system, sans-serif;
+  }
+
+  html { font-size: 16px; }
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: var(--font-ui);
+    font-weight: 300;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── SCREEN CONTAINER ── */
+  .screen {
+    position: fixed; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 2rem 1.5rem;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s cubic-bezier(.4,0,.2,1), transform 0.6s cubic-bezier(.4,0,.2,1);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .screen.active {
+    opacity: 1; transform: translateY(0);
+    pointer-events: auto; z-index: 10;
+  }
+  .screen.exit {
+    opacity: 0; transform: translateY(-12px);
+    pointer-events: none;
+  }
+
+  /* ── INTRO SCREEN ── */
+  .intro-badge {
+    font-family: var(--font-ui);
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.6rem;
+    opacity: 0;
+    animation: fadeUp .8s .3s forwards;
+  }
+  .intro-title {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(2.2rem, 7vw, 3.6rem);
+    line-height: 1.15;
+    text-align: center;
+    max-width: 560px;
+    margin-bottom: 1.4rem;
+    opacity: 0;
+    animation: fadeUp .8s .5s forwards;
+  }
+  .intro-sub {
+    font-size: .95rem;
+    color: var(--text-mid);
+    text-align: center;
+    max-width: 380px;
+    line-height: 1.6;
+    margin-bottom: 2.8rem;
+    opacity: 0;
+    animation: fadeUp .8s .7s forwards;
+  }
+  .intro-meta {
+    font-size: .75rem;
+    color: var(--text-mid);
+    letter-spacing: .06em;
+    margin-bottom: .8rem;
+    opacity: 0;
+    animation: fadeUp .8s .7s forwards;
+  }
+
+  /* ── BUTTON ── */
+  .btn {
+    font-family: var(--font-ui);
+    font-weight: 400;
+    font-size: .9rem;
+    letter-spacing: .08em;
+    color: var(--bg);
+    background: var(--accent);
+    border: none;
+    border-radius: 60px;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: all .3s;
+    min-height: 52px;
+    min-width: 180px;
+    touch-action: manipulation;
+    opacity: 0;
+    animation: fadeUp .8s .9s forwards;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,.15), transparent 60%);
+    opacity: 0;
+    transition: opacity .3s;
+  }
+  .btn:hover::after { opacity: 1; }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 30px rgba(196,135,90,.25); }
+  .btn:active { transform: scale(.97); }
+  .btn.no-anim { opacity: 1; animation: none; }
+
+  /* ── QUESTION SCREEN ── */
+  .question-screen { justify-content: flex-start; padding-top: 2.5rem; padding-bottom: 1.5rem; }
+
+  .question-top-bar {
+    width: 100%;
+    display: flex; align-items: center;
+    gap: .8rem;
+    max-width: 400px;
+  }
+  .back-btn {
+    background: none; border: none;
+    color: var(--text-mid);
+    cursor: pointer;
+    padding: .4rem;
+    border-radius: 50%;
+    transition: all .25s;
+    touch-action: manipulation;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    flex-shrink: 0;
+    width: 32px; height: 32px;
+  }
+  .back-btn.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .back-btn.invisible {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .back-btn:hover { color: var(--text-primary); background: rgba(255,255,255,.05); }
+  .back-btn:active { transform: scale(.9); }
+  .back-btn svg {
+    width: 18px; height: 18px;
+    stroke: currentColor; fill: none;
+    stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+  }
+
+  .progress-area {
+    flex: 1;
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .progress-track {
+    width: 100%;
+    height: 2px;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    width: 0%;
+    transition: width .5s cubic-bezier(.4,0,.2,1);
+  }
+  .progress-label {
+    font-size: .65rem;
+    color: var(--text-mid);
+    letter-spacing: .1em;
+    margin-top: .4rem;
+    text-transform: uppercase;
+    opacity: .6;
+  }
+
+  .question-body {
+    flex: 1;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    width: 100%;
+    gap: 2rem;
+  }
+  .question-area {
+    display: flex; flex-direction: column;
+    align-items: center;
+    width: 100%; max-width: 560px;
+    text-align: center;
+  }
+  .dimension-tag {
+    font-family: var(--font-ui);
+    font-size: .65rem;
+    font-weight: 500;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    padding: .35rem 1rem;
+    border-radius: 30px;
+    border: 1px solid;
+    margin-bottom: 2rem;
+    transition: all .5s;
+  }
+  .question-text {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    line-height: 1.4;
+    max-width: 480px;
+    min-height: 3em;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .answer-group {
+    display: flex; flex-direction: column; gap: .75rem;
+    width: 100%; max-width: 340px;
+  }
+  .answer-btn {
+    font-family: var(--font-ui);
+    font-weight: 400;
+    font-size: .9rem;
+    color: var(--text-primary);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.1rem 1.4rem;
+    cursor: pointer;
+    transition: all .25s;
+    min-height: 52px;
+    touch-action: manipulation;
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    text-align: left;
+  }
+  .answer-btn .answer-value {
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: .08em;
+    color: var(--text-mid);
+    text-transform: uppercase;
+    min-width: 4.8rem;
+    transition: color .25s;
+  }
+  .answer-btn .answer-desc {
+    color: var(--text-mid);
+    font-size: .8rem;
+    transition: color .25s;
+  }
+  .answer-btn:hover {
+    border-color: var(--accent);
+    background: rgba(196,135,90,.06);
+  }
+  .answer-btn:hover .answer-value { color: var(--accent); }
+  .answer-btn:hover .answer-desc { color: var(--text-primary); }
+  .answer-btn:active { transform: scale(.98); }
+  .answer-btn.selected {
+    border-color: var(--accent);
+    background: rgba(196,135,90,.1);
+  }
+
+  /* ── RESULTS SCREEN ── */
+  .results-screen {
+    position: fixed; inset: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    padding: 0 1.5rem 4rem;
+  }
+  .results-inner {
+    display: flex; flex-direction: column; align-items: center;
+    min-height: 100%;
+    padding-top: 2rem;
+  }
+
+  .result-verdict {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: .4rem;
+    opacity: 0;
+    text-align: center;
+  }
+  .result-verdict-sub {
+    font-size: .85rem;
+    color: var(--text-mid);
+    margin-bottom: .8rem;
+    text-align: center;
+    max-width: 360px;
+    line-height: 1.5;
+    opacity: 0;
+  }
+  .verdict-scale {
+    display: flex; gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transition: opacity .8s;
+  }
+  .verdict-scale.show { opacity: 1; }
+  .verdict-scale-item {
+    font-size: .7rem;
+    letter-spacing: .06em;
+    color: var(--text-mid);
+    opacity: .5;
+    transition: opacity .3s;
+  }
+  .verdict-scale-item.active {
+    opacity: 1;
+    color: var(--accent);
+  }
+  .verdict-scale-sep {
+    width: 12px; height: 1px;
+    background: var(--border);
+  }
+
+  /* Scoring scale above pills */
+  .scoring-scale {
+    display: flex; gap: .8rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .8rem;
+    opacity: 0;
+    transition: opacity .8s;
+    font-size: .65rem;
+    color: var(--text-mid);
+    letter-spacing: .04em;
+  }
+  .scoring-scale.show { opacity: .6; }
+  .scoring-scale-item {
+    display: flex; align-items: center; gap: .35rem;
+  }
+  .scoring-scale-range {
+    font-weight: 500;
+    color: var(--text-primary);
+    opacity: .7;
+  }
+
+  /* ── COMPARISON SECTION ── */
+  .comparison-section {
+    display: none;
+    width: 100%;
+    max-width: 640px;
+    margin-bottom: 2rem;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .comparison-section.show {
+    display: block;
+    opacity: 1;
+  }
+  .comparison-header {
+    font-family: var(--font-ui);
+    font-size: .65rem;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 1.4rem;
+  }
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .comparison-col {
+    display: flex; flex-direction: column; align-items: center;
+  }
+  .comparison-date {
+    font-family: var(--font-ui);
+    font-size: .6rem;
+    font-weight: 500;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    margin-bottom: .6rem;
+    opacity: .7;
+  }
+  .comparison-verdict-word {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-bottom: .6rem;
+    opacity: .9;
+  }
+  .comparison-circle-wrap {
+    width: 100%;
+    max-width: 200px;
+    position: relative;
+    padding: .8rem 0;
+  }
+  .comparison-circle-wrap canvas {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+  }
+  .comparison-labels {
+    display: none;
+  }
+  .comparison-scores {
+    display: flex; flex-wrap: wrap; gap: .3rem;
+    justify-content: center;
+    margin-top: 1.2rem;
+  }
+  .comp-score {
+    font-size: .55rem;
+    letter-spacing: .04em;
+    color: var(--text-mid);
+    padding: .2rem .5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+  }
+  .comparison-divider {
+    width: 100%;
+    max-width: 640px;
+    height: 1px;
+    background: var(--border);
+    margin-bottom: 2rem;
+    opacity: 0;
+    transition: opacity .8s;
+  }
+  .comparison-divider.show { opacity: .5; }
+
+  /* ── DELTA BADGES ── */
+  .delta-row {
+    display: none;
+    gap: .5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transition: opacity .8s;
+  }
+  .delta-row.show { display: flex; opacity: 1; }
+  .delta-badge {
+    display: flex; align-items: center; gap: .3rem;
+    padding: .3rem .7rem;
+    border-radius: 20px;
+    font-size: .6rem;
+    font-weight: 500;
+    letter-spacing: .04em;
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+  .delta-badge .delta-arrow {
+    font-size: .7rem;
+  }
+  .delta-badge .delta-arrow.up { color: #8bc49a; }
+  .delta-badge .delta-arrow.down { color: #c45a5a; }
+  .delta-badge .delta-arrow.same { color: var(--text-mid); }
+
+  /* Circle Canvas */
+  .circle-container {
+    width: min(280px, 72vw);
+    position: relative;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    overflow: visible;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+  }
+  .circle-container canvas {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1;
+  }
+  #circleCanvas {
+    width: 100%;
+    aspect-ratio: 1;
+  }
+  .circle-labels {
+    position: absolute;
+    top: 1.6rem; left: 0; right: 0;
+    height: min(280px, 72vw);
+    pointer-events: none;
+    overflow: visible;
+  }
+  .circle-label {
+    position: absolute;
+    font-family: var(--font-ui);
+    font-size: .6rem;
+    font-weight: 500;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .6s;
+  }
+  .circle-label.show { opacity: .8; }
+  .circle-label.body     { top: -8%; left: 50%; color: var(--body-color); }
+  .circle-label.mind     { top: 50%; left: 112%; color: var(--mind-color); }
+  .circle-label.emotions { top: 108%; left: 50%; color: var(--emotions-color); }
+  .circle-label.spirit   { top: 50%; left: -8%; color: var(--spirit-color); }
+
+  /* Legend */
+  .circle-legend {
+    display: flex; gap: 1.4rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.8rem;
+    opacity: 0;
+    transition: opacity .8s;
+  }
+  .circle-legend.show { opacity: 1; }
+  .legend-item {
+    display: flex; align-items: center; gap: .45rem;
+    font-size: .75rem;
+    color: var(--text-mid);
+    letter-spacing: .03em;
+  }
+  .legend-swatch {
+    width: 14px; height: 14px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  .legend-swatch.often {
+    background: var(--accent);
+    opacity: .82;
+  }
+  .legend-swatch.sometimes {
+    background: var(--accent);
+    opacity: .35;
+  }
+  .legend-swatch.rarely {
+    background: transparent;
+    border: 1px dashed var(--accent);
+    opacity: .6;
+  }
+
+  /* Score pills */
+  .score-row {
+    display: flex; gap: .5rem; flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 2.4rem;
+    opacity: 0;
+  }
+  .score-pill {
+    display: flex; align-items: center; gap: .45rem;
+    padding: .5rem .95rem;
+    border-radius: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    font-size: .82rem;
+    font-weight: 400;
+    letter-spacing: .04em;
+  }
+  .score-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+  }
+  .score-tier {
+    font-size: .68rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    margin-left: .15rem;
+  }
+
+  /* Result Card */
+  .result-card {
+    width: 100%; max-width: 520px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 2.4rem 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .result-card.show {
+    opacity: 1; transform: translateY(0);
+    transition: all .8s cubic-bezier(.4,0,.2,1);
+  }
+  .result-card-tag {
+    font-size: .65rem;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+  .result-card-title {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 1.4rem;
+  }
+  .result-card-body {
+    font-size: .9rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+  }
+  .result-card-body p { margin-bottom: 1rem; }
+  .result-card-body p:last-child { margin-bottom: 0; }
+  .result-card-divider {
+    width: 40px; height: 1px;
+    background: var(--border);
+    margin: 1.6rem 0;
+  }
+
+  /* ── EMAIL CAPTURE ── */
+  .email-section {
+    width: 100%; max-width: 520px;
+    margin-top: 2.4rem;
+    padding: 2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  .email-section.show {
+    opacity: 1; transform: translateY(0);
+    transition: all .8s cubic-bezier(.4,0,.2,1);
+  }
+  .email-section h3 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+  }
+  .email-section p {
+    font-size: .8rem;
+    color: var(--text-mid);
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+  .email-form {
+    display: flex; gap: .6rem;
+    width: 100%;
+  }
+  .email-input {
+    flex: 1;
+    font-family: var(--font-ui);
+    font-size: .85rem;
+    font-weight: 300;
+    color: var(--text-primary);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: .85rem 1.2rem;
+    outline: none;
+    transition: border-color .3s;
+  }
+  .email-input::placeholder { color: var(--text-mid); opacity: .5; }
+  .email-input:focus { border-color: var(--accent); }
+  .email-submit {
+    font-family: var(--font-ui);
+    font-weight: 400;
+    font-size: .8rem;
+    letter-spacing: .06em;
+    color: var(--bg);
+    background: var(--accent);
+    border: none;
+    border-radius: 12px;
+    padding: .85rem 1.6rem;
+    cursor: pointer;
+    transition: all .3s;
+    touch-action: manipulation;
+    white-space: nowrap;
+  }
+  .email-submit:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(196,135,90,.3); }
+  .email-submit:active { transform: scale(.97); }
+  .email-submit:disabled { opacity: .5; cursor: default; transform: none; box-shadow: none; }
+  .email-success {
+    display: none;
+    font-size: .8rem;
+    color: var(--body-color);
+    padding: .6rem 0;
+  }
+  .email-success.show { display: block; }
+
+  /* ── DOWNLOAD BUTTON ── */
+  .download-btn {
+    font-family: var(--font-ui);
+    font-weight: 400;
+    font-size: .8rem;
+    letter-spacing: .06em;
+    color: var(--text-mid);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 60px;
+    padding: .8rem 2rem;
+    cursor: pointer;
+    transition: all .3s;
+    touch-action: manipulation;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  .download-btn:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+  }
+  .download-btn svg {
+    width: 14px; height: 14px;
+    stroke: currentColor; fill: none;
+    stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+  }
+
+  /* CTA after card */
+  .result-cta {
+    margin-top: 2.4rem;
+    opacity: 0;
+    text-align: center;
+    display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
+  }
+  .result-cta.show { opacity: 1; transition: opacity .8s .3s; }
+  .retake-btn {
+    font-family: var(--font-ui);
+    font-weight: 400;
+    font-size: .8rem;
+    letter-spacing: .06em;
+    color: var(--text-mid);
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 60px;
+    padding: .8rem 2rem;
+    cursor: pointer;
+    transition: all .3s;
+    touch-action: manipulation;
+  }
+  .retake-btn:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+  }
+
+  /* Footer */
+  .result-footer {
+    margin-top: 3rem;
+    padding-bottom: 1rem;
+    font-family: var(--font-display);
+    font-size: .85rem;
+    color: var(--text-mid);
+    opacity: 0;
+    text-align: center;
+    line-height: 1.6;
+  }
+  .result-footer.show { opacity: .5; transition: opacity 1s .5s; }
+  .result-footer strong { font-weight: 400; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes gentlePulse {
+    0%, 100% { opacity: .08; }
+    50% { opacity: .16; }
+  }
+
+  /* ── AMBIENT GLOW ── */
+  .ambient-glow {
+    position: fixed;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    filter: blur(160px);
+    opacity: .04;
+    pointer-events: none;
+    z-index: 0;
+    transition: all 2s ease;
+  }
+  .glow-1 { top: -20%; left: -10%; background: var(--accent); }
+  .glow-2 { bottom: -20%; right: -10%; background: var(--spirit-color); }
+
+  /* ── PARTICLE CANVAS ── */
+  #particleCanvas {
+    position: fixed; inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: .4;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 420px) {
+    .answer-group { max-width: 100%; }
+    .result-card { padding: 2rem 1.5rem; }
+    .email-section { padding: 1.5rem 1.2rem; }
+    .email-form { flex-direction: column; }
+    .comparison-grid { gap: .8rem; }
+    .comp-label { font-size: .38rem; }
+  }
+  @media (max-height: 700px) {
+    .results-inner { padding-top: 1.2rem; }
+    .result-verdict { font-size: clamp(1.6rem, 5vw, 2.4rem); }
+    .result-verdict-sub { margin-bottom: 1.4rem; }
+    .circle-container { width: min(240px, 60vw); margin-bottom: 1.4rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="ambient-glow glow-1"></div>
+<div class="ambient-glow glow-2"></div>
+<canvas id="particleCanvas"></canvas>
+
+<!-- ── INTRO ── -->
+<div class="screen active" id="introScreen">
+  <div class="intro-badge">Conscious Motivation</div>
+  <h1 class="intro-title">The Instrument Check</h1>
+  <p class="intro-sub">12 questions. 90 seconds. A mirror — not a diagnosis. See where your instrument needs tuning.</p>
+  <p class="intro-meta">Body &middot; Mind &middot; Emotions &middot; Spirit</p>
+  <button class="btn" id="beginBtn" onmousemove="this.style.setProperty('--mx',event.offsetX+'px');this.style.setProperty('--my',event.offsetY+'px')">Begin</button>
+</div>
+
+<!-- ── QUESTIONS ── -->
+<div class="screen question-screen" id="questionScreen">
+  <div class="question-top-bar">
+    <button class="back-btn" id="backBtn" onclick="goBack()" aria-label="Previous question">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <div class="progress-area">
+      <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-label" id="progressLabel">1 / 12</div>
+    </div>
+  </div>
+  <div class="question-body">
+    <div class="question-area">
+      <div class="dimension-tag" id="dimensionTag">BODY</div>
+      <div class="question-text" id="questionText"></div>
+    </div>
+    <div class="answer-group" id="answerGroup">
+    <button class="answer-btn" data-value="1" onclick="selectAnswer(1)">
+      <span class="answer-value">Rarely</span>
+      <span class="answer-desc">This input is mostly absent</span>
+    </button>
+    <button class="answer-btn" data-value="2" onclick="selectAnswer(2)">
+      <span class="answer-value">Sometimes</span>
+      <span class="answer-desc">This input is inconsistent</span>
+    </button>
+    <button class="answer-btn" data-value="3" onclick="selectAnswer(3)">
+      <span class="answer-value">Often</span>
+      <span class="answer-desc">Active and consistent</span>
+    </button>
+    </div>
+  </div>
+</div>
+
+<!-- ── RESULTS ── -->
+<div class="screen results-screen" id="resultsScreen">
+  <div class="results-inner">
+    <div class="result-verdict" id="resultVerdict"></div>
+    <div class="result-verdict-sub" id="resultVerdictSub"></div>
+    <div class="verdict-scale" id="verdictScale">
+      <span class="verdict-scale-item" data-tier="tending">Tending</span>
+      <span class="verdict-scale-sep"></span>
+      <span class="verdict-scale-item" data-tier="rising">Rising</span>
+      <span class="verdict-scale-sep"></span>
+      <span class="verdict-scale-item" data-tier="tuned">Tuned</span>
+    </div>
+
+    <!-- Comparison (hidden until retake with previous data) -->
+    <div class="comparison-section" id="comparisonSection">
+      <div class="comparison-header">Your Transformation</div>
+      <div class="comparison-grid">
+        <div class="comparison-col">
+          <div class="comparison-date" id="compPrevDate">Previous</div>
+          <div class="comparison-verdict-word" id="compPrevVerdict"></div>
+          <div class="comparison-circle-wrap">
+            <canvas id="compPrevCanvas" width="400" height="400"></canvas>
+            <div class="comparison-labels">
+              <span class="comp-label body">Body</span>
+              <span class="comp-label mind">Mind</span>
+              <span class="comp-label emotions">Emotions</span>
+              <span class="comp-label spirit">Spirit</span>
+            </div>
+          </div>
+          <div class="comparison-scores" id="compPrevScores"></div>
+        </div>
+        <div class="comparison-col">
+          <div class="comparison-date" id="compNowDate">Now</div>
+          <div class="comparison-verdict-word" id="compNowVerdict"></div>
+          <div class="comparison-circle-wrap">
+            <canvas id="compNowCanvas" width="400" height="400"></canvas>
+            <div class="comparison-labels">
+              <span class="comp-label body">Body</span>
+              <span class="comp-label mind">Mind</span>
+              <span class="comp-label emotions">Emotions</span>
+              <span class="comp-label spirit">Spirit</span>
+            </div>
+          </div>
+          <div class="comparison-scores" id="compNowScores"></div>
+        </div>
+      </div>
+    </div>
+    <div class="comparison-divider" id="compDivider"></div>
+
+    <!-- Delta badges -->
+    <div class="delta-row" id="deltaRow"></div>
+
+    <!-- Current result circle (always shown) -->
+    <div class="circle-container" id="circleContainer">
+      <canvas id="circleCanvas" width="640" height="640"></canvas>
+      <div class="circle-labels">
+        <span class="circle-label body">Body</span>
+        <span class="circle-label mind">Mind</span>
+        <span class="circle-label emotions">Emotions</span>
+        <span class="circle-label spirit">Spirit</span>
+      </div>
+    </div>
+    <div class="circle-legend" id="circleLegend">
+      <div class="legend-item"><span class="legend-swatch often"></span> Often</div>
+      <div class="legend-item"><span class="legend-swatch sometimes"></span> Sometimes</div>
+      <div class="legend-item"><span class="legend-swatch rarely"></span> Rarely</div>
+    </div>
+    <div class="scoring-scale" id="scoringScale">
+      <div class="scoring-scale-item"><span class="scoring-scale-range">7–9</span> Tuned</div>
+      <div class="scoring-scale-item"><span class="scoring-scale-range">5–6</span> Awakening</div>
+      <div class="scoring-scale-item"><span class="scoring-scale-range">3–4</span> Undertended</div>
+    </div>
+    <div class="score-row" id="scoreRow"></div>
+    <div class="result-card" id="resultCard"></div>
+
+    <!-- Email capture -->
+    <div class="email-section" id="emailSection">
+      <h3>Track your transformation</h3>
+      <p>Save your results and see how your circle changes over time.</p>
+      <div class="email-form" id="emailForm">
+        <input type="email" class="email-input" id="emailInput" placeholder="your@email.com" autocomplete="email">
+        <button class="email-submit" id="emailSubmit" onclick="saveResults()">Save</button>
+      </div>
+      <div class="email-success" id="emailSuccess">Saved. When you retake, enter the same email to see your shift.</div>
+    </div>
+
+    <div class="result-cta" id="resultCta">
+      <button class="retake-btn" onclick="retake()">Retake the check</button>
+      <button class="download-btn" onclick="downloadCircle()">
+        <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Save image
+      </button>
+    </div>
+    <div class="result-footer" id="resultFooter">
+      <em>Still. Rising.</em><br><strong>Conscious Motivation</strong>
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════
+// CONFIGURATION — Supabase
+// ═══════════════════════════════════════════
+// Paste your Supabase project URL and anon key below.
+// Leave empty to use browser localStorage as fallback.
+const SUPABASE_URL = '';
+const SUPABASE_KEY = '';
+
+// ═══════════════════════════════════════════
+// DATA
+// ═══════════════════════════════════════════
+const DIMENSIONS = [
+  { key: 'body', name: 'Body', sub: 'Move. Eat. Sleep.', color: '#8bc49a' },
+  { key: 'mind', name: 'Mind', sub: 'Stillness. Examination. Intentional Consumption.', color: '#7a9ec4' },
+  { key: 'emotions', name: 'Emotions', sub: 'Identification. Honesty. Ownership.', color: '#c4875a' },
+  { key: 'spirit', name: 'Spirit', sub: 'Practice. Service. Release.', color: '#b894c4' }
+];
+
+const QUESTIONS = [
+  { dim: 0, text: 'I move my body intentionally for at least 30 minutes.' },
+  { dim: 0, text: 'I am mindful of the quality and quantity of what I eat and drink.' },
+  { dim: 0, text: 'I prioritize sleep habits that create high\u2011quality rest.' },
+  { dim: 1, text: 'I create space for genuine stillness\u200A\u2014\u200Anot scrolling, watching, or listening disguised as rest.' },
+  { dim: 1, text: 'I question long\u2011held beliefs rather than assuming they are still true.' },
+  { dim: 1, text: 'I choose what I give my attention to rather than letting algorithms decide for me.' },
+  { dim: 2, text: 'I can name what I am feeling while I am feeling it.' },
+  { dim: 2, text: 'I have at least one person I am fully honest with\u200A\u2014\u200Anot performing fine.' },
+  { dim: 2, text: 'I regulate my own emotions rather than depending on something external to do it for me.' },
+  { dim: 3, text: 'I have a practice I return to consistently\u200A\u2014\u200Aprayer, meditation, journaling, or something equivalent.' },
+  { dim: 3, text: 'I do things for others expecting nothing in return.' },
+  { dim: 3, text: 'I let go of things I have been carrying longer than they serve me.' }
+];
+
+const RESULT_CARDS = {
+  body: {
+    tag: 'Your Lowest Dimension',
+    title: 'Your Foundation Is Asking for Attention',
+    body: `<p>Everything you build\u200A\u2014\u200Ayour clarity, your emotional resilience, your capacity to show up\u200A\u2014\u200Aruns through a body that is either supporting you or quietly working against you.</p>
+<p>When movement, nutrition, and sleep aren\u2019t tended to, it doesn\u2019t show up as a collapse. It shows up as a slow fade. More reactive. More dependent on caffeine to start and a screen to wind down.</p>
+<p>This is also the most concrete dimension to shift. It doesn\u2019t require a breakthrough. It requires one practice, done consistently, starting today.</p>`
+  },
+  mind: {
+    tag: 'Your Lowest Dimension',
+    title: 'Your Clarity Has Been Borrowed',
+    body: `<p>The quality of every decision, relationship, and creative act in your life is downstream of what your mind is running on. When stillness is absent and your attention belongs to whoever grabs it first\u200A\u2014\u200Ayou\u2019re operating on borrowed clarity.</p>
+<p>It doesn\u2019t feel like a crisis. It feels like noise you\u2019ve gotten used to. Overthinking that passes for planning. Consuming that passes for learning.</p>
+<p>Stillness is not a luxury. It is the foundation everything else is built on\u200A\u2014\u200Aand it starts with choosing what gets access to your attention.</p>`
+  },
+  emotions: {
+    tag: 'Your Lowest Dimension',
+    title: 'Your Inner Signal Is Being Overridden',
+    body: `<p>Emotions are not the obstacle. They are the information. When you can\u2019t name what you\u2019re feeling, when honesty has been replaced by performance, when regulation depends on something external\u200A\u2014\u200Athe signal that\u2019s supposed to guide you gets muted.</p>
+<p>What shows up instead is a pattern: reacting instead of responding, carrying tension you can\u2019t explain, relationships where no one really knows how you\u2019re doing\u200A\u2014\u200Aincluding you.</p>
+<p>The work here isn\u2019t about feeling more. It\u2019s about letting what you already feel actually reach you.</p>`
+  },
+  spirit: {
+    tag: 'Your Lowest Dimension',
+    title: 'Your Connection Has Gone Quiet',
+    body: `<p>Spirit is not about religion or ritual for its own sake. It\u2019s the part of you that stays when everything external is stripped away\u200A\u2014\u200Athe sense that your life is connected to something beyond your own survival.</p>
+<p>When practice, service, and release aren\u2019t tended to, it doesn\u2019t feel dramatic. It feels like operating without a why. Going through motions that work on paper.</p>
+<p>This dimension doesn\u2019t need to be rebuilt. It needs to be remembered\u200A\u2014\u200Aand that starts with one consistent practice and one act of giving without expectation.</p>`
+  }
+};
+
+const VERDICTS = {
+  tuned:  { word: 'Tuned',  sub: 'All four dimensions are active. The instrument is playing.' },
+  rising: { word: 'Rising', sub: 'Momentum is building. One area is asking for more attention.' },
+  tending:{ word: 'Tending', sub: 'The honest work begins here. You saw it\u200A\u2014\u200Athat\u2019s the first step.' }
+};
+
+// ═══════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════
+let currentQ = 0;
+let answers = new Array(12).fill(0);
+let isTransitioning = false;
+let previousResult = null;  // Populated if returning user
+let supabase = null;
+
+// ═══════════════════════════════════════════
+// SUPABASE INIT
+// ═══════════════════════════════════════════
+async function initSupabase() {
+  if (!SUPABASE_URL || !SUPABASE_KEY) return;
+  try {
+    // Load Supabase client from CDN
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js';
+    document.head.appendChild(script);
+    await new Promise((resolve, reject) => {
+      script.onload = resolve;
+      script.onerror = reject;
+    });
+    supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    console.log('Supabase connected');
+  } catch (e) {
+    console.warn('Supabase init failed, using localStorage fallback:', e);
+    supabase = null;
+  }
+}
+initSupabase();
+
+// ═══════════════════════════════════════════
+// STORAGE — unified interface (Supabase or localStorage)
+// ═══════════════════════════════════════════
+async function saveToDB(email, resultData) {
+  if (supabase) {
+    try {
+      const { error } = await supabase
+        .from('instrument_checks')
+        .insert({
+          email: email.toLowerCase().trim(),
+          version: 'v5',
+          answers: resultData.answers,
+          scores: resultData.scores,
+          verdict: resultData.verdict,
+          lowest_dimension: resultData.lowestDim,
+          timestamp: new Date().toISOString()
+        });
+      if (error) throw error;
+      return true;
+    } catch (e) {
+      console.warn('Supabase save failed, falling back to localStorage:', e);
+    }
+  }
+  // localStorage fallback
+  const key = 'ic_' + email.toLowerCase().trim();
+  const history = JSON.parse(localStorage.getItem(key) || '[]');
+  history.push({
+    ...resultData,
+    timestamp: new Date().toISOString()
+  });
+  localStorage.setItem(key, JSON.stringify(history));
+  return true;
+}
+
+async function loadFromDB(email) {
+  if (supabase) {
+    try {
+      const { data, error } = await supabase
+        .from('instrument_checks')
+        .select('*')
+        .eq('email', email.toLowerCase().trim())
+        .eq('version', 'v5')
+        .order('timestamp', { ascending: false })
+        .limit(1);
+      if (error) throw error;
+      if (data && data.length > 0) {
+        return {
+          answers: data[0].answers,
+          scores: data[0].scores,
+          verdict: data[0].verdict,
+          lowestDim: data[0].lowest_dimension,
+          timestamp: data[0].timestamp
+        };
+      }
+      return null;
+    } catch (e) {
+      console.warn('Supabase load failed, falling back to localStorage:', e);
+    }
+  }
+  // localStorage fallback
+  const key = 'ic_' + email.toLowerCase().trim();
+  const history = JSON.parse(localStorage.getItem(key) || '[]');
+  if (history.length > 0) {
+    return history[history.length - 1];
+  }
+  return null;
+}
+
+// ═══════════════════════════════════════════
+// PARTICLES
+// ═══════════════════════════════════════════
+const pCanvas = document.getElementById('particleCanvas');
+const pCtx = pCanvas.getContext('2d');
+let particles = [];
+
+function initParticles() {
+  pCanvas.width = window.innerWidth;
+  pCanvas.height = window.innerHeight;
+  particles = [];
+  const count = Math.min(60, Math.floor(window.innerWidth * window.innerHeight / 18000));
+  for (let i = 0; i < count; i++) {
+    particles.push({
+      x: Math.random() * pCanvas.width,
+      y: Math.random() * pCanvas.height,
+      vx: (Math.random() - .5) * .15,
+      vy: (Math.random() - .5) * .15,
+      r: Math.random() * 1.2 + .3,
+      o: Math.random() * .3 + .1
+    });
+  }
+}
+
+function drawParticles() {
+  pCtx.clearRect(0, 0, pCanvas.width, pCanvas.height);
+  for (const p of particles) {
+    p.x += p.vx; p.y += p.vy;
+    if (p.x < 0) p.x = pCanvas.width;
+    if (p.x > pCanvas.width) p.x = 0;
+    if (p.y < 0) p.y = pCanvas.height;
+    if (p.y > pCanvas.height) p.y = 0;
+    pCtx.beginPath();
+    pCtx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    pCtx.fillStyle = `rgba(232,228,223,${p.o})`;
+    pCtx.fill();
+  }
+  requestAnimationFrame(drawParticles);
+}
+
+initParticles();
+drawParticles();
+window.addEventListener('resize', initParticles);
+
+// ═══════════════════════════════════════════
+// NAVIGATION
+// ═══════════════════════════════════════════
+function transition(from, to) {
+  from.classList.add('exit');
+  from.classList.remove('active');
+  setTimeout(() => {
+    from.classList.remove('exit');
+    to.classList.add('active');
+  }, 400);
+}
+
+document.getElementById('beginBtn').addEventListener('click', () => {
+  showQuestion(0);
+  transition(document.getElementById('introScreen'), document.getElementById('questionScreen'));
+});
+
+// ═══════════════════════════════════════════
+// BACK BUTTON
+// ═══════════════════════════════════════════
+function goBack() {
+  if (currentQ <= 0 || isTransitioning) return;
+  isTransitioning = true;
+  currentQ--;
+  answers[currentQ] = 0;
+  showQuestion(currentQ);
+  setTimeout(() => { isTransitioning = false; }, 300);
+}
+
+function updateBackBtn() {
+  const btn = document.getElementById('backBtn');
+  if (currentQ > 0) {
+    btn.classList.add('visible');
+    btn.classList.remove('invisible');
+  } else {
+    btn.classList.remove('visible');
+    btn.classList.add('invisible');
+  }
+}
+
+// ═══════════════════════════════════════════
+// QUESTIONS
+// ═══════════════════════════════════════════
+function showQuestion(idx) {
+  const q = QUESTIONS[idx];
+  const dim = DIMENSIONS[q.dim];
+
+  document.getElementById('progressFill').style.width = ((idx) / 12 * 100) + '%';
+  document.getElementById('progressLabel').textContent = `${idx + 1}\u2009/\u200912`;
+
+  updateBackBtn();
+
+  const tag = document.getElementById('dimensionTag');
+  tag.textContent = dim.name.toUpperCase();
+  tag.style.color = dim.color;
+  tag.style.borderColor = dim.color + '40';
+
+  const textEl = document.getElementById('questionText');
+  textEl.style.opacity = 0;
+  textEl.style.transform = 'translateY(8px)';
+  setTimeout(() => {
+    textEl.textContent = q.text;
+    textEl.style.transition = 'all .4s cubic-bezier(.4,0,.2,1)';
+    textEl.style.opacity = 1;
+    textEl.style.transform = 'translateY(0)';
+  }, 150);
+
+  document.querySelectorAll('.answer-btn').forEach(b => {
+    b.classList.remove('selected');
+    b.style.borderColor = '';
+    b.style.background = '';
+  });
+
+  if (answers[idx] > 0) {
+    const prev = document.querySelector(`.answer-btn[data-value="${answers[idx]}"]`);
+    if (prev) {
+      prev.classList.add('selected');
+      prev.style.borderColor = dim.color;
+      prev.style.background = dim.color + '15';
+    }
+  }
+
+  const btns = document.querySelectorAll('.answer-btn');
+  btns.forEach(b => {
+    b.onmouseenter = () => { b.style.borderColor = dim.color; b.style.background = dim.color + '0a'; };
+    b.onmouseleave = () => { if (!b.classList.contains('selected')) { b.style.borderColor = ''; b.style.background = ''; } };
+  });
+}
+
+function selectAnswer(value) {
+  if (isTransitioning) return;
+  isTransitioning = true;
+
+  answers[currentQ] = value;
+  const dim = DIMENSIONS[QUESTIONS[currentQ].dim];
+
+  document.querySelectorAll('.answer-btn').forEach(b => {
+    b.classList.remove('selected');
+    b.style.borderColor = '';
+    b.style.background = '';
+  });
+  const btn = document.querySelector(`.answer-btn[data-value="${value}"]`);
+  btn.classList.add('selected');
+  btn.style.borderColor = dim.color;
+  btn.style.background = dim.color + '15';
+
+  setTimeout(() => {
+    currentQ++;
+    if (currentQ >= 12) {
+      document.getElementById('progressFill').style.width = '100%';
+      setTimeout(() => showResults(), 400);
+      transition(document.getElementById('questionScreen'), document.getElementById('resultsScreen'));
+    } else {
+      showQuestion(currentQ);
+    }
+    isTransitioning = false;
+  }, 350);
+}
+
+// ═══════════════════════════════════════════
+// SCORING
+// ═══════════════════════════════════════════
+function calcScores(ans) {
+  const scores = [0, 0, 0, 0];
+  ans = ans || answers;
+  for (let i = 0; i < 12; i++) {
+    scores[QUESTIONS[i].dim] += ans[i];
+  }
+  return scores;
+}
+
+function getTier(score) {
+  if (score >= 7) return 'Tuned';
+  if (score >= 5) return 'Awakening';
+  return 'Undertended';
+}
+
+function getVerdict(scores) {
+  const total = scores.reduce((a, b) => a + b, 0);
+  const allTuned = scores.every(s => s >= 7);
+  const undertendedCount = scores.filter(s => s <= 4).length;
+  if (allTuned) return 'tuned';
+  if (total >= 20 && undertendedCount === 0) return 'rising';
+  return 'tending';
+}
+
+function getLowest(scores) {
+  let min = 10, idx = 0;
+  for (let i = 0; i < 4; i++) {
+    if (scores[i] < min) { min = scores[i]; idx = i; }
+  }
+  return idx;
+}
+
+// ═══════════════════════════════════════════
+// RESULTS
+// ═══════════════════════════════════════════
+function showResults() {
+  const resultsEl = document.getElementById('resultsScreen');
+  resultsEl.scrollTop = 0;
+
+  const scores = calcScores();
+  const verdict = getVerdict(scores);
+  const lowest = getLowest(scores);
+  const v = VERDICTS[verdict];
+
+  // Verdict text
+  const verdictEl = document.getElementById('resultVerdict');
+  verdictEl.textContent = v.word;
+  setTimeout(() => { verdictEl.style.transition = 'opacity .8s'; verdictEl.style.opacity = 1; }, 200);
+
+  const subEl = document.getElementById('resultVerdictSub');
+  subEl.textContent = v.sub;
+  setTimeout(() => { subEl.style.transition = 'opacity .8s'; subEl.style.opacity = 1; }, 500);
+
+  // Verdict scale — highlight the active tier
+  setTimeout(() => {
+    const scale = document.getElementById('verdictScale');
+    scale.querySelectorAll('.verdict-scale-item').forEach(item => {
+      item.classList.toggle('active', item.dataset.tier === verdict);
+    });
+    scale.classList.add('show');
+  }, 700);
+
+  // ── COMPARISON (if previous result exists) ──
+  let timeOffset = 0;
+  if (previousResult) {
+    timeOffset = 1200; // extra time for comparison to render
+    showComparison(previousResult, { answers: [...answers], scores, verdict, lowestDim: lowest }, timeOffset);
+  }
+
+  // Circle
+  setTimeout(() => {
+    const cc = document.getElementById('circleContainer');
+    cc.style.transition = 'opacity 1s';
+    cc.style.opacity = 1;
+    animateCircle(document.getElementById('circleCanvas'), scores, lowest, answers);
+    document.querySelectorAll('.circle-label').forEach((l, i) => {
+      setTimeout(() => l.classList.add('show'), 800 + i * 150);
+    });
+  }, 700 + timeOffset);
+
+  // Legend
+  setTimeout(() => {
+    document.getElementById('circleLegend').classList.add('show');
+  }, 1500 + timeOffset);
+
+  // Scoring scale + Score pills
+  setTimeout(() => {
+    document.getElementById('scoringScale').classList.add('show');
+  }, 1700 + timeOffset);
+
+  setTimeout(() => {
+    const row = document.getElementById('scoreRow');
+    row.innerHTML = scores.map((s, i) => `
+      <div class="score-pill">
+        <span class="score-dot" style="background:${DIMENSIONS[i].color}"></span>
+        ${DIMENSIONS[i].name} ${s}/9
+        <span class="score-tier">${getTier(s)}</span>
+      </div>
+    `).join('');
+    row.style.transition = 'opacity .8s';
+    row.style.opacity = 1;
+  }, 1800 + timeOffset);
+
+  // Result card
+  setTimeout(() => {
+    const card = document.getElementById('resultCard');
+    const data = RESULT_CARDS[DIMENSIONS[lowest].key];
+    card.innerHTML = `
+      <div class="result-card-tag" style="color:${DIMENSIONS[lowest].color}">${data.tag} &middot; ${DIMENSIONS[lowest].name}</div>
+      <h2 class="result-card-title">${data.title}</h2>
+      <div class="result-card-divider"></div>
+      <div class="result-card-body">${data.body}</div>
+    `;
+    card.classList.add('show');
+  }, 2400 + timeOffset);
+
+  // Email + CTA + footer
+  setTimeout(() => {
+    document.getElementById('emailSection').classList.add('show');
+  }, 2800 + timeOffset);
+  setTimeout(() => { document.getElementById('resultCta').classList.add('show'); }, 3200 + timeOffset);
+  setTimeout(() => { document.getElementById('resultFooter').classList.add('show'); }, 3400 + timeOffset);
+}
+
+// ═══════════════════════════════════════════
+// COMPARISON VIEW
+// ═══════════════════════════════════════════
+function showComparison(prev, current, timeOffset) {
+  const section = document.getElementById('comparisonSection');
+  const divider = document.getElementById('compDivider');
+  const deltaRow = document.getElementById('deltaRow');
+
+  // Format dates
+  const prevDate = prev.timestamp ? new Date(prev.timestamp) : null;
+  document.getElementById('compPrevDate').textContent = prevDate
+    ? prevDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+    : 'Previous';
+  document.getElementById('compNowDate').textContent = 'Today';
+
+  // Verdict words
+  const prevVerdict = typeof prev.verdict === 'string' ? prev.verdict : getVerdict(prev.scores);
+  document.getElementById('compPrevVerdict').textContent = VERDICTS[prevVerdict] ? VERDICTS[prevVerdict].word : prevVerdict;
+  document.getElementById('compNowVerdict').textContent = VERDICTS[current.verdict] ? VERDICTS[current.verdict].word : current.verdict;
+
+  // Draw previous circle (static, no animation)
+  const prevScores = prev.scores;
+  const prevLowest = typeof prev.lowestDim === 'number' ? prev.lowestDim : getLowest(prevScores);
+  const prevAnswers = prev.answers;
+  drawStaticCircle(document.getElementById('compPrevCanvas'), prevScores, prevLowest, prevAnswers);
+
+  // Draw current circle (static)
+  drawStaticCircle(document.getElementById('compNowCanvas'), current.scores, current.lowestDim, current.answers);
+
+  // Score summaries
+  document.getElementById('compPrevScores').innerHTML = prevScores.map((s, i) =>
+    `<span class="comp-score" style="color:${DIMENSIONS[i].color}">${DIMENSIONS[i].name[0]} ${s}/9</span>`
+  ).join('');
+  document.getElementById('compNowScores').innerHTML = current.scores.map((s, i) =>
+    `<span class="comp-score" style="color:${DIMENSIONS[i].color}">${DIMENSIONS[i].name[0]} ${s}/9</span>`
+  ).join('');
+
+  // Delta badges
+  let deltaHTML = '';
+  for (let i = 0; i < 4; i++) {
+    const diff = current.scores[i] - prevScores[i];
+    const arrow = diff > 0 ? 'up' : diff < 0 ? 'down' : 'same';
+    const symbol = diff > 0 ? '\u2191' : diff < 0 ? '\u2193' : '\u2192';
+    const label = diff > 0 ? `+${diff}` : diff < 0 ? `${diff}` : '=';
+    deltaHTML += `<div class="delta-badge">
+      <span class="score-dot" style="background:${DIMENSIONS[i].color}"></span>
+      ${DIMENSIONS[i].name}
+      <span class="delta-arrow ${arrow}">${symbol} ${label}</span>
+    </div>`;
+  }
+  deltaRow.innerHTML = deltaHTML;
+
+  // Show with animation
+  setTimeout(() => {
+    section.classList.add('show');
+  }, 600);
+  setTimeout(() => {
+    divider.classList.add('show');
+    deltaRow.classList.add('show');
+  }, 1000);
+}
+
+// ═══════════════════════════════════════════
+// EMAIL SAVE
+// ═══════════════════════════════════════════
+async function saveResults() {
+  const emailInput = document.getElementById('emailInput');
+  const email = emailInput.value.trim();
+  if (!email || !email.includes('@')) {
+    emailInput.style.borderColor = '#c45a5a';
+    setTimeout(() => { emailInput.style.borderColor = ''; }, 1500);
+    return;
+  }
+
+  const submitBtn = document.getElementById('emailSubmit');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Saving...';
+
+  const scores = calcScores();
+  const verdict = getVerdict(scores);
+  const lowest = getLowest(scores);
+
+  const resultData = {
+    answers: [...answers],
+    scores,
+    verdict,
+    lowestDim: lowest
+  };
+
+  await saveToDB(email, resultData);
+
+  submitBtn.textContent = 'Saved';
+  document.getElementById('emailForm').style.display = 'none';
+  document.getElementById('emailSuccess').classList.add('show');
+
+  // Store email locally so we auto-fill and auto-load on retake
+  localStorage.setItem('ic_last_email', email);
+}
+
+// ═══════════════════════════════════════════
+// CIRCLE DRAWING — EQUAL PIE SLICES
+// ═══════════════════════════════════════════
+function drawCircleOnCanvas(canvas, answersArr, lowestDim, progress) {
+  const ctx = canvas.getContext('2d');
+  const size = canvas.width;
+  const cx = size / 2, cy = size / 2;
+
+  const innerR = size * .09;
+  const outerR = size * .42;
+  const sliceGap = .018;
+  const quadrantGap = .025;
+
+  const quadrantStart = [-Math.PI / 2, 0, Math.PI / 2, Math.PI];
+  const quadrantAngle = Math.PI / 2;
+  const sliceAngle = (quadrantAngle - 2 * quadrantGap - 2 * sliceGap) / 3;
+
+  const ease = (sliceIdx) => {
+    const stagger = sliceIdx * .1;
+    const t = Math.max(0, Math.min(1, (progress - stagger) / (1 - stagger)));
+    return 1 - Math.pow(1 - t, 3);
+  };
+
+  ctx.clearRect(0, 0, size, size);
+
+  // Quadrant dividers
+  ctx.save();
+  for (let i = 0; i < 4; i++) {
+    const angle = quadrantStart[i];
+    ctx.beginPath();
+    ctx.moveTo(cx + (innerR - 2) * Math.cos(angle), cy + (innerR - 2) * Math.sin(angle));
+    ctx.lineTo(cx + (outerR + 6) * Math.cos(angle), cy + (outerR + 6) * Math.sin(angle));
+    ctx.strokeStyle = 'rgba(42,37,32,.25)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  }
+  ctx.restore();
+
+  // Slices
+  for (let dim = 0; dim < 4; dim++) {
+    const baseAngle = quadrantStart[dim] + quadrantGap;
+    const color = DIMENSIONS[dim].color;
+    const qIdx = dim * 3;
+
+    for (let s = 0; s < 3; s++) {
+      const value = answersArr[qIdx + s];
+      const e = ease(s);
+
+      const a1 = baseAngle + s * (sliceAngle + sliceGap);
+      const a2 = a1 + sliceAngle;
+      const rOuter = innerR + (outerR - innerR) * e;
+
+      if (rOuter <= innerR) continue;
+
+      ctx.beginPath();
+      ctx.arc(cx, cy, rOuter, a1, a2);
+      ctx.arc(cx, cy, innerR, a2, a1, true);
+      ctx.closePath();
+
+      if (value === 3) {
+        ctx.fillStyle = hexToRgba(color, .82 * e);
+      } else if (value === 2) {
+        ctx.fillStyle = hexToRgba(color, .35 * e);
+      } else {
+        ctx.fillStyle = hexToRgba(color, .04 * e);
+      }
+      ctx.fill();
+
+      if (value === 1) {
+        ctx.save();
+        ctx.setLineDash([4, 6]);
+        ctx.strokeStyle = hexToRgba(color, .25 * e);
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        ctx.restore();
+      } else {
+        ctx.strokeStyle = hexToRgba(color, .18 * e);
+        ctx.lineWidth = .8;
+        ctx.stroke();
+      }
+    }
+  }
+
+  // Center circle
+  ctx.beginPath();
+  ctx.arc(cx, cy, innerR - 1, 0, Math.PI * 2);
+  ctx.fillStyle = '#080808';
+  ctx.fill();
+  ctx.strokeStyle = 'rgba(42,37,32,.4)';
+  ctx.lineWidth = 1;
+  ctx.stroke();
+
+  // Outer ring
+  ctx.beginPath();
+  ctx.arc(cx, cy, outerR + 3, 0, Math.PI * 2);
+  ctx.strokeStyle = 'rgba(42,37,32,.15)';
+  ctx.lineWidth = .5;
+  ctx.stroke();
+
+  return ctx;
+}
+
+function drawStaticCircle(canvas, scores, lowestDim, answersArr) {
+  drawCircleOnCanvas(canvas, answersArr, lowestDim, 1);
+}
+
+function animateCircle(canvas, scores, lowestDim, answersArr) {
+  const size = canvas.width;
+  const cx = size / 2, cy = size / 2;
+  const outerR = size * .42;
+  const quadrantStart = [-Math.PI / 2, 0, Math.PI / 2, Math.PI];
+  const quadrantAngle = Math.PI / 2;
+
+  const duration = 1400;
+  const startTime = performance.now();
+
+  function draw(time) {
+    const progress = Math.min(1, (time - startTime) / duration);
+
+    drawCircleOnCanvas(canvas, answersArr, lowestDim, progress);
+
+    // Pulse glow on lowest dimension
+    if (progress >= .8) {
+      const ctx = canvas.getContext('2d');
+      const pulseT = (time % 3000) / 3000;
+      const pulseAlpha = .03 + .04 * Math.sin(pulseT * Math.PI * 2);
+      const glowAngle = quadrantStart[lowestDim] + quadrantAngle / 2;
+      const glowDist = size * .24;
+      const gx = cx + glowDist * Math.cos(glowAngle);
+      const gy = cy + glowDist * Math.sin(glowAngle);
+      const grad = ctx.createRadialGradient(gx, gy, 0, gx, gy, size * .22);
+      grad.addColorStop(0, hexToRgba(DIMENSIONS[lowestDim].color, pulseAlpha));
+      grad.addColorStop(1, 'transparent');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, size, size);
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  requestAnimationFrame(draw);
+}
+
+function hexToRgba(hex, alpha) {
+  const r = parseInt(hex.slice(1,3), 16);
+  const g = parseInt(hex.slice(3,5), 16);
+  const b = parseInt(hex.slice(5,7), 16);
+  return `rgba(${r},${g},${b},${alpha})`;
+}
+
+// ═══════════════════════════════════════════
+// DOWNLOAD CIRCLE IMAGE
+// ═══════════════════════════════════════════
+function downloadCircle() {
+  // Create a high-res offscreen canvas with branding
+  const pad = 80;
+  const cSize = 640;
+  const totalW = cSize + pad * 2;
+  const totalH = cSize + pad * 2 + 120; // extra for title + scores
+
+  const offscreen = document.createElement('canvas');
+  offscreen.width = totalW;
+  offscreen.height = totalH;
+  const ctx = offscreen.getContext('2d');
+
+  // Background
+  ctx.fillStyle = '#080808';
+  ctx.fillRect(0, 0, totalW, totalH);
+
+  // Title
+  ctx.font = '300 18px "Libre Franklin", sans-serif';
+  ctx.fillStyle = '#c4875a';
+  ctx.textAlign = 'center';
+  ctx.fillText('THE INSTRUMENT CHECK', totalW / 2, 40);
+
+  // Draw circle
+  const circleCanvas = document.createElement('canvas');
+  circleCanvas.width = cSize;
+  circleCanvas.height = cSize;
+  const scores = calcScores();
+  const lowest = getLowest(scores);
+  drawCircleOnCanvas(circleCanvas, answers, lowest, 1);
+  ctx.drawImage(circleCanvas, pad, pad + 20);
+
+  // Dimension labels on the circle
+  ctx.font = '500 11px "Libre Franklin", sans-serif';
+  ctx.textAlign = 'center';
+  const dims = [
+    { label: 'BODY', color: '#8bc49a', x: totalW / 2, y: pad + 10 },
+    { label: 'MIND', color: '#7a9ec4', x: totalW - pad + 30, y: pad + 20 + cSize / 2 },
+    { label: 'EMOTIONS', color: '#c4875a', x: totalW / 2, y: pad + 30 + cSize },
+    { label: 'SPIRIT', color: '#b894c4', x: pad - 30, y: pad + 20 + cSize / 2 }
+  ];
+  dims.forEach(d => {
+    ctx.fillStyle = d.color;
+    ctx.fillText(d.label, d.x, d.y);
+  });
+
+  // Scores
+  const yScore = pad + 30 + cSize + 24;
+  ctx.font = '400 13px "Libre Franklin", sans-serif';
+  const scoreTexts = scores.map((s, i) => `${DIMENSIONS[i].name} ${s}/9`);
+  const totalLen = scoreTexts.join('    ');
+  ctx.fillStyle = '#a09890';
+  ctx.fillText(scoreTexts.join('    '), totalW / 2, yScore);
+
+  // Verdict
+  const verdict = getVerdict(scores);
+  ctx.font = '300 28px "Cormorant Garamond", Georgia, serif';
+  ctx.fillStyle = '#e8e4df';
+  ctx.fillText(VERDICTS[verdict].word, totalW / 2, yScore + 40);
+
+  // Watermark
+  ctx.font = '300 10px "Libre Franklin", sans-serif';
+  ctx.fillStyle = '#a0989060';
+  ctx.fillText('consciousmotivation.com', totalW / 2, totalH - 16);
+
+  // Download
+  const link = document.createElement('a');
+  link.download = 'instrument-check-' + new Date().toISOString().slice(0, 10) + '.png';
+  link.href = offscreen.toDataURL('image/png');
+  link.click();
+}
+
+// ═══════════════════════════════════════════
+// RETAKE
+// ═══════════════════════════════════════════
+function retake() {
+  // Check if we have a saved email — if so, load previous results for comparison
+  const lastEmail = localStorage.getItem('ic_last_email');
+  if (lastEmail) {
+    loadFromDB(lastEmail).then(prev => {
+      previousResult = prev;
+    });
+    // Pre-fill email input for next save
+    document.getElementById('emailInput').value = lastEmail;
+  }
+
+  currentQ = 0;
+  answers.fill(0);
+  isTransitioning = false;
+
+  // Reset result elements
+  document.getElementById('resultVerdict').style.opacity = 0;
+  document.getElementById('resultVerdictSub').style.opacity = 0;
+  document.getElementById('circleContainer').style.opacity = 0;
+  document.getElementById('scoreRow').style.opacity = 0;
+  document.getElementById('resultCard').classList.remove('show');
+  document.getElementById('resultCard').style.opacity = 0;
+  document.getElementById('resultCta').classList.remove('show');
+  document.getElementById('resultFooter').classList.remove('show');
+  document.getElementById('emailSection').classList.remove('show');
+  document.getElementById('emailForm').style.display = '';
+  document.getElementById('emailSuccess').classList.remove('show');
+  document.getElementById('emailSubmit').disabled = false;
+  document.getElementById('emailSubmit').textContent = 'Save';
+  document.querySelectorAll('.circle-label').forEach(l => l.classList.remove('show'));
+  document.getElementById('circleLegend').classList.remove('show');
+  document.getElementById('verdictScale').classList.remove('show');
+  document.getElementById('scoringScale').classList.remove('show');
+
+  // Reset comparison
+  document.getElementById('comparisonSection').classList.remove('show');
+  document.getElementById('compDivider').classList.remove('show');
+  document.getElementById('deltaRow').classList.remove('show');
+
+  document.getElementById('resultsScreen').scrollTop = 0;
+
+  showQuestion(0);
+  transition(document.getElementById('resultsScreen'), document.getElementById('questionScreen'));
+}
+
+// ═══════════════════════════════════════════
+// KEYBOARD
+// ═══════════════════════════════════════════
+document.addEventListener('keydown', (e) => {
+  if (document.getElementById('questionScreen').classList.contains('active')) {
+    if (e.key === '1') selectAnswer(1);
+    if (e.key === '2') selectAnswer(2);
+    if (e.key === '3') selectAnswer(3);
+    if (e.key === 'Backspace' || e.key === 'ArrowLeft') goBack();
+  }
+});
+
+// ═══════════════════════════════════════════
+// ON LOAD — check for returning user
+// ═══════════════════════════════════════════
+(async function checkReturningUser() {
+  const lastEmail = localStorage.getItem('ic_last_email');
+  if (lastEmail) {
+    const prev = await loadFromDB(lastEmail);
+    if (prev) {
+      previousResult = prev;
+      // Pre-fill email
+      document.getElementById('emailInput').value = lastEmail;
+    }
+  }
+})();
+</script>
+</body>
+</html>
