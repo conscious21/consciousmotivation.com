@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercises in Mindfulness | Conscious Motivation</title>
-    <meta name="description" content="&amp;mdash; Marianne WilliamsonMany of us begin each new year with personal growth goals that we would like to achieve in the upcoming year. We create...">
+    <meta name="description" content="– Marianne WilliamsonMany of us begin each new year with personal growth goals that we would like to achieve in the upcoming year. We create these...">
     
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Exercises in Mindfulness">
-    <meta property="og:description" content="&amp;mdash; Marianne WilliamsonMany of us begin each new year with personal growth goals that we would like to achieve in the upcoming year. We create...">
+    <meta property="og:description" content="– Marianne WilliamsonMany of us begin each new year with personal growth goals that we would like to achieve in the upcoming year. We create these...">
     <meta property="og:url" content="https://consciousmotivation.com/blog/exercises-in-mindfulness">
     <meta property="og:site_name" content="Conscious Motivation">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Exercises in Mindfulness">
-    <meta name="twitter:description" content="&amp;mdash; Marianne WilliamsonMany of us begin each new year with personal growth goals that we would like to achieve in the upcoming year. We create...">
+    <meta name="twitter:description" content="– Marianne WilliamsonMany of us begin each new year with personal growth goals that we would like to achieve in the upcoming year. We create these...">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -177,25 +177,135 @@
             font-style: italic;
         }
         
+        /* Author Bio Section */
+        .author-bio {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            padding: 2rem 0;
+            margin: 3rem 0;
+            border-top: 2px solid var(--gold);
+            border-bottom: 1px solid #e8dcc8;
+        }
+        
+        .author-bio-image {
+            flex-shrink: 0;
+        }
+        
+        .author-bio-image img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .author-bio-content {
+            flex: 1;
+        }
+        
+        .author-bio-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--ash);
+            margin-bottom: 0.5rem;
+        }
+        
+        .author-bio-text {
+            color: var(--charcoal);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .author-bio-links {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .author-bio-links a {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
+            transition: border-color 0.3s ease;
+        }
+        
+        .author-bio-links a:hover {
+            border-bottom-color: var(--gold);
+        }
+        
+        /* Post Navigation */
+        .post-navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 2rem 0;
+            margin: 3rem 0;
+            border-top: 1px solid #e8dcc8;
+            border-bottom: 1px solid #e8dcc8;
+            flex-wrap: wrap;
+        }
+        
+        .nav-prev,
+        .nav-next {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
+            transition: border-color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .nav-prev:hover,
+        .nav-next:hover {
+            border-bottom-color: var(--gold);
+        }
+        
+        .nav-next {
+            margin-left: auto;
+        }
+        
         /* Footer */
         footer {
             background-color: var(--bone);
             border-top: 1px solid #e8dcc8;
-            padding: 2rem 1rem;
+            padding: 3rem 1rem;
             text-align: center;
             color: var(--slate);
             font-size: 0.9rem;
         }
         
-        footer a {
+        .footer-content {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
             color: var(--ash);
             text-decoration: none;
             border-bottom: 1px solid rgba(26, 26, 26, 0.2);
             transition: border-color 0.3s ease;
         }
         
-        footer a:hover {
+        .footer-links a:hover {
             border-bottom-color: var(--ember);
+        }
+        
+        .footer-copyright {
+            color: var(--slate);
+            font-size: 0.85rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e8dcc8;
         }
         
         /* Responsive */
@@ -215,6 +325,35 @@
             
             header h1 {
                 font-size: 1.25rem;
+            }
+            
+            .author-bio {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .author-bio-image img {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .author-bio-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .post-navigation {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-next {
+                margin-left: 0;
+            }
+            
+            .footer-links {
+                gap: 1rem;
             }
         }
     </style>
@@ -236,10 +375,40 @@
                 <figure ><blockquote  >&mdash; Marianne Williamson</figcaption></figure><p><!--StartFragment--></p><p><span >Many of us begin each new year with personal growth goals that we would like to achieve in the upcoming year.&nbsp;</span></p><p><span >We create these goals with a desire to attain a higher state of well-being</span><span >—</span><span >both health and happiness.&nbsp;</span></p><p><span >Three-quarters of the way through the year, the majority of people have completely given up on those goals.&nbsp;</span></p><p><span >Their failure resides in the inability to stay aware of their goals (short-term &amp; long-term) on a daily basis.&nbsp;</span></p><p><span >They are usually too distracted—either by regrets of the past or worries about the future—to focus on the present moment.</span></p><p><span >On the other hand, the most successful people have a knack for taking advantage of opportunities in the present moment.&nbsp; &nbsp;</span></p><p><span >They stay singular focused on the pursuit of their goals and did not get distracted by things that are unimportant. &nbsp;</span></p><p><span >For some, this focus comes naturally. For others, they must develop the ability to stay singularly focused on the task at hand.</span></p><p><span >Do not be discouraged if you fall into the latter category.&nbsp;</span></p><p><span >The following mindfulness exercises will help you become more singular focused on achieving your goals.</span><br /><br /><br /><strong><span >Put Your Phone Down</span></strong><span >&nbsp;</span></p><p><span >Mobile phones have become the greatest single inhibitor for people trying to stay focused in the present moment. &nbsp;</span></p><p><span >Whether it is checking email, text messages, social media, or watching videos, our focus on the present moment is constantly diluted by what is taking place on our phone.&nbsp;</span></p><p><span >When spending time with your family or friends, give them your undivided attention by putting your phone down (and on mute). Time moves so quickly that we often regret not being more present with others when we had the chance. &nbsp;</span></p><p><span >So ask yourself, "is what I'm focusing on really more important than giving this person/these people my undivided attention?"&nbsp;</span></p><p><span >The answer is usually “no.” &nbsp;</span></p><p><span >So, put the phone down.</span></p><p><span >I promise you that none of the emails or texts are going anywhere.</span><br /></p><p><strong><span >Remember You Are Breathing</span></strong><span >&nbsp;</span></p><p><span >It is easy to get so caught up in our daily responsibilities that the day seems to fly by as if it was a blur. &nbsp;</span></p><p><span >If you want to be mindful of the present moment, all you must do is be conscious of the fact that you are breathing.&nbsp;</span></p><p><span >To do this, practice taking a deep breath at least once or twice per hour.&nbsp;</span></p><p><span >These deep breaths will allow you to re-center yourself in the present moment, and focus on what is the most important next move.&nbsp;&nbsp;</span><br /><br /><br /><strong><span >Smile &amp; Appreciate The Moment</span></strong><br /><br /><span >There is beauty all around us, but we fail to see it when our focus is on the excessive thoughts of our mind.</span></p><p><span >For those of you that find yourself in this situation often, I recommend a poem by Thich Nhat Hanh:</span><span >&nbsp;</span></p><p><em><span >Breathing in, I calm my body.</span></em><br /><em><span >Breathing out, I smile.</span></em><br /><em><span >Dwelling in the present moment</span></em><br /><em><span >I know this is a wonderful moment.</span></em></p><p><span >I used this poem to find the present moment during the most stressful times of my consulting career. And, the results were amazing. &nbsp;</span></p><p><span >And like magic, after repeating the poem in my head, I would always return to the present moment and notice something wonderful around me to appreciate.&nbsp;</span><br /><br /><br /><strong><span >Begin Practicing Today</span></strong></p><p><span >It will progressively become easier for us to come back to the present moment by practicing these mindfulness exercises.&nbsp;</span></p><p><span >At this moment, anything is achievable if you can stay singularly focused on what small steps are available to pursue your goals.</span></p><p><!--EndFragment--></p>
             </div>
         </article>
+        
+        <!-- Author Bio Section -->
+        <section class="author-bio">
+            <div class="author-bio-image">
+                <img src="/blog/assets/keenan-headshot-800px.jpg" alt="Keenan Benjamin">
+            </div>
+            <div class="author-bio-content">
+                <div class="author-bio-name">Keenan Benjamin</div>
+                <p class="author-bio-text">Guide, coach, and systems builder helping people rise into their next level of being — skillfully, sustainably, and without ego.</p>
+                <div class="author-bio-links">
+                    <a href="https://www.instagram.com/consciousmotivation" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.linkedin.com/in/keenanbenjamin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+        <nav class="post-navigation">
+            <a href="/blog/materialisms-momentary-happiness" class="nav-prev">← Previous: Materialism&#x27;s Momentary Happiness</a>
+            <a href="/blog/expanding-horizons-through-books" class="nav-next">Next: Expanding Horizons Through Books →</a>
+        </nav>
     </main>
     
     <footer>
-        <p>&copy; Conscious Motivation · <a href="https://consciousmotivation.com">Back to home</a></p>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://consciousmotivation.com">Conscious Motivation</a>
+                <a href="https://keenanbenjamin.com">Walk Through Fire</a>
+                <a href="https://thebenjaminhouse.com">The Benjamin House</a>
+                <a href="https://www.instagram.com/consciousmotivation" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.linkedin.com/in/keenanbenjamin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Conscious Motivation
+            </div>
+        </div>
     </footer>
 </body>
 </html>

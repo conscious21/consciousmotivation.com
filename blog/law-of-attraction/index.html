@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Law Of Attraction | Conscious Motivation</title>
-    <meta name="description" content="&amp;mdash; Florence Scovell ShinnWe create our present and future with more love or more suffering based upon the choices we make in each moment. This...">
+    <meta name="description" content="– Florence Scovell ShinnWe create our present and future with more love or more suffering based upon the choices we make in each moment. This power...">
     
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="The Law Of Attraction">
-    <meta property="og:description" content="&amp;mdash; Florence Scovell ShinnWe create our present and future with more love or more suffering based upon the choices we make in each moment. This...">
+    <meta property="og:description" content="– Florence Scovell ShinnWe create our present and future with more love or more suffering based upon the choices we make in each moment. This power...">
     <meta property="og:url" content="https://consciousmotivation.com/blog/law-of-attraction">
     <meta property="og:site_name" content="Conscious Motivation">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="The Law Of Attraction">
-    <meta name="twitter:description" content="&amp;mdash; Florence Scovell ShinnWe create our present and future with more love or more suffering based upon the choices we make in each moment. This...">
+    <meta name="twitter:description" content="– Florence Scovell ShinnWe create our present and future with more love or more suffering based upon the choices we make in each moment. This power...">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -177,25 +177,135 @@
             font-style: italic;
         }
         
+        /* Author Bio Section */
+        .author-bio {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            padding: 2rem 0;
+            margin: 3rem 0;
+            border-top: 2px solid var(--gold);
+            border-bottom: 1px solid #e8dcc8;
+        }
+        
+        .author-bio-image {
+            flex-shrink: 0;
+        }
+        
+        .author-bio-image img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .author-bio-content {
+            flex: 1;
+        }
+        
+        .author-bio-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--ash);
+            margin-bottom: 0.5rem;
+        }
+        
+        .author-bio-text {
+            color: var(--charcoal);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .author-bio-links {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .author-bio-links a {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
+            transition: border-color 0.3s ease;
+        }
+        
+        .author-bio-links a:hover {
+            border-bottom-color: var(--gold);
+        }
+        
+        /* Post Navigation */
+        .post-navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 2rem 0;
+            margin: 3rem 0;
+            border-top: 1px solid #e8dcc8;
+            border-bottom: 1px solid #e8dcc8;
+            flex-wrap: wrap;
+        }
+        
+        .nav-prev,
+        .nav-next {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
+            transition: border-color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .nav-prev:hover,
+        .nav-next:hover {
+            border-bottom-color: var(--gold);
+        }
+        
+        .nav-next {
+            margin-left: auto;
+        }
+        
         /* Footer */
         footer {
             background-color: var(--bone);
             border-top: 1px solid #e8dcc8;
-            padding: 2rem 1rem;
+            padding: 3rem 1rem;
             text-align: center;
             color: var(--slate);
             font-size: 0.9rem;
         }
         
-        footer a {
+        .footer-content {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
             color: var(--ash);
             text-decoration: none;
             border-bottom: 1px solid rgba(26, 26, 26, 0.2);
             transition: border-color 0.3s ease;
         }
         
-        footer a:hover {
+        .footer-links a:hover {
             border-bottom-color: var(--ember);
+        }
+        
+        .footer-copyright {
+            color: var(--slate);
+            font-size: 0.85rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e8dcc8;
         }
         
         /* Responsive */
@@ -215,6 +325,35 @@
             
             header h1 {
                 font-size: 1.25rem;
+            }
+            
+            .author-bio {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .author-bio-image img {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .author-bio-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .post-navigation {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-next {
+                margin-left: 0;
+            }
+            
+            .footer-links {
+                gap: 1rem;
             }
         }
     </style>
@@ -236,10 +375,40 @@
                 <figure ><blockquote  >&mdash; Florence Scovell Shinn</figcaption></figure><p><!--StartFragment--></p><p ></p><p><span >We create our present and future with more love or more suffering based upon the choices we make in each moment.&nbsp; This power to create is called <em>the law of attraction</em>. </span><br /><br /><span >The law of attraction simply means &nbsp;“like attracts like.” We attract the same energy from the outer world that we put off through our words, thoughts, feelings, and actions.&nbsp;</span><br /><br /><span >Although the law of attraction is referenced in all major spiritual philosophies (such as Christianity, Islam, Hinduism, Buddhism), most of us do not recognize how important a role it plays in our daily lives.</span><br /><br /><br /><strong><span >Our Thoughts Create Our Reality</span></strong><br /><br /><span >Nearly 2,500 years ago, the Buddha stated that: “All that we are is the result of what we have thought.”&nbsp; </span><br /><br /><span >Jim Rohn, one of the most influential personal development authors and motivational speakers, frequently quoted Earl Shoaff as saying, “Success is something you attract by the person you become.”</span><br /><br /><span >If both of these quotes are true, then we become the person we want to become and attract love and success into our lives by changing our thoughts. &nbsp;</span><br /><br /><span >This is a fundamental truth for us at Conscious Motivation, and why our first post was titled, “<a href="http://consciousmotivation.com/motivation/change-your-mind-change-your-life">Change Your Mind, Change Your Life</a>.”</span><br /><br /><span >We cannot expect our reality to change if we are unwilling to change the way our minds experience reality—through our thoughts.</span><br /></p><p><strong><span >We Reap What We Sow</span></strong><br /><br /><span >There is a proverb in the Bible that states that, “you reap what you sow.” If we sow (plant) apple seeds in our backyard, we would never expect to reap (receive) anything other than apples.&nbsp; </span><br /><br /><span >With the same logic, if we are constantly sowing negative seeds (i.e. fear, worry, anger, jealousy, judgment, deceit, resentment, vanity) in our daily lives, we can only expect the universe to return negative and misfortunate experiences to us. &nbsp;&nbsp;</span><br /><br /><span >However, if we are sowing positive seeds (i.e. love, faith, kindness, compassion, forgiveness, gratitude, humility) in our daily lives, the universe will return positive and fortunate experiences to us.</span><br /><br /><span >We sow these seeds in the only moment we ever have—the present moment.&nbsp; In every moment, we choose to either sow the seeds that will manifest the desires of our heart or the seeds that will manifest the fears of our mind. &nbsp;</span><br /><br /><span >Through mindfulness, we can <em>choose </em>to sow positive seeds and bring love into our lives. </span><br /><br /><br /><strong><span >My Experience With The Law</span></strong><br /><br /><span >The law of attraction became real to me when I began practicing mindfulness and meditation.&nbsp; My goal each day was to clear the noise in my mind so that I could spend more time focused on positive thinking and on my dreams.</span><br /><br /><span >With each month of practice, I began to notice an increasing number of—what I could only describe at the time as— “strange coincidences”. </span><br /><br /><span >For example, I would be talking with a friend about somebody that I had not seen in years, and then walk right into them the next day.&nbsp; Or, I would have a thought about somebody that I had not spoken to in years and they would call or message me later in the week.</span><br /><br /><span >These “coincidences” happen to all of us. We just fail to recognize them because we have a tremendous amount of noise in our minds.</span><br /><br /><span >I no longer refer to these experiences as “coincidences”.&nbsp; They simply happen too often to be random. I know that I have manifested these positive experiences in my life by sowing positive seeds. </span><br /><br /><span >And, as my confidence in the power of the law of attraction grew, so did my belief that I could attract whatever was needed to pursue my dreams into my life.</span><br /><br /><span >Leaving my successful career in consulting and going “all in” on my dream to launch Conscious Motivation is proof of my confidence in the law. And I have never felt more loved and fulfilled than I do today, sitting here in India and sharing my love with the world.</span><br /><br /><strong><span >We can bring love into our lives by being love.&nbsp;</span></strong></p><p><!--EndFragment--></p>
             </div>
         </article>
+        
+        <!-- Author Bio Section -->
+        <section class="author-bio">
+            <div class="author-bio-image">
+                <img src="/blog/assets/keenan-headshot-800px.jpg" alt="Keenan Benjamin">
+            </div>
+            <div class="author-bio-content">
+                <div class="author-bio-name">Keenan Benjamin</div>
+                <p class="author-bio-text">Guide, coach, and systems builder helping people rise into their next level of being — skillfully, sustainably, and without ego.</p>
+                <div class="author-bio-links">
+                    <a href="https://www.instagram.com/consciousmotivation" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.linkedin.com/in/keenanbenjamin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+        <nav class="post-navigation">
+            <a href="/blog/the-unreal-others" class="nav-prev">← Previous: The Unreal Others</a>
+            <a href="/blog/the-art-of-listening" class="nav-next">Next: The Art Of Listening →</a>
+        </nav>
     </main>
     
     <footer>
-        <p>&copy; Conscious Motivation · <a href="https://consciousmotivation.com">Back to home</a></p>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://consciousmotivation.com">Conscious Motivation</a>
+                <a href="https://keenanbenjamin.com">Walk Through Fire</a>
+                <a href="https://thebenjaminhouse.com">The Benjamin House</a>
+                <a href="https://www.instagram.com/consciousmotivation" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.linkedin.com/in/keenanbenjamin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Conscious Motivation
+            </div>
+        </div>
     </footer>
 </body>
 </html>

@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materialism&#x27;s Momentary Happiness | Conscious Motivation</title>
-    <meta name="description" content="&amp;mdash; Mark TwainWe must accept that material things do not bring us real, lasting happiness. The happiness we receive from purchasing new things...">
+    <meta name="description" content="– Mark TwainWe must accept that material things do not bring us real, lasting happiness. The happiness we receive from purchasing new things...">
     
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Materialism&#x27;s Momentary Happiness">
-    <meta property="og:description" content="&amp;mdash; Mark TwainWe must accept that material things do not bring us real, lasting happiness. The happiness we receive from purchasing new things...">
+    <meta property="og:description" content="– Mark TwainWe must accept that material things do not bring us real, lasting happiness. The happiness we receive from purchasing new things...">
     <meta property="og:url" content="https://consciousmotivation.com/blog/materialisms-momentary-happiness">
     <meta property="og:site_name" content="Conscious Motivation">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Materialism&#x27;s Momentary Happiness">
-    <meta name="twitter:description" content="&amp;mdash; Mark TwainWe must accept that material things do not bring us real, lasting happiness. The happiness we receive from purchasing new things...">
+    <meta name="twitter:description" content="– Mark TwainWe must accept that material things do not bring us real, lasting happiness. The happiness we receive from purchasing new things...">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -177,25 +177,135 @@
             font-style: italic;
         }
         
+        /* Author Bio Section */
+        .author-bio {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            padding: 2rem 0;
+            margin: 3rem 0;
+            border-top: 2px solid var(--gold);
+            border-bottom: 1px solid #e8dcc8;
+        }
+        
+        .author-bio-image {
+            flex-shrink: 0;
+        }
+        
+        .author-bio-image img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .author-bio-content {
+            flex: 1;
+        }
+        
+        .author-bio-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--ash);
+            margin-bottom: 0.5rem;
+        }
+        
+        .author-bio-text {
+            color: var(--charcoal);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .author-bio-links {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .author-bio-links a {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
+            transition: border-color 0.3s ease;
+        }
+        
+        .author-bio-links a:hover {
+            border-bottom-color: var(--gold);
+        }
+        
+        /* Post Navigation */
+        .post-navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 2rem 0;
+            margin: 3rem 0;
+            border-top: 1px solid #e8dcc8;
+            border-bottom: 1px solid #e8dcc8;
+            flex-wrap: wrap;
+        }
+        
+        .nav-prev,
+        .nav-next {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
+            transition: border-color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .nav-prev:hover,
+        .nav-next:hover {
+            border-bottom-color: var(--gold);
+        }
+        
+        .nav-next {
+            margin-left: auto;
+        }
+        
         /* Footer */
         footer {
             background-color: var(--bone);
             border-top: 1px solid #e8dcc8;
-            padding: 2rem 1rem;
+            padding: 3rem 1rem;
             text-align: center;
             color: var(--slate);
             font-size: 0.9rem;
         }
         
-        footer a {
+        .footer-content {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
             color: var(--ash);
             text-decoration: none;
             border-bottom: 1px solid rgba(26, 26, 26, 0.2);
             transition: border-color 0.3s ease;
         }
         
-        footer a:hover {
+        .footer-links a:hover {
             border-bottom-color: var(--ember);
+        }
+        
+        .footer-copyright {
+            color: var(--slate);
+            font-size: 0.85rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e8dcc8;
         }
         
         /* Responsive */
@@ -215,6 +325,35 @@
             
             header h1 {
                 font-size: 1.25rem;
+            }
+            
+            .author-bio {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .author-bio-image img {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .author-bio-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .post-navigation {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-next {
+                margin-left: 0;
+            }
+            
+            .footer-links {
+                gap: 1rem;
             }
         }
     </style>
@@ -236,10 +375,40 @@
                 <figure ><blockquote  >&mdash;  Mark Twain</figcaption></figure><p><!--StartFragment--><!--StartFragment--></p><p><span >We must accept that material things do not bring us real, lasting happiness.</span><span >&nbsp;</span></p><p><span >The happiness we receive from purchasing new things (clothes, cars, jewelry, electronics, apartments and houses) is really only a short-termed boost for our ego. There will always be somebody somewhere with something newer or better that causes our ego to feel inferior.&nbsp;</span></p><p><span >This sense of inferiority causes us to suffer. And, that suffering can only be overcome by purchasing that which we desire.</span><span >&nbsp;</span></p><p><span >For example, how many of us have been super excited about purchasing the latest iPhone or Android phone, only to feel a sense of despair when a newer version comes out a year later?&nbsp;</span></p><p><span >Or maybe we upgraded our living situation by moving into a new apartment or house. Then we go over to a friend or family member's place that is much nicer or bigger. All the sudden, we are no longer as excited about our new home.&nbsp;</span></p><p><span >In the short-term, our purchase of the new phone or home brought us a great deal of happiness.&nbsp; But less than a year later, we are either subconsciously (unknowingly) or consciously (knowingly) suffering because our ego desires the newer, nicer, or bigger version.</span><span >&nbsp;</span></p><p><span >With our happiness tied to owning new material objects, we must continue the cycle of purchasing more and more things to keep our ego satisfied by the short-term boosts in happiness.</span><span >&nbsp;</span></p><p><span ><strong>Breaking the Cycle of Materialism</strong></span></p><p><span >This cycle of materialism either puts us in debt or in a place where we lack the financial freedom to pursue unexpected opportunities when they arise.&nbsp;</span></p><p><span >If we loved ourselves, that love alone would be enough to keep us happy with what we had in the present moment.&nbsp;</span></p><p><span >However, the present moment is never enough when we lack love and our lives are guided by our ego—not our heart. </span><span >&nbsp;</span></p><p><span >The ego is always looking into the future for more, even though the present moment we currently occupy was a future dream of the past.&nbsp;</span></p><p><span >To break the cycle of materialism, we must learn to follow our heart. &nbsp;</span></p><p><span >Our heart will help us determine the things we actually need, versus want. &nbsp;Allowing us the financial freedom to pursue new experiences and opportunities that fill us with lasting love and happiness.&nbsp; </span></p><p><span >In this state of being, we will no longer need to look outside of our self for happiness from material things.</span></p><p><span ><!--EndFragment--></span></p><p><!--EndFragment--></p>
             </div>
         </article>
+        
+        <!-- Author Bio Section -->
+        <section class="author-bio">
+            <div class="author-bio-image">
+                <img src="/blog/assets/keenan-headshot-800px.jpg" alt="Keenan Benjamin">
+            </div>
+            <div class="author-bio-content">
+                <div class="author-bio-name">Keenan Benjamin</div>
+                <p class="author-bio-text">Guide, coach, and systems builder helping people rise into their next level of being — skillfully, sustainably, and without ego.</p>
+                <div class="author-bio-links">
+                    <a href="https://www.instagram.com/consciousmotivation" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.linkedin.com/in/keenanbenjamin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+        <nav class="post-navigation">
+            <a href="/blog/finding-calm-through-adversity" class="nav-prev">← Previous: Finding Calm Through Adversity</a>
+            <a href="/blog/exercises-in-mindfulness" class="nav-next">Next: Exercises in Mindfulness →</a>
+        </nav>
     </main>
     
     <footer>
-        <p>&copy; Conscious Motivation · <a href="https://consciousmotivation.com">Back to home</a></p>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://consciousmotivation.com">Conscious Motivation</a>
+                <a href="https://keenanbenjamin.com">Walk Through Fire</a>
+                <a href="https://thebenjaminhouse.com">The Benjamin House</a>
+                <a href="https://www.instagram.com/consciousmotivation" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.linkedin.com/in/keenanbenjamin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Conscious Motivation
+            </div>
+        </div>
     </footer>
 </body>
 </html>

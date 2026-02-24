@@ -177,25 +177,135 @@
             font-style: italic;
         }
         
+        /* Author Bio Section */
+        .author-bio {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            padding: 2rem 0;
+            margin: 3rem 0;
+            border-top: 2px solid var(--gold);
+            border-bottom: 1px solid #e8dcc8;
+        }
+        
+        .author-bio-image {
+            flex-shrink: 0;
+        }
+        
+        .author-bio-image img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .author-bio-content {
+            flex: 1;
+        }
+        
+        .author-bio-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--ash);
+            margin-bottom: 0.5rem;
+        }
+        
+        .author-bio-text {
+            color: var(--charcoal);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        .author-bio-links {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .author-bio-links a {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
+            transition: border-color 0.3s ease;
+        }
+        
+        .author-bio-links a:hover {
+            border-bottom-color: var(--gold);
+        }
+        
+        /* Post Navigation */
+        .post-navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            padding: 2rem 0;
+            margin: 3rem 0;
+            border-top: 1px solid #e8dcc8;
+            border-bottom: 1px solid #e8dcc8;
+            flex-wrap: wrap;
+        }
+        
+        .nav-prev,
+        .nav-next {
+            color: var(--gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
+            transition: border-color 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .nav-prev:hover,
+        .nav-next:hover {
+            border-bottom-color: var(--gold);
+        }
+        
+        .nav-next {
+            margin-left: auto;
+        }
+        
         /* Footer */
         footer {
             background-color: var(--bone);
             border-top: 1px solid #e8dcc8;
-            padding: 2rem 1rem;
+            padding: 3rem 1rem;
             text-align: center;
             color: var(--slate);
             font-size: 0.9rem;
         }
         
-        footer a {
+        .footer-content {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
             color: var(--ash);
             text-decoration: none;
             border-bottom: 1px solid rgba(26, 26, 26, 0.2);
             transition: border-color 0.3s ease;
         }
         
-        footer a:hover {
+        .footer-links a:hover {
             border-bottom-color: var(--ember);
+        }
+        
+        .footer-copyright {
+            color: var(--slate);
+            font-size: 0.85rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e8dcc8;
         }
         
         /* Responsive */
@@ -215,6 +325,35 @@
             
             header h1 {
                 font-size: 1.25rem;
+            }
+            
+            .author-bio {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .author-bio-image img {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .author-bio-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .post-navigation {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-next {
+                margin-left: 0;
+            }
+            
+            .footer-links {
+                gap: 1rem;
             }
         }
     </style>
@@ -236,10 +375,40 @@
                 <p><!--StartFragment--></p><p><!--StartFragment--></p><p><strong><!--StartFragment--></strong><!--StartFragment--><!--StartFragment--><!--StartFragment--><span >Why is it so difficult to make decisions?&nbsp;</span></p><p><span >We often find ourselves paralyzed when faced with stressful situations. Though we may know what we would say to a friend or family member in a similar situation, we are unable to act when the choice presenting itself is our own.</span></p><p><span >If you’re having trouble envisioning a situation like this, here are a few common examples:&nbsp;</span></p><ul dir="ltr"><li><span >An unhealthy relationship that you are too afraid to leave, because you would rather live with the pain you know than risk the unknown pain of leaving the relationship.</span></li><li><span >A job that you that you dread showing up for but continue to stay in because it is an organization that you know as opposed to an unknown career that may better align with your interests.</span></li><li><span >An environment in which people prevent you from growing but you stay because you fear to be alone.</span></li></ul><p><span >The heart knows our divine plan. It seeks to guide us down the path that will bring us love and happiness.&nbsp; It is our heart that gives us that feeling that tells us the situation we’re in or what we’re doing is not right for us. It is our heart that whispers to us when the noise in our mind momentarily stops in the quiet of meditation and says:&nbsp;</span></p><p><em><span >“You can do it!”…“Don’t worry if you’ve never done this before; you can learn!”… “Trust me; you are good enough to do this!”&nbsp;</span></em></p><p><span >But those moments of quiet inevitably come to an end, and then POOF, our ego kicks in. It is our ego that tells us all of the reasons why we should rethink our decision to venture into the unknown: &nbsp;</span></p><p><em><span >“Are you sure you want to do this?”…“What if it doesn’t work out the way you had hoped?”…“What if you end up unhappier than you already are?”</span></em><span >&nbsp;</span></p><p><span >But, these reasons are grounded in fear. We choose not to leave that unhealthy relationship or job in which we are unhappy because we would rather live with the pain we know than risk the pain that may come from pursuing the unknown.&nbsp;</span></p><p><span >After a while, that pain becomes more than just something that which we are aware. It becomes our drug, and we become addicted to our pain. We expect to feel unhappy.</span><span >&nbsp;</span></p><p><span >The whisper of our heart and the reasoning of our ego are what we call the duality of the heart and ego. We usually speak from the heart when advising our friends and family because we love them. But, if we are not careful, our ego takes over when we have to make that same decision for ourselves.</span></p><p><span >When faced with a difficult situation, we must ask ourselves: Are we making this decision with our ego and in fear, worry, and pessimism that our choice may lead to an unknown future that could be worse than our present? Or, are we making this decision with our heart and in love, compassion, and faith that the unknown future will be better than our present?</span></p><p><span >We must make our choices in mindfulness, and from our hearts. Living from fear will undoubtedly cause us regret. But, facing our fears and making the choices our egos tell us not to make will transform our fears into our greatest opportunities.</span></p><p><span >Follow your heart into the unknown, and experience the joy of being alive!</span></p><p><span >&nbsp;</span></p><p><span >&nbsp;</span></p><p><span >&nbsp;</span></p><p><span >&nbsp;</span></p><p><span >&nbsp;</span></p><p><!--EndFragment--></p><p><span ><!--EndFragment--></span></p><p><!--EndFragment--></p><p><!--EndFragment--></p><p><strong><!--EndFragment--></strong><!--EndFragment--></p>
             </div>
         </article>
+        
+        <!-- Author Bio Section -->
+        <section class="author-bio">
+            <div class="author-bio-image">
+                <img src="/blog/assets/keenan-headshot-800px.jpg" alt="Keenan Benjamin">
+            </div>
+            <div class="author-bio-content">
+                <div class="author-bio-name">Keenan Benjamin</div>
+                <p class="author-bio-text">Guide, coach, and systems builder helping people rise into their next level of being — skillfully, sustainably, and without ego.</p>
+                <div class="author-bio-links">
+                    <a href="https://www.instagram.com/consciousmotivation" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.linkedin.com/in/keenanbenjamin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+        <nav class="post-navigation">
+            <a href="/blog/change-your-mind-change-your-life" class="nav-prev">← Previous: Change Your Mind, Change Your Life</a>
+            <a href="/blog/7-ways-meditation-will-change-your-life" class="nav-next">Next: 7 Ways Meditation Will Change Your Life →</a>
+        </nav>
     </main>
     
     <footer>
-        <p>&copy; Conscious Motivation · <a href="https://consciousmotivation.com">Back to home</a></p>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://consciousmotivation.com">Conscious Motivation</a>
+                <a href="https://keenanbenjamin.com">Walk Through Fire</a>
+                <a href="https://thebenjaminhouse.com">The Benjamin House</a>
+                <a href="https://www.instagram.com/consciousmotivation" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://www.linkedin.com/in/keenanbenjamin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Conscious Motivation
+            </div>
+        </div>
     </footer>
 </body>
 </html>
