@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P6MS2C5W5X"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P6MS2C5W5X');</script>
+<title>Still Rising Collection — Conscious Motivation Merch</title>
+<meta name="description" content="Wear the reminder. The Still Rising collection by Conscious Motivation — tees, hoodies, long sleeves, and caps featuring the phoenix emblem. Free shipping on orders over $75.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Still Rising Collection — Conscious Motivation">
+<meta property="og:description" content="Wear the reminder. Tees, hoodies, long sleeves, and caps featuring the phoenix emblem.">
+<meta property="og:url" content="https://consciousmotivation.com/merch/">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Still Rising Collection — Conscious Motivation">
+<meta name="twitter:description" content="Wear the reminder. Tees, hoodies, long sleeves, and caps featuring the phoenix emblem.">
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap');
+
+  :root {
+    --ember: #E8530E;
+    --ember-glow: #FF6B2B;
+    --gold: #C49A6C;
+    --gold-light: #D4B896;
+    --bone: #FAF5EF;
+    --ash: #1a1a1a;
+    --smoke: #f5f0eb;
+    --charcoal: #3a3a3a;
+    --slate: #6b7280;
+    --warmth: #fdf8f3;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) var(--bone);
+  }
+
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--bone); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--gold-light); }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bone);
+    color: var(--charcoal);
+    overflow-x: hidden;
+    cursor: default;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ============================================
+     HEADER
+     ============================================ */
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    transition: all 0.4s ease;
+    background: rgba(250, 245, 239, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(196, 154, 108, 0.15);
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+  }
+
+  .header-left:hover { opacity: 0.85; }
+
+  .header-phoenix {
+    width: 40px;
+    height: 40px;
+    opacity: 0.85;
+  }
+
+  .header-wordmark {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    text-decoration: none;
+  }
+
+  .header-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .header-nav a {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--slate);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: color 0.3s ease;
+  }
+
+  .header-nav a:hover {
+    color: var(--ember);
+  }
+
+  /* ============================================
+     HERO SECTION
+     ============================================ */
+  .merch-hero {
+    padding: 10rem 2rem 4rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .merch-hero .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+
+  .merch-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  .merch-hero .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--slate);
+    max-width: 500px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+  }
+
+  .merch-hero .shipping-note {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--ember);
+    text-transform: uppercase;
+  }
+
+  /* ============================================
+     COLLECTION SECTION
+     ============================================ */
+  .collection-section {
+    padding: 2rem 2rem 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Shopify Buy Button overrides to match brand */
+  .collection-section iframe {
+    max-width: 100%;
+  }
+
+  /* ============================================
+     BRAND PROMISE
+     ============================================ */
+  .brand-promise {
+    padding: 4rem 2rem;
+    text-align: center;
+    border-top: 1px solid rgba(196, 154, 108, 0.2);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .brand-promise h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+  }
+
+  .brand-promise p {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--slate);
+    line-height: 1.7;
+  }
+
+  /* ============================================
+     FOOTER
+     ============================================ */
+  footer {
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+    border-top: 1px solid rgba(196, 154, 108, 0.15);
+    background: var(--warmth);
+  }
+
+  .footer-brand {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--charcoal);
+    margin-bottom: 0.75rem;
+  }
+
+  .footer-tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: var(--gold);
+    margin-bottom: 2rem;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--slate);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-links a:hover {
+    color: var(--gold);
+  }
+
+  .footer-legal {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    color: var(--slate);
+    opacity: 0.6;
+  }
+
+  /* ============================================
+     RESPONSIVE
+     ============================================ */
+  @media (max-width: 768px) {
+    .site-header {
+      padding: 1rem 1.25rem;
+    }
+
+    .header-wordmark {
+      font-size: 0.65rem;
+    }
+
+    .header-nav {
+      gap: 1rem;
+    }
+
+    .header-nav a {
+      font-size: 0.75rem;
+    }
+
+    .merch-hero {
+      padding: 8rem 1.5rem 3rem;
+    }
+
+    .merch-hero h1 {
+      font-size: 2rem;
+    }
+
+    .collection-section {
+      padding: 1rem 1rem 4rem;
+    }
+
+    .footer-links {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================== HEADER ============================== -->
+<header class="site-header" role="banner">
+  <a href="/" class="header-left">
+    <svg class="header-phoenix" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 5 C35 20, 20 35, 25 55 C28 65, 35 72, 50 80 C65 72, 72 65, 75 55 C80 35, 65 20, 50 5Z" fill="var(--ember)" opacity="0.9"/>
+      <path d="M50 15 C40 28, 32 40, 35 52 C37 58, 42 63, 50 68 C58 63, 63 58, 65 52 C68 40, 60 28, 50 15Z" fill="var(--gold)" opacity="0.7"/>
+      <path d="M50 30 C45 38, 42 45, 44 50 C45 53, 47 55, 50 58 C53 55, 55 53, 56 50 C58 45, 55 38, 50 30Z" fill="var(--bone)" opacity="0.9"/>
+    </svg>
+    <span class="header-wordmark">Conscious Motivation</span>
+  </a>
+  <nav class="header-nav">
+    <a href="/">Home</a>
+    <a href="/#the-work">The Work</a>
+    <a href="/merch/">Merch</a>
+    <a href="https://keenanbenjamin.com" target="_blank" rel="noopener noreferrer">Coaching</a>
+  </nav>
+</header>
+
+<!-- ============================== MERCH HERO ============================== -->
+<section class="merch-hero">
+  <div class="section-label">EMBODY</div>
+  <h1>Still Rising</h1>
+  <p class="subtitle">Wear the reminder. The phoenix emblem on premium essentials — designed to spark a conversation before you say a word.</p>
+  <p class="shipping-note">Free shipping on orders over $75</p>
+</section>
+
+<!-- ============================== SHOPIFY COLLECTION ============================== -->
+<section class="collection-section">
+  <div id='collection-component-1771964352893'></div>
+  <script type="text/javascript">
+  /*<![CDATA[*/
+  (function () {
+    var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+    if (window.ShopifyBuy) {
+      if (window.ShopifyBuy.UI) {
+        ShopifyBuyInit();
+      } else {
+        loadScript();
+      }
+    } else {
+      loadScript();
+    }
+    function loadScript() {
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = scriptURL;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+      script.onload = ShopifyBuyInit;
+    }
+    function ShopifyBuyInit() {
+      var client = ShopifyBuy.buildClient({
+        domain: 'wh00vy-qx.myshopify.com',
+        storefrontAccessToken: 'c19b23c6460de61c9ac04c7f3059a354',
+      });
+      ShopifyBuy.UI.onReady(client).then(function (ui) {
+        ui.createComponent('collection', {
+          id: '319793955012',
+          node: document.getElementById('collection-component-1771964352893'),
+          moneyFormat: '%24%7B%7Bamount%7D%7D',
+          options: {
+    "product": {
+      "styles": {
+        "product": {
+          "@media (min-width: 601px)": {
+            "max-width": "calc(33.33% - 30px)",
+            "margin-left": "30px",
+            "margin-bottom": "50px",
+            "width": "calc(33.33% - 30px)"
+          },
+          "img": {
+            "height": "calc(100% - 15px)",
+            "position": "absolute",
+            "left": "0",
+            "right": "0",
+            "top": "0"
+          },
+          "imgWrapper": {
+            "padding-top": "calc(75% + 15px)",
+            "position": "relative",
+            "height": "0"
+          }
+        },
+        "title": {
+          "font-family": "Playfair Display, serif",
+          "font-weight": "700",
+          "font-size": "16px",
+          "color": "#2d2d2d"
+        },
+        "button": {
+          "font-family": "Inter, sans-serif",
+          "font-weight": "500",
+          "font-size": "14px",
+          "letter-spacing": "0.05em",
+          "border-radius": "0px",
+          "padding": "12px 24px",
+          ":hover": {
+            "background-color": "#d14b0d"
+          },
+          "background-color": "#e8530e",
+          ":focus": {
+            "background-color": "#d14b0d"
+          }
+        },
+        "price": {
+          "font-family": "Inter, sans-serif",
+          "font-weight": "400",
+          "color": "#c49a6c"
+        },
+        "compareAt": {
+          "color": "#c49a6c"
+        },
+        "unitPrice": {
+          "color": "#c49a6c"
+        }
+      },
+      "text": {
+        "button": "Add to cart"
+      }
+    },
+    "productSet": {
+      "styles": {
+        "products": {
+          "@media (min-width: 601px)": {
+            "margin-left": "-30px"
+          }
+        }
+      }
+    },
+    "modalProduct": {
+      "contents": {
+        "img": false,
+        "imgWithCarousel": true,
+        "button": false,
+        "buttonWithQuantity": true
+      },
+      "styles": {
+        "product": {
+          "@media (min-width: 601px)": {
+            "max-width": "100%",
+            "margin-left": "0px",
+            "margin-bottom": "0px"
+          }
+        },
+        "button": {
+          "font-family": "Inter, sans-serif",
+          "font-weight": "500",
+          "border-radius": "0px",
+          "padding": "14px 28px",
+          ":hover": {
+            "background-color": "#d14b0d"
+          },
+          "background-color": "#e8530e",
+          ":focus": {
+            "background-color": "#d14b0d"
+          }
+        },
+        "title": {
+          "font-family": "Playfair Display, serif",
+          "font-weight": "bold",
+          "font-size": "26px",
+          "color": "#3a3a3a"
+        },
+        "price": {
+          "font-family": "Inter, sans-serif",
+          "font-weight": "normal",
+          "font-size": "18px",
+          "color": "#c49a6c"
+        },
+        "compareAt": {
+          "font-family": "Inter, sans-serif",
+          "font-weight": "normal",
+          "font-size": "15.3px",
+          "color": "#c49a6c"
+        },
+        "unitPrice": {
+          "font-family": "Inter, sans-serif",
+          "font-weight": "normal",
+          "font-size": "15.3px",
+          "color": "#c49a6c"
+        }
+      },
+      "text": {
+        "button": "Add to cart"
+      }
+    },
+    "option": {
+      "styles": {
+        "label": {
+          "font-family": "Inter, sans-serif"
+        },
+        "select": {
+          "font-family": "Inter, sans-serif"
+        }
+      }
+    },
+    "cart": {
+      "styles": {
+        "button": {
+          "font-family": "Inter, sans-serif",
+          "font-weight": "500",
+          "border-radius": "0px",
+          ":hover": {
+            "background-color": "#d14b0d"
+          },
+          "background-color": "#e8530e",
+          ":focus": {
+            "background-color": "#d14b0d"
+          }
+        },
+        "title": {
+          "font-family": "Playfair Display, serif",
+          "color": "#3a3a3a"
+        },
+        "header": {
+          "color": "#3a3a3a"
+        },
+        "lineItems": {
+          "font-family": "Inter, sans-serif",
+          "color": "#3a3a3a"
+        },
+        "subtotalText": {
+          "font-family": "Inter, sans-serif",
+          "color": "#6b7280"
+        },
+        "subtotal": {
+          "font-family": "Inter, sans-serif",
+          "color": "#3a3a3a"
+        },
+        "notice": {
+          "font-family": "Inter, sans-serif",
+          "color": "#6b7280"
+        },
+        "currency": {
+          "font-family": "Inter, sans-serif",
+          "color": "#6b7280"
+        },
+        "close": {
+          "color": "#3a3a3a",
+          ":hover": {
+            "color": "#3a3a3a"
+          }
+        }
+      },
+      "text": {
+        "total": "Subtotal",
+        "button": "Checkout"
+      }
+    },
+    "toggle": {
+      "styles": {
+        "toggle": {
+          "background-color": "#e8530e",
+          ":hover": {
+            "background-color": "#d14b0d"
+          },
+          ":focus": {
+            "background-color": "#d14b0d"
+          }
+        },
+        "count": {
+          "font-family": "Inter, sans-serif"
+        }
+      }
+    }
+  },
+        });
+      });
+    }
+  })();
+  /*]]>*/
+  </script>
+</section>
+
+<!-- ============================== BRAND PROMISE ============================== -->
+<section class="brand-promise">
+  <h3>"Where belief becomes being."</h3>
+  <p>Every piece in the Still Rising collection carries the phoenix emblem — a reminder that transformation isn't a destination. It's a daily practice. Wear it. Live it. Rise.</p>
+</section>
+
+<!-- ============================== FOOTER ============================== -->
+<footer role="contentinfo">
+  <div class="footer-brand">Conscious Motivation</div>
+  <div class="footer-tagline">"Where belief becomes being."</div>
+  <nav class="footer-links" aria-label="Social links">
+    <a href="https://www.instagram.com/consciousmotivation" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="mailto:keenan@consciousmotivation.com">Contact</a>
+  </nav>
+  <div class="footer-legal">&copy; 2026 Keenan Benjamin. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
