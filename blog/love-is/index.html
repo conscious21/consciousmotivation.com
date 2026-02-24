@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love is... | Conscious Motivation</title>
-    <meta name="description" content="– Leo BuscagliaLove is the essence of the universe. It is the energy that underlies all that is good and just in the world. Though human beings have...">
+    <meta name="description" content="&quot;Love is life. And if you miss love, you miss life.&quot;– Leo BuscagliaLove is the essence of the universe. It is the energy that underlies all that is...">
     
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Love is...">
-    <meta property="og:description" content="– Leo BuscagliaLove is the essence of the universe. It is the energy that underlies all that is good and just in the world. Though human beings have...">
+    <meta property="og:description" content="&quot;Love is life. And if you miss love, you miss life.&quot;– Leo BuscagliaLove is the essence of the universe. It is the energy that underlies all that is...">
     <meta property="og:url" content="https://consciousmotivation.com/blog/love-is">
     <meta property="og:site_name" content="Conscious Motivation">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Love is...">
-    <meta name="twitter:description" content="– Leo BuscagliaLove is the essence of the universe. It is the energy that underlies all that is good and just in the world. Though human beings have...">
+    <meta name="twitter:description" content="&quot;Love is life. And if you miss love, you miss life.&quot;– Leo BuscagliaLove is the essence of the universe. It is the energy that underlies all that is...">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +52,7 @@
             background-color: var(--bone);
             border-bottom: 1px solid #e8dcc8;
             padding: 2rem 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         header h1 {
@@ -79,124 +79,104 @@
             padding: 0 1rem 3rem;
         }
         
-        article {
-            margin-bottom: 4rem;
-        }
-        
         article h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
             line-height: 1.2;
-            color: var(--ash);
         }
         
         .post-meta {
             color: var(--slate);
             font-size: 0.95rem;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e8dcc8;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .post-content {
-            margin-bottom: 3rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            font-size: 16px;
         }
         
         .post-content p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .post-content h2,
-        .post-content h3,
-        .post-content h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--charcoal);
+            margin-bottom: 1.25rem;
         }
         
         .post-content h2 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
         }
         
         .post-content h3 {
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.75rem;
         }
         
-        .post-content h4 {
-            font-size: 1.25rem;
+        .post-content strong {
+            font-weight: 600;
+            color: var(--ash);
         }
         
-        .post-content blockquote {
-            border-left: 4px solid var(--ember);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            color: var(--charcoal);
+        .post-content em {
             font-style: italic;
-        }
-        
-        .post-content ul,
-        .post-content ol {
-            margin: 1.5rem 0 1.5rem 1.5rem;
-        }
-        
-        .post-content li {
-            margin-bottom: 0.75rem;
         }
         
         .post-content a {
             color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(232, 83, 14, 0.3);
-            transition: border-color 0.3s ease;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .post-content a:hover {
-            border-bottom-color: var(--ember);
+            color: var(--ash);
         }
         
-        .post-content img {
-            max-width: 100%;
-            height: auto;
+        /* Pull quotes */
+        .pull-quote {
+            border-left: 3px solid var(--gold);
+            padding-left: 1.5rem;
             margin: 2rem 0;
-            border-radius: 4px;
+            font-style: normal;
         }
         
-        .post-content figure {
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .post-content figcaption {
-            font-size: 0.9rem;
-            color: var(--slate);
-            margin-top: 0.75rem;
+        .pull-quote p {
             font-style: italic;
+            font-size: 1.1em;
+            color: var(--charcoal);
+            margin: 0;
         }
         
-        /* Author Bio Section */
+        .pull-quote cite {
+            display: block;
+            font-size: 0.9em;
+            color: var(--slate);
+            font-style: normal;
+            margin-top: 0.75rem;
+        }
+        
+        /* Author bio section */
         .author-bio {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             align-items: flex-start;
-            padding: 2rem 0;
-            margin: 3rem 0;
-            border-top: 2px solid var(--gold);
-            border-bottom: 1px solid #e8dcc8;
-        }
-        
-        .author-bio-image {
-            flex-shrink: 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e8dcc8;
         }
         
         .author-bio-image img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
             object-fit: cover;
             display: block;
         }
@@ -207,60 +187,60 @@
         
         .author-bio-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: var(--ash);
             margin-bottom: 0.5rem;
         }
         
         .author-bio-text {
             color: var(--charcoal);
+            margin-bottom: 1rem;
             font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 1rem;
         }
         
         .author-bio-links {
             display: flex;
             gap: 1.5rem;
-            font-size: 0.9rem;
         }
         
         .author-bio-links a {
-            color: var(--gold);
+            color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .author-bio-links a:hover {
-            border-bottom-color: var(--gold);
+            color: var(--ash);
         }
         
-        /* Post Navigation */
+        /* Post navigation */
         .post-navigation {
             display: flex;
             justify-content: space-between;
             gap: 2rem;
-            padding: 2rem 0;
-            margin: 3rem 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
             border-top: 1px solid #e8dcc8;
-            border-bottom: 1px solid #e8dcc8;
-            flex-wrap: wrap;
         }
         
-        .nav-prev,
-        .nav-next {
-            color: var(--gold);
+        .post-navigation a {
+            color: var(--ash);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
             font-size: 0.95rem;
+            flex: 1;
+            padding: 1rem;
+            background-color: var(--warmth);
+            border: 1px solid #e8dcc8;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
         
-        .nav-prev:hover,
-        .nav-next:hover {
-            border-bottom-color: var(--gold);
+        .post-navigation a:hover {
+            border-color: var(--ember);
+            background-color: rgba(232, 83, 14, 0.05);
         }
         
         .nav-next {
@@ -372,7 +352,7 @@
                 <span>by Keenan Benjamin</span>
             </div>
             <div class="post-content">
-                <figure ><blockquote  >&mdash; Leo Buscaglia</figcaption></figure><p><!--StartFragment--></p><p><span >Love is the essence of the universe. &nbsp;It is the energy that underlies all that is good and just in the world.&nbsp; Though human beings have experienced—and continue to experience—dark times, love has always prevailed.</span><br /><br /><span >However, when we do not strengthen our minds through mindfulness exercises like meditation, we allow our ego’s fears to dominate our attention.&nbsp; And when our ego’s fears dominate our attention, we lose sight of the much more important things that bring love and happiness into our lives.</span><br /><br /><span >Osho once said, “Fear is an absence of love.”&nbsp; If fear-based thoughts are the only things that stand between the love needed to pursue our dreams and live a life of purpose, is it not imperative that we strengthen our mind’s ability to stay focused on the things we love?</span><br /><br /><span >By practicing mindfulness and meditation, we condition our mind to focus on the love in our hearts instead of the fears of our ego. Over time, we can extinguish these fears completely. </span><br /><br /><span >What is love?</span><br /><br /><span >I will share what love is to me:</span></p><ul><li><strong><span >Love is…</span></strong><span ><strong>my family</strong> that has loved me unconditionally throughout my evolution.&nbsp; I recognize now, more than ever before, what a blessing it was to grow up in a family who’s focus was always love.</span><br /></li><li><p><strong><span >Love is… my partner</span></strong><span > who showed me how to open my heart completely and have faith in the unknown future that the universe had in store for me. &nbsp;This has taught me that things work out best when we trust in the plans of the universe instead of our own personal plans.&nbsp;</span><br /></p></li><li><strong><span >Love is… my hometown of Sewanee, Tennessee,</span></strong><span >&nbsp;a small town on a mountain where I spent my childhood enjoying the peace and serenity that can be found in nature.&nbsp; It was also there that I learned that the love between me and my “southern” friends (the majority of whom were white) was more powerful than the hate and racism that existed around us.&nbsp;</span><br /></li><li><strong><span >Love is… my coaches, teammates, and opponents</span></strong><span > who taught me the importance of hard work and that greatness is achievable.</span><br /></li><li><strong><span >Love is… Elon University</span></strong><span >.&nbsp; Elon was a place where I learned to chart my own path, made life-long friends from all over the world, and had professors who recognized my potential well before I did.</span><br /></li><li><strong><span >Love is…</span></strong><span ><strong>my mentors, managers and executives</strong><strong>in the banking and consulting world</strong>&nbsp;who provided me (a non-business major without an MBA) with amazing opportunities to understand how the world’s largest businesses are run at the highest levels.&nbsp; It was here that I learned to have faith in my ability to succeed when presented with the unknown and thrive under pressure.&nbsp;</span><br /></li><li><strong><span >Love is… the great spiritual teachers of the past</span></strong><span > who have left us a blueprint on how to live a life of fulfillment through love and kindness.&nbsp; This same blueprint inspired me to launch Conscious Motivation and live a life of service.</span><br /></li><li><strong><span >Love is…</span></strong><span ><strong>what I feel for</strong><strong>the people who do not like me for prejudiced reasons</strong> because I know that they are suffering and that we would enjoy each other’s company if we had the time to get to know one another.</span><br /></li><li><span ><strong>L</strong><strong>ove is… what I feel for all of the people doing harm in the world</strong> by chasing money,&nbsp;power, and material things without empathy for those they harm.&nbsp; For they will suffer greatly when they regretfully realize that giving to others is the only way to bring about the lasting peace and happiness they desire in their lives.</span><br /></li><li><strong><span >Love is… all of my great friends</span></strong><span > that have become my brothers and sisters in this journey.&nbsp; They inspire me, are always there to help me stay on the path, and remind me of my purpose.</span><br /></li><li><strong><span >Love is… my new tribe of human beings</span></strong><span > that are working to bring love and light to the world.&nbsp; Keep shining your light, as we multiply in numbers every day.</span><br /></li><li><strong><span >Love is… knowing that the world is reawakening to love.</span></strong><span >&nbsp; Regardless of how much negative imagery the media tries to distract us with for ratings and advertising revenue, the momentum will not be stopped.</span><br /></li><li><strong><span >Love is… me.</span></strong><br /></li><li><strong><span >Love is… you.</span></strong><br /></li><li><strong><span >Love is… everything, if we are conscious and allow it to be.</span></strong></li></ul><p><!--EndFragment--></p>
+                <blockquote class="pull-quote"><p>"Love is life. And if you miss love, you miss life."</p><cite>&mdash; Leo Buscaglia</cite></blockquote><p><!--StartFragment--></p><p><span >Love is the essence of the universe. &nbsp;It is the energy that underlies all that is good and just in the world.&nbsp; Though human beings have experienced—and continue to experience—dark times, love has always prevailed.</span><br /><br /><span >However, when we do not strengthen our minds through mindfulness exercises like meditation, we allow our ego's fears to dominate our attention.&nbsp; And when our ego's fears dominate our attention, we lose sight of the much more important things that bring love and happiness into our lives.</span><br /><br /><span >Osho once said, "Fear is an absence of love."&nbsp; If fear-based thoughts are the only things that stand between the love needed to pursue our dreams and live a life of purpose, is it not imperative that we strengthen our mind's ability to stay focused on the things we love?</span><br /><br /><span >By practicing mindfulness and meditation, we condition our mind to focus on the love in our hearts instead of the fears of our ego. Over time, we can extinguish these fears completely. </span><br /><br /><span >What is love?</span><br /><br /><span >I will share what love is to me:</span></p><ul><li><strong><span >Love is…</span></strong><span ><strong>my family</strong> that has loved me unconditionally throughout my evolution.&nbsp; I recognize now, more than ever before, what a blessing it was to grow up in a family who's focus was always love.</span><br /></li><li><p><strong><span >Love is… my partner</span></strong><span > who showed me how to open my heart completely and have faith in the unknown future that the universe had in store for me. &nbsp;This has taught me that things work out best when we trust in the plans of the universe instead of our own personal plans.&nbsp;</span><br /></p></li><li><strong><span >Love is… my hometown of Sewanee, Tennessee,</span></strong><span >&nbsp;a small town on a mountain where I spent my childhood enjoying the peace and serenity that can be found in nature.&nbsp; It was also there that I learned that the love between me and my "southern" friends (the majority of whom were white) was more powerful than the hate and racism that existed around us.&nbsp;</span><br /></li><li><strong><span >Love is… my coaches, teammates, and opponents</span></strong><span > who taught me the importance of hard work and that greatness is achievable.</span><br /></li><li><strong><span >Love is… Elon University</span></strong><span >.&nbsp; Elon was a place where I learned to chart my own path, made life-long friends from all over the world, and had professors who recognized my potential well before I did.</span><br /></li><li><strong><span >Love is…</span></strong><span ><strong>my mentors, managers and executives</strong><strong>in the banking and consulting world</strong>&nbsp;who provided me (a non-business major without an MBA) with amazing opportunities to understand how the world's largest businesses are run at the highest levels.&nbsp; It was here that I learned to have faith in my ability to succeed when presented with the unknown and thrive under pressure.&nbsp;</span><br /></li><li><strong><span >Love is… the great spiritual teachers of the past</span></strong><span > who have left us a blueprint on how to live a life of fulfillment through love and kindness.&nbsp; This same blueprint inspired me to launch Conscious Motivation and live a life of service.</span><br /></li><li><strong><span >Love is…</span></strong><span ><strong>what I feel for</strong><strong>the people who do not like me for prejudiced reasons</strong> because I know that they are suffering and that we would enjoy each other's company if we had the time to get to know one another.</span><br /></li><li><span ><strong>L</strong><strong>ove is… what I feel for all of the people doing harm in the world</strong> by chasing money,&nbsp;power, and material things without empathy for those they harm.&nbsp; For they will suffer greatly when they regretfully realize that giving to others is the only way to bring about the lasting peace and happiness they desire in their lives.</span><br /></li><li><strong><span >Love is… all of my great friends</span></strong><span > that have become my brothers and sisters in this journey.&nbsp; They inspire me, are always there to help me stay on the path, and remind me of my purpose.</span><br /></li><li><strong><span >Love is… my new tribe of human beings</span></strong><span > that are working to bring love and light to the world.&nbsp; Keep shining your light, as we multiply in numbers every day.</span><br /></li><li><strong><span >Love is… knowing that the world is reawakening to love.</span></strong><span >&nbsp; Regardless of how much negative imagery the media tries to distract us with for ratings and advertising revenue, the momentum will not be stopped.</span><br /></li><li><strong><span >Love is… me.</span></strong><br /></li><li><strong><span >Love is… you.</span></strong><br /></li><li><strong><span >Love is… everything, if we are conscious and allow it to be.</span></strong></li></ul><p><!--EndFragment--></p>
             </div>
         </article>
         

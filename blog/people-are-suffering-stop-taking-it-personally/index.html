@@ -52,7 +52,7 @@
             background-color: var(--bone);
             border-bottom: 1px solid #e8dcc8;
             padding: 2rem 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         header h1 {
@@ -79,124 +79,104 @@
             padding: 0 1rem 3rem;
         }
         
-        article {
-            margin-bottom: 4rem;
-        }
-        
         article h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
             line-height: 1.2;
-            color: var(--ash);
         }
         
         .post-meta {
             color: var(--slate);
             font-size: 0.95rem;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e8dcc8;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .post-content {
-            margin-bottom: 3rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            font-size: 16px;
         }
         
         .post-content p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .post-content h2,
-        .post-content h3,
-        .post-content h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--charcoal);
+            margin-bottom: 1.25rem;
         }
         
         .post-content h2 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
         }
         
         .post-content h3 {
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.75rem;
         }
         
-        .post-content h4 {
-            font-size: 1.25rem;
+        .post-content strong {
+            font-weight: 600;
+            color: var(--ash);
         }
         
-        .post-content blockquote {
-            border-left: 4px solid var(--ember);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            color: var(--charcoal);
+        .post-content em {
             font-style: italic;
-        }
-        
-        .post-content ul,
-        .post-content ol {
-            margin: 1.5rem 0 1.5rem 1.5rem;
-        }
-        
-        .post-content li {
-            margin-bottom: 0.75rem;
         }
         
         .post-content a {
             color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(232, 83, 14, 0.3);
-            transition: border-color 0.3s ease;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .post-content a:hover {
-            border-bottom-color: var(--ember);
+            color: var(--ash);
         }
         
-        .post-content img {
-            max-width: 100%;
-            height: auto;
+        /* Pull quotes */
+        .pull-quote {
+            border-left: 3px solid var(--gold);
+            padding-left: 1.5rem;
             margin: 2rem 0;
-            border-radius: 4px;
+            font-style: normal;
         }
         
-        .post-content figure {
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .post-content figcaption {
-            font-size: 0.9rem;
-            color: var(--slate);
-            margin-top: 0.75rem;
+        .pull-quote p {
             font-style: italic;
+            font-size: 1.1em;
+            color: var(--charcoal);
+            margin: 0;
         }
         
-        /* Author Bio Section */
+        .pull-quote cite {
+            display: block;
+            font-size: 0.9em;
+            color: var(--slate);
+            font-style: normal;
+            margin-top: 0.75rem;
+        }
+        
+        /* Author bio section */
         .author-bio {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             align-items: flex-start;
-            padding: 2rem 0;
-            margin: 3rem 0;
-            border-top: 2px solid var(--gold);
-            border-bottom: 1px solid #e8dcc8;
-        }
-        
-        .author-bio-image {
-            flex-shrink: 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e8dcc8;
         }
         
         .author-bio-image img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
             object-fit: cover;
             display: block;
         }
@@ -207,60 +187,60 @@
         
         .author-bio-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: var(--ash);
             margin-bottom: 0.5rem;
         }
         
         .author-bio-text {
             color: var(--charcoal);
+            margin-bottom: 1rem;
             font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 1rem;
         }
         
         .author-bio-links {
             display: flex;
             gap: 1.5rem;
-            font-size: 0.9rem;
         }
         
         .author-bio-links a {
-            color: var(--gold);
+            color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .author-bio-links a:hover {
-            border-bottom-color: var(--gold);
+            color: var(--ash);
         }
         
-        /* Post Navigation */
+        /* Post navigation */
         .post-navigation {
             display: flex;
             justify-content: space-between;
             gap: 2rem;
-            padding: 2rem 0;
-            margin: 3rem 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
             border-top: 1px solid #e8dcc8;
-            border-bottom: 1px solid #e8dcc8;
-            flex-wrap: wrap;
         }
         
-        .nav-prev,
-        .nav-next {
-            color: var(--gold);
+        .post-navigation a {
+            color: var(--ash);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
             font-size: 0.95rem;
+            flex: 1;
+            padding: 1rem;
+            background-color: var(--warmth);
+            border: 1px solid #e8dcc8;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
         
-        .nav-prev:hover,
-        .nav-next:hover {
-            border-bottom-color: var(--gold);
+        .post-navigation a:hover {
+            border-color: var(--ember);
+            background-color: rgba(232, 83, 14, 0.05);
         }
         
         .nav-next {
@@ -372,7 +352,7 @@
                 <span>by Keenan Benjamin</span>
             </div>
             <div class="post-content">
-                <p><!--StartFragment--></p><p>&nbsp;&nbsp;</p><p><span >If we are serious about reducing the amount of suffering we experience, we must make a commitment to not let the negative energy of others rub off on us.</span><br /></p><p><span >In Don Miguel Ruiz’s book, “<em>The Four Agreements</em>”, I learned to “not take anything personally”.&nbsp;&nbsp; This agreement was transformational for me, because it taught me how to let go of things that would have typically upset me for a considerable period of time. </span><br /></p><p><span >Today, we will use ‘road rage’ or anger while driving as an example of something that we should not take personally.&nbsp; Let’s say that somebody is being an inconsiderate driver and cuts you off, blows their horn, and even makes a disrespectful gesture.&nbsp; The vast majority of the time, this person is suffering; they do not know who you are and they are simply angry at an object (your car).&nbsp; </span><br /></p><p><span >If we are not committed to focusing on positive energy, we will let that inconsiderate driver’s actions bruise our ego and ruin the present moment. </span><br /></p><p><span >One day, while driving in Washington, D.C., a man aggressively blew his horn at me while I was backing out of a parking spot. This man was still 100 feet away!</span><br /><span >&nbsp;</span></p><p><span >Needless to say, I lost my temper and let him know how I felt about his rudeness. Here’s the problem: An hour later, my partner asks me, “Are you okay?”. I then realized that she could feel that I had subconsciously not let go of the negative energy from that thirty-second experience with the inconsiderate driver!</span></p><p><!--StartFragment--><br /><span >My partner and I were having a great Sunday morning up until that point, and I allowed somebody that I didn’t know—and who did not know me—to ruin an hour of the precious time we had together in our long-distance relationship.&nbsp; </span></p><p><br /><span >In that moment, I made a commitment to learn from the situation and to not let somebody else’s negative energy take away from my personal happiness and the joy of the present moment.</span><br /></p><p><span >From my spiritual practice, I know that suffering is the cause of other people’s negative actions.&nbsp; (<em>Seriously, how many genuinely happy people do you see doing unkind things?</em>) Many of us carry seeds of negativity within us as a result of experiences that we found unpleasant or were harmful to us. This causes suffering that—unless we are mindful—we continue to carry into the rest of our lives.</span><br /></p><p><span >In that situation with the inconsiderate driver, I could have made one of two decisions:</span></p><p><!--[if !supportLists]--><span >1)<span >&nbsp;</span></span><strong><span ><span >&nbsp;&nbsp; </span></span></strong><!--[endif]--><span >Allowed the driver’s action to bruise my ego; resulting in me losing my cool and forgetting the beauty of the present moment. </span></p><p><span >or…</span></p><p><!--[if !supportLists]--><span >2)<span >&nbsp;&nbsp;</span></span><strong><span ><span >&nbsp; </span></span></strong><!--[endif]--><span >Taken a deep breath and showed the driver love and compassion because I knew he was suffering. For example, I could have smiled at him gently and brought positive energy into his life.</span></p><p><br /><span >If I had chosen decision 2, I would have been able to continue focusing on the positive in my life, and brought some positivity into his life. Because, I chose decision 1, I functioned as a channel through which the driver’s negative energy was transferred first onto me and then onto my partner, who could have transferred it further if she were not mindful!<br />&nbsp;</span></p><p><span >If we want to make the world a better place, we have to learn to show compassion for those who are suffering. We can heal the world through love and kindness.<br />&nbsp;</span></p><p><span >I leave you with a quote:</span></p><figure ><blockquote data-animation-override><span>“</span>“Darkness cannot drive out darkness;<br/>only light can do that.<br/>Hate cannot drive out hate;<br/>only love can do that.”<br/><br/>-  Martin Luther King Jr.<span>”</span></blockquote></figure>
+                <p><!--StartFragment--></p><p>&nbsp;&nbsp;</p><p><span >If we are serious about reducing the amount of suffering we experience, we must make a commitment to not let the negative energy of others rub off on us.</span><br /></p><p><span >In Don Miguel Ruiz's book, "<em>The Four Agreements</em>", I learned to "not take anything personally".&nbsp;&nbsp; This agreement was transformational for me, because it taught me how to let go of things that would have typically upset me for a considerable period of time. </span><br /></p><p><span >Today, we will use 'road rage' or anger while driving as an example of something that we should not take personally.&nbsp; Let's say that somebody is being an inconsiderate driver and cuts you off, blows their horn, and even makes a disrespectful gesture.&nbsp; The vast majority of the time, this person is suffering; they do not know who you are and they are simply angry at an object (your car).&nbsp; </span><br /></p><p><span >If we are not committed to focusing on positive energy, we will let that inconsiderate driver's actions bruise our ego and ruin the present moment. </span><br /></p><p><span >One day, while driving in Washington, D.C., a man aggressively blew his horn at me while I was backing out of a parking spot. This man was still 100 feet away!</span><br /><span >&nbsp;</span></p><p><span >Needless to say, I lost my temper and let him know how I felt about his rudeness. Here's the problem: An hour later, my partner asks me, "Are you okay?". I then realized that she could feel that I had subconsciously not let go of the negative energy from that thirty-second experience with the inconsiderate driver!</span></p><p><!--StartFragment--><br /><span >My partner and I were having a great Sunday morning up until that point, and I allowed somebody that I didn't know—and who did not know me—to ruin an hour of the precious time we had together in our long-distance relationship.&nbsp; </span></p><p><br /><span >In that moment, I made a commitment to learn from the situation and to not let somebody else's negative energy take away from my personal happiness and the joy of the present moment.</span><br /></p><p><span >From my spiritual practice, I know that suffering is the cause of other people's negative actions.&nbsp; (<em>Seriously, how many genuinely happy people do you see doing unkind things?</em>) Many of us carry seeds of negativity within us as a result of experiences that we found unpleasant or were harmful to us. This causes suffering that—unless we are mindful—we continue to carry into the rest of our lives.</span><br /></p><p><span >In that situation with the inconsiderate driver, I could have made one of two decisions:</span></p><p><!--[if !supportLists]--><span >1)<span >&nbsp;</span></span><strong><span ><span >&nbsp;&nbsp; </span></span></strong><!--[endif]--><span >Allowed the driver's action to bruise my ego; resulting in me losing my cool and forgetting the beauty of the present moment. </span></p><p><span >or…</span></p><p><!--[if !supportLists]--><span >2)<span >&nbsp;&nbsp;</span></span><strong><span ><span >&nbsp; </span></span></strong><!--[endif]--><span >Taken a deep breath and showed the driver love and compassion because I knew he was suffering. For example, I could have smiled at him gently and brought positive energy into his life.</span></p><p><br /><span >If I had chosen decision 2, I would have been able to continue focusing on the positive in my life, and brought some positivity into his life. Because, I chose decision 1, I functioned as a channel through which the driver's negative energy was transferred first onto me and then onto my partner, who could have transferred it further if she were not mindful!<br />&nbsp;</span></p><p><span >If we want to make the world a better place, we have to learn to show compassion for those who are suffering. We can heal the world through love and kindness.<br />&nbsp;</span></p><p><span >I leave you with a quote:</span></p><figure ><blockquote class="pull-quote"><p><span>"</span>"Darkness cannot drive out darkness;<br/>only light can do that.<br/>Hate cannot drive out hate;<br/>only love can do that."<span>"</span></p><cite>&mdash; Martin Luther King Jr.</cite></blockquote></figure>
             </div>
         </article>
         

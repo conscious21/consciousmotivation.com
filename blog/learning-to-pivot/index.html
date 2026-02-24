@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning to Pivot | Conscious Motivation</title>
-    <meta name="description" content="– John C. MaxwellThe path towards success in life rarely involves walking a straight line. Often, our path includes twists and turns that force us to...">
+    <meta name="description" content="&quot;Failed plans should not be interpreted as a failed vision. Visions don&#x27;t change, they are only refined. Plans rarely stay the same, and are scrapped...">
     
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Learning to Pivot">
-    <meta property="og:description" content="– John C. MaxwellThe path towards success in life rarely involves walking a straight line. Often, our path includes twists and turns that force us to...">
+    <meta property="og:description" content="&quot;Failed plans should not be interpreted as a failed vision. Visions don&#x27;t change, they are only refined. Plans rarely stay the same, and are scrapped...">
     <meta property="og:url" content="https://consciousmotivation.com/blog/learning-to-pivot">
     <meta property="og:site_name" content="Conscious Motivation">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Learning to Pivot">
-    <meta name="twitter:description" content="– John C. MaxwellThe path towards success in life rarely involves walking a straight line. Often, our path includes twists and turns that force us to...">
+    <meta name="twitter:description" content="&quot;Failed plans should not be interpreted as a failed vision. Visions don&#x27;t change, they are only refined. Plans rarely stay the same, and are scrapped...">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +52,7 @@
             background-color: var(--bone);
             border-bottom: 1px solid #e8dcc8;
             padding: 2rem 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         header h1 {
@@ -79,124 +79,104 @@
             padding: 0 1rem 3rem;
         }
         
-        article {
-            margin-bottom: 4rem;
-        }
-        
         article h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
             line-height: 1.2;
-            color: var(--ash);
         }
         
         .post-meta {
             color: var(--slate);
             font-size: 0.95rem;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e8dcc8;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .post-content {
-            margin-bottom: 3rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            font-size: 16px;
         }
         
         .post-content p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .post-content h2,
-        .post-content h3,
-        .post-content h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--charcoal);
+            margin-bottom: 1.25rem;
         }
         
         .post-content h2 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
         }
         
         .post-content h3 {
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.75rem;
         }
         
-        .post-content h4 {
-            font-size: 1.25rem;
+        .post-content strong {
+            font-weight: 600;
+            color: var(--ash);
         }
         
-        .post-content blockquote {
-            border-left: 4px solid var(--ember);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            color: var(--charcoal);
+        .post-content em {
             font-style: italic;
-        }
-        
-        .post-content ul,
-        .post-content ol {
-            margin: 1.5rem 0 1.5rem 1.5rem;
-        }
-        
-        .post-content li {
-            margin-bottom: 0.75rem;
         }
         
         .post-content a {
             color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(232, 83, 14, 0.3);
-            transition: border-color 0.3s ease;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .post-content a:hover {
-            border-bottom-color: var(--ember);
+            color: var(--ash);
         }
         
-        .post-content img {
-            max-width: 100%;
-            height: auto;
+        /* Pull quotes */
+        .pull-quote {
+            border-left: 3px solid var(--gold);
+            padding-left: 1.5rem;
             margin: 2rem 0;
-            border-radius: 4px;
+            font-style: normal;
         }
         
-        .post-content figure {
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .post-content figcaption {
-            font-size: 0.9rem;
-            color: var(--slate);
-            margin-top: 0.75rem;
+        .pull-quote p {
             font-style: italic;
+            font-size: 1.1em;
+            color: var(--charcoal);
+            margin: 0;
         }
         
-        /* Author Bio Section */
+        .pull-quote cite {
+            display: block;
+            font-size: 0.9em;
+            color: var(--slate);
+            font-style: normal;
+            margin-top: 0.75rem;
+        }
+        
+        /* Author bio section */
         .author-bio {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             align-items: flex-start;
-            padding: 2rem 0;
-            margin: 3rem 0;
-            border-top: 2px solid var(--gold);
-            border-bottom: 1px solid #e8dcc8;
-        }
-        
-        .author-bio-image {
-            flex-shrink: 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e8dcc8;
         }
         
         .author-bio-image img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
             object-fit: cover;
             display: block;
         }
@@ -207,60 +187,60 @@
         
         .author-bio-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: var(--ash);
             margin-bottom: 0.5rem;
         }
         
         .author-bio-text {
             color: var(--charcoal);
+            margin-bottom: 1rem;
             font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 1rem;
         }
         
         .author-bio-links {
             display: flex;
             gap: 1.5rem;
-            font-size: 0.9rem;
         }
         
         .author-bio-links a {
-            color: var(--gold);
+            color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .author-bio-links a:hover {
-            border-bottom-color: var(--gold);
+            color: var(--ash);
         }
         
-        /* Post Navigation */
+        /* Post navigation */
         .post-navigation {
             display: flex;
             justify-content: space-between;
             gap: 2rem;
-            padding: 2rem 0;
-            margin: 3rem 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
             border-top: 1px solid #e8dcc8;
-            border-bottom: 1px solid #e8dcc8;
-            flex-wrap: wrap;
         }
         
-        .nav-prev,
-        .nav-next {
-            color: var(--gold);
+        .post-navigation a {
+            color: var(--ash);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
             font-size: 0.95rem;
+            flex: 1;
+            padding: 1rem;
+            background-color: var(--warmth);
+            border: 1px solid #e8dcc8;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
         
-        .nav-prev:hover,
-        .nav-next:hover {
-            border-bottom-color: var(--gold);
+        .post-navigation a:hover {
+            border-color: var(--ember);
+            background-color: rgba(232, 83, 14, 0.05);
         }
         
         .nav-next {
@@ -372,7 +352,7 @@
                 <span>by Keenan Benjamin</span>
             </div>
             <div class="post-content">
-                <figure ><blockquote  >&mdash; John C. Maxwell</figcaption></figure><p><!--StartFragment--><span >The path towards success in life rarely involves walking a straight line.&nbsp; &nbsp;</span></p><p><span >Often, our path includes twists and turns that force us to refine and redefine our plans. </span></p><p><span >These twists and turns create resistance that sometimes triggers a cycle of frustration.&nbsp;</span></p><p><span >However, we must recognize that it is normal for plans to change; and those who know how to pivot spare themselves the extended cycle of frustration.&nbsp;</span></p><p><span >Pivoting is an art that ensures that we always pursue the best opportunity that aligns with our vision, regardless of our previous plan.&nbsp;</span></p><p><span >By reading this blog, you will learn how to pivot when experiencing resistance in the form of the Universe guiding you down a different path than the plan you put in place.<br />&nbsp;</span></p><p><strong><span >Understanding Resistance to Plan</span></strong><strong><span >&nbsp;</span></strong></p><p><!--StartFragment--></p><p><span >The process of achieving all personal and professional goals begins with a vision.&nbsp; And once the vision is in place, we come up with a plan.</span></p><p><span >When I launched Conscious Motivation in April 2016, my vision was to use my knowledge and experiences to help others overcome their suffering. My plan was to build the website from a blog into a full-service platform sharing daily positive energy-related articles, photos, and videos curated from around the Internet.</span></p><p><span >After six months of successfully executing the launch of the blog, I decided to transition my focus to launching the updated version of the website.&nbsp;</span></p><p><span >But over the last few months, I found myself experiencing internal resistance—lacking the expected enthusiasm and focus as I prepared to launch the full-service platform.&nbsp;</span></p><p><span >This lack of interest created lots of frustration because I began looking at my daily tasks as a chore more than doing what I loved.&nbsp;</span></p><p><span >I believe that we experience resistance for two reasons:</span></p><p><!--[if !supportLists]--><span >1)<span >&nbsp;&nbsp; </span></span><!--[endif]--><span >Resistance forces us to expand and grow so that we can overcome challenges.</span></p><p><!--[if !supportLists]--><span >2)<span >&nbsp;&nbsp; </span></span><!--[endif]--><span >Resistance redirects us from the personal plan that we currently have in place and towards the Universe’s plan that better aligns with our vision.</span></p><p><!--StartFragment--><span >In my case, I was unaware that the Universe was pushing me away from my personal plan because it was not directly aligning with my vision.</span><!--EndFragment--><br /></p><p><strong><span >Refining Path: Aligning to Vision</span></strong></p><p><span >As the weeks went by, I decided to let go of the frustration caused by my lack of enthusiasm, and have faith in one of my universal truths:&nbsp; </span></p><ul ><li><em><span >You are better off remaining still if you are experiencing resistance to a personal plan, and the only thing forcing you to take action is an artificial date that you put in place for yourself.&nbsp;</span></em></li></ul><p><span >My ego felt pressure to launch the new website because I had previously shared a non-binding date with my family and friends.&nbsp; </span></p><p><span >However, I had to recognize the truth: it would be better off to delay the launch because there was a chance my artificial date did not align with the Universe’s divine plan for me.&nbsp;</span></p><p><span >Instead, I focused my energy on spending quality time with my family and friends while home for the holidays in the U.S.A.</span></p><p><span >During that period, I made a day trip to Atlanta, Georgia to see Mark—one of my “brothers from another mother" and owner of a multi-million dollar technology start-up.&nbsp; Mark sensed the lack of complete excitement I had previously shown during our Conscious Motivation related conversations.&nbsp;</span></p><p><!--StartFragment--></p><p><span >Then he explained to me that the key to his success was the ability to pivot away from what they planned to do with the business when better opportunities presented themselves.</span><!--EndFragment--><span >&nbsp;</span></p><p><span >Mark asked me one simple question, “Does the full-service website align best with your divine purpose and why you created Conscious Motivation or is there another opportunity where you would rather focus your energy?”</span></p><p><span >Though the question caught me off guard, the answer was clear: “No.”</span></p><p><span >See, Mark knew what made me special was my extraordinary ability to coach people through life’s challenges—whether personal or professional.&nbsp; &nbsp;</span></p><p><span >And it was that strength that I had been grooming over the last six months while piloting a coaching business with one client in Los Angeles, California and another client in New Delhi, India.</span><br /><strong><span >&nbsp;</span></strong></p><p><strong><span >Aligning with the Divine Plan</span></strong></p><p><span >The conversation in Atlanta had a profound impact on me.&nbsp; Because by learning how to pivot, I could always ensure I stayed aligned with my vision and purpose for Conscious Motivation.&nbsp; </span></p><p><span >A moment only made possible because I had let go of my ego’s desire to force the launch of the full-service website and was willing to be patient long enough to see what the Universe’s divine plan was for me.</span></p><p><span >Though I would have been successful doing something else, coaching is the opportunity that excites me and aligns with my purpose for creating Conscious Motivation.</span><br /><br /><span >There is a divine plan for all of us, which is why we must learn to pivot when opportunity calls.</span></p><p><!--EndFragment--></p>
+                <blockquote class="pull-quote"><p>"Failed plans should not be interpreted as a failed vision. Visions don't change, they are only refined. Plans rarely stay the same, and are scrapped or adjusted as needed. Be stubborn about the vision, but flexible with your plan."</p><cite>&mdash; John C. Maxwell</cite></blockquote><p><!--StartFragment--><span >The path towards success in life rarely involves walking a straight line.&nbsp; &nbsp;</span></p><p><span >Often, our path includes twists and turns that force us to refine and redefine our plans. </span></p><p><span >These twists and turns create resistance that sometimes triggers a cycle of frustration.&nbsp;</span></p><p><span >However, we must recognize that it is normal for plans to change; and those who know how to pivot spare themselves the extended cycle of frustration.&nbsp;</span></p><p><span >Pivoting is an art that ensures that we always pursue the best opportunity that aligns with our vision, regardless of our previous plan.&nbsp;</span></p><p><span >By reading this blog, you will learn how to pivot when experiencing resistance in the form of the Universe guiding you down a different path than the plan you put in place.<br />&nbsp;</span></p><p><strong><span >Understanding Resistance to Plan</span></strong><strong><span >&nbsp;</span></strong></p><p><!--StartFragment--></p><p><span >The process of achieving all personal and professional goals begins with a vision.&nbsp; And once the vision is in place, we come up with a plan.</span></p><p><span >When I launched Conscious Motivation in April 2016, my vision was to use my knowledge and experiences to help others overcome their suffering. My plan was to build the website from a blog into a full-service platform sharing daily positive energy-related articles, photos, and videos curated from around the Internet.</span></p><p><span >After six months of successfully executing the launch of the blog, I decided to transition my focus to launching the updated version of the website.&nbsp;</span></p><p><span >But over the last few months, I found myself experiencing internal resistance—lacking the expected enthusiasm and focus as I prepared to launch the full-service platform.&nbsp;</span></p><p><span >This lack of interest created lots of frustration because I began looking at my daily tasks as a chore more than doing what I loved.&nbsp;</span></p><p><span >I believe that we experience resistance for two reasons:</span></p><p><!--[if !supportLists]--><span >1)<span >&nbsp;&nbsp; </span></span><!--[endif]--><span >Resistance forces us to expand and grow so that we can overcome challenges.</span></p><p><!--[if !supportLists]--><span >2)<span >&nbsp;&nbsp; </span></span><!--[endif]--><span >Resistance redirects us from the personal plan that we currently have in place and towards the Universe's plan that better aligns with our vision.</span></p><p><!--StartFragment--><span >In my case, I was unaware that the Universe was pushing me away from my personal plan because it was not directly aligning with my vision.</span><!--EndFragment--><br /></p><p><strong><span >Refining Path: Aligning to Vision</span></strong></p><p><span >As the weeks went by, I decided to let go of the frustration caused by my lack of enthusiasm, and have faith in one of my universal truths:&nbsp; </span></p><ul ><li><em><span >You are better off remaining still if you are experiencing resistance to a personal plan, and the only thing forcing you to take action is an artificial date that you put in place for yourself.&nbsp;</span></em></li></ul><p><span >My ego felt pressure to launch the new website because I had previously shared a non-binding date with my family and friends.&nbsp; </span></p><p><span >However, I had to recognize the truth: it would be better off to delay the launch because there was a chance my artificial date did not align with the Universe's divine plan for me.&nbsp;</span></p><p><span >Instead, I focused my energy on spending quality time with my family and friends while home for the holidays in the U.S.A.</span></p><p><span >During that period, I made a day trip to Atlanta, Georgia to see Mark—one of my "brothers from another mother" and owner of a multi-million dollar technology start-up.&nbsp; Mark sensed the lack of complete excitement I had previously shown during our Conscious Motivation related conversations.&nbsp;</span></p><p><!--StartFragment--></p><p><span >Then he explained to me that the key to his success was the ability to pivot away from what they planned to do with the business when better opportunities presented themselves.</span><!--EndFragment--><span >&nbsp;</span></p><p><span >Mark asked me one simple question, "Does the full-service website align best with your divine purpose and why you created Conscious Motivation or is there another opportunity where you would rather focus your energy?"</span></p><p><span >Though the question caught me off guard, the answer was clear: "No."</span></p><p><span >See, Mark knew what made me special was my extraordinary ability to coach people through life's challenges—whether personal or professional.&nbsp; &nbsp;</span></p><p><span >And it was that strength that I had been grooming over the last six months while piloting a coaching business with one client in Los Angeles, California and another client in New Delhi, India.</span><br /><strong><span >&nbsp;</span></strong></p><p><strong><span >Aligning with the Divine Plan</span></strong></p><p><span >The conversation in Atlanta had a profound impact on me.&nbsp; Because by learning how to pivot, I could always ensure I stayed aligned with my vision and purpose for Conscious Motivation.&nbsp; </span></p><p><span >A moment only made possible because I had let go of my ego's desire to force the launch of the full-service website and was willing to be patient long enough to see what the Universe's divine plan was for me.</span></p><p><span >Though I would have been successful doing something else, coaching is the opportunity that excites me and aligns with my purpose for creating Conscious Motivation.</span><br /><br /><span >There is a divine plan for all of us, which is why we must learn to pivot when opportunity calls.</span></p><p><!--EndFragment--></p>
             </div>
         </article>
         

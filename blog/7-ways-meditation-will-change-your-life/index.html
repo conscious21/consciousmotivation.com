@@ -52,7 +52,7 @@
             background-color: var(--bone);
             border-bottom: 1px solid #e8dcc8;
             padding: 2rem 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         header h1 {
@@ -79,124 +79,104 @@
             padding: 0 1rem 3rem;
         }
         
-        article {
-            margin-bottom: 4rem;
-        }
-        
         article h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
             line-height: 1.2;
-            color: var(--ash);
         }
         
         .post-meta {
             color: var(--slate);
             font-size: 0.95rem;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e8dcc8;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .post-content {
-            margin-bottom: 3rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            font-size: 16px;
         }
         
         .post-content p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .post-content h2,
-        .post-content h3,
-        .post-content h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--charcoal);
+            margin-bottom: 1.25rem;
         }
         
         .post-content h2 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
         }
         
         .post-content h3 {
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.75rem;
         }
         
-        .post-content h4 {
-            font-size: 1.25rem;
+        .post-content strong {
+            font-weight: 600;
+            color: var(--ash);
         }
         
-        .post-content blockquote {
-            border-left: 4px solid var(--ember);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            color: var(--charcoal);
+        .post-content em {
             font-style: italic;
-        }
-        
-        .post-content ul,
-        .post-content ol {
-            margin: 1.5rem 0 1.5rem 1.5rem;
-        }
-        
-        .post-content li {
-            margin-bottom: 0.75rem;
         }
         
         .post-content a {
             color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(232, 83, 14, 0.3);
-            transition: border-color 0.3s ease;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .post-content a:hover {
-            border-bottom-color: var(--ember);
+            color: var(--ash);
         }
         
-        .post-content img {
-            max-width: 100%;
-            height: auto;
+        /* Pull quotes */
+        .pull-quote {
+            border-left: 3px solid var(--gold);
+            padding-left: 1.5rem;
             margin: 2rem 0;
-            border-radius: 4px;
+            font-style: normal;
         }
         
-        .post-content figure {
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .post-content figcaption {
-            font-size: 0.9rem;
-            color: var(--slate);
-            margin-top: 0.75rem;
+        .pull-quote p {
             font-style: italic;
+            font-size: 1.1em;
+            color: var(--charcoal);
+            margin: 0;
         }
         
-        /* Author Bio Section */
+        .pull-quote cite {
+            display: block;
+            font-size: 0.9em;
+            color: var(--slate);
+            font-style: normal;
+            margin-top: 0.75rem;
+        }
+        
+        /* Author bio section */
         .author-bio {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             align-items: flex-start;
-            padding: 2rem 0;
-            margin: 3rem 0;
-            border-top: 2px solid var(--gold);
-            border-bottom: 1px solid #e8dcc8;
-        }
-        
-        .author-bio-image {
-            flex-shrink: 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e8dcc8;
         }
         
         .author-bio-image img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
             object-fit: cover;
             display: block;
         }
@@ -207,60 +187,60 @@
         
         .author-bio-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: var(--ash);
             margin-bottom: 0.5rem;
         }
         
         .author-bio-text {
             color: var(--charcoal);
+            margin-bottom: 1rem;
             font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 1rem;
         }
         
         .author-bio-links {
             display: flex;
             gap: 1.5rem;
-            font-size: 0.9rem;
         }
         
         .author-bio-links a {
-            color: var(--gold);
+            color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .author-bio-links a:hover {
-            border-bottom-color: var(--gold);
+            color: var(--ash);
         }
         
-        /* Post Navigation */
+        /* Post navigation */
         .post-navigation {
             display: flex;
             justify-content: space-between;
             gap: 2rem;
-            padding: 2rem 0;
-            margin: 3rem 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
             border-top: 1px solid #e8dcc8;
-            border-bottom: 1px solid #e8dcc8;
-            flex-wrap: wrap;
         }
         
-        .nav-prev,
-        .nav-next {
-            color: var(--gold);
+        .post-navigation a {
+            color: var(--ash);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
             font-size: 0.95rem;
+            flex: 1;
+            padding: 1rem;
+            background-color: var(--warmth);
+            border: 1px solid #e8dcc8;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
         
-        .nav-prev:hover,
-        .nav-next:hover {
-            border-bottom-color: var(--gold);
+        .post-navigation a:hover {
+            border-color: var(--ember);
+            background-color: rgba(232, 83, 14, 0.05);
         }
         
         .nav-next {
@@ -372,7 +352,7 @@
                 <span>by Keenan Benjamin</span>
             </div>
             <div class="post-content">
-                <p><!--StartFragment--></p><p><!--StartFragment--></p><p><!--StartFragment--></p><p><!--StartFragment--></p><p><!--StartFragment--></p><p><span >Since launching Conscious Motivation, we have received many heartwarming messages from people inspired to pursue their dreams but still fearful about making the jump.</span><br /></p><p><span >Do not feel discouraged.&nbsp; It took me several months to clear my mind of the thoughts that were not serving me, so that I could begin building the courage and will-power to believe that my dreams were possible.</span><br /></p><p><span >The key to clearing our minds of self-limiting thoughts is meditation.&nbsp; By continuously shining our light of awareness on those negative thoughts, we will be able to bring them out of the darkness. And, over time, they will fade away.</span><br /></p><p><span >Whatever your goals in life may be, a daily meditation practice will make them more easily attainable.&nbsp; Here is a short list of the benefits of meditation:</span></p><p><em><span >1)&nbsp;&nbsp;&nbsp;Happiness:&nbsp; Meditation increases oxytocin (the “love molecule”) in the body and enables us to feel more connected to everything and everyone around us.</span></em><br /></p><p><em><span >2)&nbsp;&nbsp;&nbsp;Anxiety &amp; Stress:&nbsp; Meditation decreases cortisol (the anxiety &amp; stress hormone) in the body and thereby allows our nervous systems to relax.</span></em><br /></p><p><em><span >3)&nbsp;&nbsp;&nbsp;Communication:</span></em><span >&nbsp;<em>Meditation enables us to speak more fluidly and from the heart, without our ego’s self-conscious thoughts clouding our mind.</em></span><br /></p><p><span >4)&nbsp;&nbsp;&nbsp;<em>Focus:</em>&nbsp;<em>Meditation brings focus by building our ability to concentrate and enabling us to give attention to our most important tasks.</em></span><br /></p><p><span >5)&nbsp;&nbsp;&nbsp;<em>Productivity:</em>&nbsp;<em>Meditation increases our productivity by increasing our focus on the things that matter.&nbsp;</em></span><br /></p><p><span >6)&nbsp;&nbsp;&nbsp;<em>Sleep:</em>&nbsp;<em>Meditation brings better sleep by ridding us of the negative thoughts that follow us into bed</em>.</span><br /></p><p><span >7)&nbsp;&nbsp;&nbsp;<em>Intuition:</em>&nbsp;<em>Meditation makes us more intuitive by giving us the ability to be present in every moment and thereby attuned to the signs guiding us toward our divine purpose.</em></span></p><p><span >&nbsp;</span></p><p><span ><!--EndFragment--></span></p><p><em><!--EndFragment--></em></p><p><em><!--EndFragment--></em></p><p><em><span ><!--EndFragment--></span></em><!--EndFragment--></p>
+                <p><!--StartFragment--></p><p><!--StartFragment--></p><p><!--StartFragment--></p><p><!--StartFragment--></p><p><!--StartFragment--></p><p><span >Since launching Conscious Motivation, we have received many heartwarming messages from people inspired to pursue their dreams but still fearful about making the jump.</span><br /></p><p><span >Do not feel discouraged.&nbsp; It took me several months to clear my mind of the thoughts that were not serving me, so that I could begin building the courage and will-power to believe that my dreams were possible.</span><br /></p><p><span >The key to clearing our minds of self-limiting thoughts is meditation.&nbsp; By continuously shining our light of awareness on those negative thoughts, we will be able to bring them out of the darkness. And, over time, they will fade away.</span><br /></p><p><span >Whatever your goals in life may be, a daily meditation practice will make them more easily attainable.&nbsp; Here is a short list of the benefits of meditation:</span></p><p><em><span >1)&nbsp;&nbsp;&nbsp;Happiness:&nbsp; Meditation increases oxytocin (the "love molecule") in the body and enables us to feel more connected to everything and everyone around us.</span></em><br /></p><p><em><span >2)&nbsp;&nbsp;&nbsp;Anxiety &amp; Stress:&nbsp; Meditation decreases cortisol (the anxiety &amp; stress hormone) in the body and thereby allows our nervous systems to relax.</span></em><br /></p><p><em><span >3)&nbsp;&nbsp;&nbsp;Communication:</span></em><span >&nbsp;<em>Meditation enables us to speak more fluidly and from the heart, without our ego's self-conscious thoughts clouding our mind.</em></span><br /></p><p><span >4)&nbsp;&nbsp;&nbsp;<em>Focus:</em>&nbsp;<em>Meditation brings focus by building our ability to concentrate and enabling us to give attention to our most important tasks.</em></span><br /></p><p><span >5)&nbsp;&nbsp;&nbsp;<em>Productivity:</em>&nbsp;<em>Meditation increases our productivity by increasing our focus on the things that matter.&nbsp;</em></span><br /></p><p><span >6)&nbsp;&nbsp;&nbsp;<em>Sleep:</em>&nbsp;<em>Meditation brings better sleep by ridding us of the negative thoughts that follow us into bed</em>.</span><br /></p><p><span >7)&nbsp;&nbsp;&nbsp;<em>Intuition:</em>&nbsp;<em>Meditation makes us more intuitive by giving us the ability to be present in every moment and thereby attuned to the signs guiding us toward our divine purpose.</em></span></p><p><span >&nbsp;</span></p><p><span ><!--EndFragment--></span></p><p><em><!--EndFragment--></em></p><p><em><!--EndFragment--></em></p><p><em><span ><!--EndFragment--></span></em><!--EndFragment--></p>
             </div>
         </article>
         

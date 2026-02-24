@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Unreal Others | Conscious Motivation</title>
-    <meta name="description" content="– Mahatma GandhiThis week, we once again witnessed an extreme act of violence that released immense suffering into the world. In the wake of this...">
+    <meta name="description" content="&quot;You must not lose faith in humanity. Humanity is an ocean; if a few drops of the ocean are dirty, the ocean does not become dirty.&quot;– Mahatma...">
     
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="The Unreal Others">
-    <meta property="og:description" content="– Mahatma GandhiThis week, we once again witnessed an extreme act of violence that released immense suffering into the world. In the wake of this...">
+    <meta property="og:description" content="&quot;You must not lose faith in humanity. Humanity is an ocean; if a few drops of the ocean are dirty, the ocean does not become dirty.&quot;– Mahatma...">
     <meta property="og:url" content="https://consciousmotivation.com/blog/the-unreal-others">
     <meta property="og:site_name" content="Conscious Motivation">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="The Unreal Others">
-    <meta name="twitter:description" content="– Mahatma GandhiThis week, we once again witnessed an extreme act of violence that released immense suffering into the world. In the wake of this...">
+    <meta name="twitter:description" content="&quot;You must not lose faith in humanity. Humanity is an ocean; if a few drops of the ocean are dirty, the ocean does not become dirty.&quot;– Mahatma...">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +52,7 @@
             background-color: var(--bone);
             border-bottom: 1px solid #e8dcc8;
             padding: 2rem 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         header h1 {
@@ -79,124 +79,104 @@
             padding: 0 1rem 3rem;
         }
         
-        article {
-            margin-bottom: 4rem;
-        }
-        
         article h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
             line-height: 1.2;
-            color: var(--ash);
         }
         
         .post-meta {
             color: var(--slate);
             font-size: 0.95rem;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e8dcc8;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .post-content {
-            margin-bottom: 3rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            font-size: 16px;
         }
         
         .post-content p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .post-content h2,
-        .post-content h3,
-        .post-content h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--charcoal);
+            margin-bottom: 1.25rem;
         }
         
         .post-content h2 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
         }
         
         .post-content h3 {
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.75rem;
         }
         
-        .post-content h4 {
-            font-size: 1.25rem;
+        .post-content strong {
+            font-weight: 600;
+            color: var(--ash);
         }
         
-        .post-content blockquote {
-            border-left: 4px solid var(--ember);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            color: var(--charcoal);
+        .post-content em {
             font-style: italic;
-        }
-        
-        .post-content ul,
-        .post-content ol {
-            margin: 1.5rem 0 1.5rem 1.5rem;
-        }
-        
-        .post-content li {
-            margin-bottom: 0.75rem;
         }
         
         .post-content a {
             color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(232, 83, 14, 0.3);
-            transition: border-color 0.3s ease;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .post-content a:hover {
-            border-bottom-color: var(--ember);
+            color: var(--ash);
         }
         
-        .post-content img {
-            max-width: 100%;
-            height: auto;
+        /* Pull quotes */
+        .pull-quote {
+            border-left: 3px solid var(--gold);
+            padding-left: 1.5rem;
             margin: 2rem 0;
-            border-radius: 4px;
+            font-style: normal;
         }
         
-        .post-content figure {
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .post-content figcaption {
-            font-size: 0.9rem;
-            color: var(--slate);
-            margin-top: 0.75rem;
+        .pull-quote p {
             font-style: italic;
+            font-size: 1.1em;
+            color: var(--charcoal);
+            margin: 0;
         }
         
-        /* Author Bio Section */
+        .pull-quote cite {
+            display: block;
+            font-size: 0.9em;
+            color: var(--slate);
+            font-style: normal;
+            margin-top: 0.75rem;
+        }
+        
+        /* Author bio section */
         .author-bio {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             align-items: flex-start;
-            padding: 2rem 0;
-            margin: 3rem 0;
-            border-top: 2px solid var(--gold);
-            border-bottom: 1px solid #e8dcc8;
-        }
-        
-        .author-bio-image {
-            flex-shrink: 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e8dcc8;
         }
         
         .author-bio-image img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
             object-fit: cover;
             display: block;
         }
@@ -207,60 +187,60 @@
         
         .author-bio-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: var(--ash);
             margin-bottom: 0.5rem;
         }
         
         .author-bio-text {
             color: var(--charcoal);
+            margin-bottom: 1rem;
             font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 1rem;
         }
         
         .author-bio-links {
             display: flex;
             gap: 1.5rem;
-            font-size: 0.9rem;
         }
         
         .author-bio-links a {
-            color: var(--gold);
+            color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .author-bio-links a:hover {
-            border-bottom-color: var(--gold);
+            color: var(--ash);
         }
         
-        /* Post Navigation */
+        /* Post navigation */
         .post-navigation {
             display: flex;
             justify-content: space-between;
             gap: 2rem;
-            padding: 2rem 0;
-            margin: 3rem 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
             border-top: 1px solid #e8dcc8;
-            border-bottom: 1px solid #e8dcc8;
-            flex-wrap: wrap;
         }
         
-        .nav-prev,
-        .nav-next {
-            color: var(--gold);
+        .post-navigation a {
+            color: var(--ash);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
             font-size: 0.95rem;
+            flex: 1;
+            padding: 1rem;
+            background-color: var(--warmth);
+            border: 1px solid #e8dcc8;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
         
-        .nav-prev:hover,
-        .nav-next:hover {
-            border-bottom-color: var(--gold);
+        .post-navigation a:hover {
+            border-color: var(--ember);
+            background-color: rgba(232, 83, 14, 0.05);
         }
         
         .nav-next {
@@ -372,7 +352,7 @@
                 <span>by Keenan Benjamin</span>
             </div>
             <div class="post-content">
-                <figure ><blockquote  >&mdash; Mahatma Gandhi</figcaption></figure><p><!--StartFragment--></p><p><span >This week, we once again witnessed an extreme act of violence that released immense suffering into the world.&nbsp;<br /><br />In the wake of this tragedy, many of us are left wondering, “Why has it become so commonplace for people to commit such extreme acts of violence without regard for our shared humanity?”</span><br /><br /><span >There are many complex answers to this question, and they can differ with each tragedy.&nbsp; However, there is one key theme that is present in all of them: Hate.&nbsp; </span><br /><br /><span >This hate arises when we feel different from and fearful of people with whom we do not identify. They become “Others” to us.&nbsp; </span><br /><br /><span >In other words, those individuals who hate people who are of a different race, gender, sexual orientation, religion, and/or nationality commit the majority of these heinous acts of violence.</span><br /></p><p><strong><span >Creating Unreal Others</span></strong><br /><br /><span >Tara Brach is a well-known teacher of meditation, emotional healing and spiritual awakening. In her podcast, “Widening the Circles of Compassion”, she discusses how suffering causes us to create “Unreal Others”.</span><br /><br /><span >The “Unreal Others” are people with whom we do not identify. And, because we do not identify with them, we ignore them, are mistrustful of them, and sometimes even devalue their lives. </span><br /><br /><span >The consequences of creating “Unreal Others” vary from person to person. Some who generate “Unreal Others” simply ignore these persons, while others are driven to commit extreme acts of violence against them. </span><br /><br /><span >It is important that we all reflect on our lives and identify the people whom we have categorized as the “Unreal Others”.</span><br /><br /><span >Belongingness and intimacy are a part of human nature. When we create “Unreal Others” for reasons such as race, gender and sexual orientation, we cause ourselves suffering by limiting the people who we allow ourselves to love and receive love from.</span></p><p><br /><strong><span >Choosing Love</span></strong><br /><br /><span >In a world that can often seem full of darkness, it is important that we take every opportunity to shine our light.</span><br /><br /><span >We must choose to love and care for everyone, including the “Unreal Others” in our lives.&nbsp; </span><br /><br /><span >When we love those “Unreal Others”, we diminish our mutual mistrust and hatred and bring light into their lives and our lives.</span><br /><br /><span >And by diminishing mistrust and hatred, we can create the peaceful world that we so greatly desire.</span></p><p><!--EndFragment--></p>
+                <blockquote class="pull-quote"><p>"You must not lose faith in humanity. Humanity is an ocean; if a few drops of the ocean are dirty, the ocean does not become dirty."</p><cite>&mdash; Mahatma Gandhi</cite></blockquote><p><!--StartFragment--></p><p><span >This week, we once again witnessed an extreme act of violence that released immense suffering into the world.&nbsp;<br /><br />In the wake of this tragedy, many of us are left wondering, "Why has it become so commonplace for people to commit such extreme acts of violence without regard for our shared humanity?"</span><br /><br /><span >There are many complex answers to this question, and they can differ with each tragedy.&nbsp; However, there is one key theme that is present in all of them: Hate.&nbsp; </span><br /><br /><span >This hate arises when we feel different from and fearful of people with whom we do not identify. They become "Others" to us.&nbsp; </span><br /><br /><span >In other words, those individuals who hate people who are of a different race, gender, sexual orientation, religion, and/or nationality commit the majority of these heinous acts of violence.</span><br /></p><p><strong><span >Creating Unreal Others</span></strong><br /><br /><span >Tara Brach is a well-known teacher of meditation, emotional healing and spiritual awakening. In her podcast, "Widening the Circles of Compassion", she discusses how suffering causes us to create "Unreal Others".</span><br /><br /><span >The "Unreal Others" are people with whom we do not identify. And, because we do not identify with them, we ignore them, are mistrustful of them, and sometimes even devalue their lives. </span><br /><br /><span >The consequences of creating "Unreal Others" vary from person to person. Some who generate "Unreal Others" simply ignore these persons, while others are driven to commit extreme acts of violence against them. </span><br /><br /><span >It is important that we all reflect on our lives and identify the people whom we have categorized as the "Unreal Others".</span><br /><br /><span >Belongingness and intimacy are a part of human nature. When we create "Unreal Others" for reasons such as race, gender and sexual orientation, we cause ourselves suffering by limiting the people who we allow ourselves to love and receive love from.</span></p><p><br /><strong><span >Choosing Love</span></strong><br /><br /><span >In a world that can often seem full of darkness, it is important that we take every opportunity to shine our light.</span><br /><br /><span >We must choose to love and care for everyone, including the "Unreal Others" in our lives.&nbsp; </span><br /><br /><span >When we love those "Unreal Others", we diminish our mutual mistrust and hatred and bring light into their lives and our lives.</span><br /><br /><span >And by diminishing mistrust and hatred, we can create the peaceful world that we so greatly desire.</span></p><p><!--EndFragment--></p>
             </div>
         </article>
         

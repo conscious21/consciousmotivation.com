@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liberation from the Opinions of Others | Conscious Motivation</title>
-    <meta name="description" content="– Brigham YoungTrue happiness cannot be found in the opinion of others.We scrutinize all of our actions when we fear others’ opinions; whether it be...">
+    <meta name="description" content="&quot;Why should we worry about what others think of us, do we have more confidence in their opinions than we do our own?&quot;– Brigham YoungTrue happiness...">
     
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Liberation from the Opinions of Others">
-    <meta property="og:description" content="– Brigham YoungTrue happiness cannot be found in the opinion of others.We scrutinize all of our actions when we fear others’ opinions; whether it be...">
+    <meta property="og:description" content="&quot;Why should we worry about what others think of us, do we have more confidence in their opinions than we do our own?&quot;– Brigham YoungTrue happiness...">
     <meta property="og:url" content="https://consciousmotivation.com/blog/liberation-from-the-opinions-of-others">
     <meta property="og:site_name" content="Conscious Motivation">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Liberation from the Opinions of Others">
-    <meta name="twitter:description" content="– Brigham YoungTrue happiness cannot be found in the opinion of others.We scrutinize all of our actions when we fear others’ opinions; whether it be...">
+    <meta name="twitter:description" content="&quot;Why should we worry about what others think of us, do we have more confidence in their opinions than we do our own?&quot;– Brigham YoungTrue happiness...">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +52,7 @@
             background-color: var(--bone);
             border-bottom: 1px solid #e8dcc8;
             padding: 2rem 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         header h1 {
@@ -79,124 +79,104 @@
             padding: 0 1rem 3rem;
         }
         
-        article {
-            margin-bottom: 4rem;
-        }
-        
         article h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
             line-height: 1.2;
-            color: var(--ash);
         }
         
         .post-meta {
             color: var(--slate);
             font-size: 0.95rem;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e8dcc8;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .post-content {
-            margin-bottom: 3rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            font-size: 16px;
         }
         
         .post-content p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .post-content h2,
-        .post-content h3,
-        .post-content h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--charcoal);
+            margin-bottom: 1.25rem;
         }
         
         .post-content h2 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
         }
         
         .post-content h3 {
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.75rem;
         }
         
-        .post-content h4 {
-            font-size: 1.25rem;
+        .post-content strong {
+            font-weight: 600;
+            color: var(--ash);
         }
         
-        .post-content blockquote {
-            border-left: 4px solid var(--ember);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            color: var(--charcoal);
+        .post-content em {
             font-style: italic;
-        }
-        
-        .post-content ul,
-        .post-content ol {
-            margin: 1.5rem 0 1.5rem 1.5rem;
-        }
-        
-        .post-content li {
-            margin-bottom: 0.75rem;
         }
         
         .post-content a {
             color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(232, 83, 14, 0.3);
-            transition: border-color 0.3s ease;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .post-content a:hover {
-            border-bottom-color: var(--ember);
+            color: var(--ash);
         }
         
-        .post-content img {
-            max-width: 100%;
-            height: auto;
+        /* Pull quotes */
+        .pull-quote {
+            border-left: 3px solid var(--gold);
+            padding-left: 1.5rem;
             margin: 2rem 0;
-            border-radius: 4px;
+            font-style: normal;
         }
         
-        .post-content figure {
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .post-content figcaption {
-            font-size: 0.9rem;
-            color: var(--slate);
-            margin-top: 0.75rem;
+        .pull-quote p {
             font-style: italic;
+            font-size: 1.1em;
+            color: var(--charcoal);
+            margin: 0;
         }
         
-        /* Author Bio Section */
+        .pull-quote cite {
+            display: block;
+            font-size: 0.9em;
+            color: var(--slate);
+            font-style: normal;
+            margin-top: 0.75rem;
+        }
+        
+        /* Author bio section */
         .author-bio {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             align-items: flex-start;
-            padding: 2rem 0;
-            margin: 3rem 0;
-            border-top: 2px solid var(--gold);
-            border-bottom: 1px solid #e8dcc8;
-        }
-        
-        .author-bio-image {
-            flex-shrink: 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e8dcc8;
         }
         
         .author-bio-image img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
             object-fit: cover;
             display: block;
         }
@@ -207,60 +187,60 @@
         
         .author-bio-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: var(--ash);
             margin-bottom: 0.5rem;
         }
         
         .author-bio-text {
             color: var(--charcoal);
+            margin-bottom: 1rem;
             font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 1rem;
         }
         
         .author-bio-links {
             display: flex;
             gap: 1.5rem;
-            font-size: 0.9rem;
         }
         
         .author-bio-links a {
-            color: var(--gold);
+            color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .author-bio-links a:hover {
-            border-bottom-color: var(--gold);
+            color: var(--ash);
         }
         
-        /* Post Navigation */
+        /* Post navigation */
         .post-navigation {
             display: flex;
             justify-content: space-between;
             gap: 2rem;
-            padding: 2rem 0;
-            margin: 3rem 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
             border-top: 1px solid #e8dcc8;
-            border-bottom: 1px solid #e8dcc8;
-            flex-wrap: wrap;
         }
         
-        .nav-prev,
-        .nav-next {
-            color: var(--gold);
+        .post-navigation a {
+            color: var(--ash);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
             font-size: 0.95rem;
+            flex: 1;
+            padding: 1rem;
+            background-color: var(--warmth);
+            border: 1px solid #e8dcc8;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
         
-        .nav-prev:hover,
-        .nav-next:hover {
-            border-bottom-color: var(--gold);
+        .post-navigation a:hover {
+            border-color: var(--ember);
+            background-color: rgba(232, 83, 14, 0.05);
         }
         
         .nav-next {
@@ -372,7 +352,7 @@
                 <span>by Keenan Benjamin</span>
             </div>
             <div class="post-content">
-                <figure ><blockquote  >&mdash; Brigham Young</figcaption></figure><p><!--StartFragment--><span >True happiness cannot be found in the opinion of others.</span></p><p><span >We scrutinize all of our actions when we fear others’ opinions; whether it be how we dress, walk, talk, or laugh. Subconsciously, we are fearful of being judged.&nbsp;</span></p><p><span >This dependence on the opinion of others is caused by a void of love for our self in our hearts. &nbsp;</span></p><p><span >It is by pursuing our purpose and dreams that we will learn to love who we are and lose all need for validation. </span><br /></p><p><strong><span >Void of Love</span></strong><span >&nbsp;</span></p><p><span >A very common misconception is that we can find happiness outside of ourselves. </span></p><p><span >However, true happiness is only found within.&nbsp;</span></p><p><span >We tend to look elsewhere for validation when we lack love for our self. This lack of love for our self is caused by focusing on sources of negativity instead of our passions and dreams. When we focus on sources of negativity, we generate a tremendous amount of suffering. &nbsp;</span></p><p><span >Our hope is that we can disguise this suffering through the positive opinions of others.&nbsp; But this is only a temporary remedy—one negative opinion away from returning us to suffering.&nbsp;</span></p><p><span >Regardless of where we are in life in relation to our hopes and expectations for ourselves, the only way to progress is to take our attention away from sources of negativity and refocus it on the sources of our positivity.&nbsp; &nbsp;</span></p><p><span >We can do this by staying mindful of our intentions in each and every moment. We must choose to love our self through mindfully-taken choices; “I will not watch the news. I will instead read this book or article about my passion.” </span><span >&nbsp;</span></p><p><span >In doing this consistently, we will learn to love who we are and free ourselves from the need for validation.<br />&nbsp;</span></p><p><strong><span >Practicing Love for Self</span></strong><span >&nbsp;</span></p><p><span >As I grew spiritually through my meditation practice, I became aware of the sources of my conscious and sub-conscious suffering.&nbsp;</span></p><p><span >For example, I identified fear-inducing media, social media overuse, focusing on negative people and gossip, regrets about the past and insecurity about the future as sources of negativity in my life. </span><em><span >&nbsp;</span></em></p><p><span >Having identified these, I began to focus on limiting the amount of time I spent on them. I did this by practicing present-moment awareness, and choosing to focus my time and attention on the activity that filled my heart with love.&nbsp;</span></p><p><span >For me, this activity was helping others overcome their challenges and suffering.&nbsp;</span></p><p><span >I made a conscious choice to show love to every person who crossed my path, whether it was the janitor, an Uber driver, a homeless person on the street, or restaurant employee.&nbsp; &nbsp;</span></p><p><span >My goal was to leave each person happier than I found her or him. This left me with a deep sense of fulfillment.<em></em>Anybody who has volunteered for a just cause can relate to the feeling of peace that arises from giving back to those in need.</span><em><span >&nbsp;</span></em></p><p><span >My self-esteem no longer needed the validation of others because there was no longer a void of love in my heart.&nbsp; By loving others, I had come to truly love myself. </span><br /><strong><span >&nbsp;</span></strong></p><p><strong><span >Love Yourself, Free Yourself</span></strong><span >&nbsp;</span></p><p><span >We all have special gifts that can bring more love and happiness into the world. These special gifts are often our purpose. &nbsp;</span></p><p><span >When we work towards our purpose, we redirect our focus from the opinions of others to the desires of our heart.&nbsp;</span></p><p><span >And, by following our heart, we learn to love ourselves completely and ultimately liberate ourselves from our dependence on the opinions of others.&nbsp;&nbsp;</span><!--EndFragment--></p>
+                <blockquote class="pull-quote"><p>"Why should we worry about what others think of us, do we have more confidence in their opinions than we do our own?"</p><cite>&mdash; Brigham Young</cite></blockquote><p><!--StartFragment--><span >True happiness cannot be found in the opinion of others.</span></p><p><span >We scrutinize all of our actions when we fear others' opinions; whether it be how we dress, walk, talk, or laugh. Subconsciously, we are fearful of being judged.&nbsp;</span></p><p><span >This dependence on the opinion of others is caused by a void of love for our self in our hearts. &nbsp;</span></p><p><span >It is by pursuing our purpose and dreams that we will learn to love who we are and lose all need for validation. </span><br /></p><p><strong><span >Void of Love</span></strong><span >&nbsp;</span></p><p><span >A very common misconception is that we can find happiness outside of ourselves. </span></p><p><span >However, true happiness is only found within.&nbsp;</span></p><p><span >We tend to look elsewhere for validation when we lack love for our self. This lack of love for our self is caused by focusing on sources of negativity instead of our passions and dreams. When we focus on sources of negativity, we generate a tremendous amount of suffering. &nbsp;</span></p><p><span >Our hope is that we can disguise this suffering through the positive opinions of others.&nbsp; But this is only a temporary remedy—one negative opinion away from returning us to suffering.&nbsp;</span></p><p><span >Regardless of where we are in life in relation to our hopes and expectations for ourselves, the only way to progress is to take our attention away from sources of negativity and refocus it on the sources of our positivity.&nbsp; &nbsp;</span></p><p><span >We can do this by staying mindful of our intentions in each and every moment. We must choose to love our self through mindfully-taken choices; "I will not watch the news. I will instead read this book or article about my passion." </span><span >&nbsp;</span></p><p><span >In doing this consistently, we will learn to love who we are and free ourselves from the need for validation.<br />&nbsp;</span></p><p><strong><span >Practicing Love for Self</span></strong><span >&nbsp;</span></p><p><span >As I grew spiritually through my meditation practice, I became aware of the sources of my conscious and sub-conscious suffering.&nbsp;</span></p><p><span >For example, I identified fear-inducing media, social media overuse, focusing on negative people and gossip, regrets about the past and insecurity about the future as sources of negativity in my life. </span><em><span >&nbsp;</span></em></p><p><span >Having identified these, I began to focus on limiting the amount of time I spent on them. I did this by practicing present-moment awareness, and choosing to focus my time and attention on the activity that filled my heart with love.&nbsp;</span></p><p><span >For me, this activity was helping others overcome their challenges and suffering.&nbsp;</span></p><p><span >I made a conscious choice to show love to every person who crossed my path, whether it was the janitor, an Uber driver, a homeless person on the street, or restaurant employee.&nbsp; &nbsp;</span></p><p><span >My goal was to leave each person happier than I found her or him. This left me with a deep sense of fulfillment.<em></em>Anybody who has volunteered for a just cause can relate to the feeling of peace that arises from giving back to those in need.</span><em><span >&nbsp;</span></em></p><p><span >My self-esteem no longer needed the validation of others because there was no longer a void of love in my heart.&nbsp; By loving others, I had come to truly love myself. </span><br /><strong><span >&nbsp;</span></strong></p><p><strong><span >Love Yourself, Free Yourself</span></strong><span >&nbsp;</span></p><p><span >We all have special gifts that can bring more love and happiness into the world. These special gifts are often our purpose. &nbsp;</span></p><p><span >When we work towards our purpose, we redirect our focus from the opinions of others to the desires of our heart.&nbsp;</span></p><p><span >And, by following our heart, we learn to love ourselves completely and ultimately liberate ourselves from our dependence on the opinions of others.&nbsp;&nbsp;</span><!--EndFragment--></p>
             </div>
         </article>
         

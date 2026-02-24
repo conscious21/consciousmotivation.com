@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discovering a Rainbow in the Storm | Conscious Motivation</title>
-    <meta name="description" content="– Helen Keller We all experience times in our life where it seems like our world is getting flipped upside down and nothing is going our way. In...">
+    <meta name="description" content="&quot;Character cannot be developed in ease and quiet. Only through experience of trial and suffering can the soul be strengthened, ambition inspired, and...">
     
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Discovering a Rainbow in the Storm">
-    <meta property="og:description" content="– Helen Keller We all experience times in our life where it seems like our world is getting flipped upside down and nothing is going our way. In...">
+    <meta property="og:description" content="&quot;Character cannot be developed in ease and quiet. Only through experience of trial and suffering can the soul be strengthened, ambition inspired, and...">
     <meta property="og:url" content="https://consciousmotivation.com/blog/discovering-a-rainbow-in-the-storm">
     <meta property="og:site_name" content="Conscious Motivation">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Discovering a Rainbow in the Storm">
-    <meta name="twitter:description" content="– Helen Keller We all experience times in our life where it seems like our world is getting flipped upside down and nothing is going our way. In...">
+    <meta name="twitter:description" content="&quot;Character cannot be developed in ease and quiet. Only through experience of trial and suffering can the soul be strengthened, ambition inspired, and...">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +52,7 @@
             background-color: var(--bone);
             border-bottom: 1px solid #e8dcc8;
             padding: 2rem 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         header h1 {
@@ -79,124 +79,104 @@
             padding: 0 1rem 3rem;
         }
         
-        article {
-            margin-bottom: 4rem;
-        }
-        
         article h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
             line-height: 1.2;
-            color: var(--ash);
         }
         
         .post-meta {
             color: var(--slate);
             font-size: 0.95rem;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e8dcc8;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .post-content {
-            margin-bottom: 3rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            font-size: 16px;
         }
         
         .post-content p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .post-content h2,
-        .post-content h3,
-        .post-content h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--charcoal);
+            margin-bottom: 1.25rem;
         }
         
         .post-content h2 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
         }
         
         .post-content h3 {
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.75rem;
         }
         
-        .post-content h4 {
-            font-size: 1.25rem;
+        .post-content strong {
+            font-weight: 600;
+            color: var(--ash);
         }
         
-        .post-content blockquote {
-            border-left: 4px solid var(--ember);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            color: var(--charcoal);
+        .post-content em {
             font-style: italic;
-        }
-        
-        .post-content ul,
-        .post-content ol {
-            margin: 1.5rem 0 1.5rem 1.5rem;
-        }
-        
-        .post-content li {
-            margin-bottom: 0.75rem;
         }
         
         .post-content a {
             color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(232, 83, 14, 0.3);
-            transition: border-color 0.3s ease;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .post-content a:hover {
-            border-bottom-color: var(--ember);
+            color: var(--ash);
         }
         
-        .post-content img {
-            max-width: 100%;
-            height: auto;
+        /* Pull quotes */
+        .pull-quote {
+            border-left: 3px solid var(--gold);
+            padding-left: 1.5rem;
             margin: 2rem 0;
-            border-radius: 4px;
+            font-style: normal;
         }
         
-        .post-content figure {
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .post-content figcaption {
-            font-size: 0.9rem;
-            color: var(--slate);
-            margin-top: 0.75rem;
+        .pull-quote p {
             font-style: italic;
+            font-size: 1.1em;
+            color: var(--charcoal);
+            margin: 0;
         }
         
-        /* Author Bio Section */
+        .pull-quote cite {
+            display: block;
+            font-size: 0.9em;
+            color: var(--slate);
+            font-style: normal;
+            margin-top: 0.75rem;
+        }
+        
+        /* Author bio section */
         .author-bio {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             align-items: flex-start;
-            padding: 2rem 0;
-            margin: 3rem 0;
-            border-top: 2px solid var(--gold);
-            border-bottom: 1px solid #e8dcc8;
-        }
-        
-        .author-bio-image {
-            flex-shrink: 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e8dcc8;
         }
         
         .author-bio-image img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
             object-fit: cover;
             display: block;
         }
@@ -207,60 +187,60 @@
         
         .author-bio-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: var(--ash);
             margin-bottom: 0.5rem;
         }
         
         .author-bio-text {
             color: var(--charcoal);
+            margin-bottom: 1rem;
             font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 1rem;
         }
         
         .author-bio-links {
             display: flex;
             gap: 1.5rem;
-            font-size: 0.9rem;
         }
         
         .author-bio-links a {
-            color: var(--gold);
+            color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .author-bio-links a:hover {
-            border-bottom-color: var(--gold);
+            color: var(--ash);
         }
         
-        /* Post Navigation */
+        /* Post navigation */
         .post-navigation {
             display: flex;
             justify-content: space-between;
             gap: 2rem;
-            padding: 2rem 0;
-            margin: 3rem 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
             border-top: 1px solid #e8dcc8;
-            border-bottom: 1px solid #e8dcc8;
-            flex-wrap: wrap;
         }
         
-        .nav-prev,
-        .nav-next {
-            color: var(--gold);
+        .post-navigation a {
+            color: var(--ash);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
             font-size: 0.95rem;
+            flex: 1;
+            padding: 1rem;
+            background-color: var(--warmth);
+            border: 1px solid #e8dcc8;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
         
-        .nav-prev:hover,
-        .nav-next:hover {
-            border-bottom-color: var(--gold);
+        .post-navigation a:hover {
+            border-color: var(--ember);
+            background-color: rgba(232, 83, 14, 0.05);
         }
         
         .nav-next {
@@ -372,7 +352,7 @@
                 <span>by Keenan Benjamin</span>
             </div>
             <div class="post-content">
-                <figure ><blockquote  >&mdash; Helen Keller</figcaption></figure><p ><span >&nbsp;&nbsp;</span></p><p><span >We all experience times in our life where it seems like our world is getting flipped upside down and nothing is going our way.&nbsp;</span></p><p><span >In these most trying of times, we must remember that nothing happens by chance; and that everything that does happen is part the divine plan for our personal and spiritual growth.&nbsp;</span></p><p><span >I have found that one of the easiest ways to gain perspective on pain and suffering is to understand the law of contrast.&nbsp;</span></p><p><span >We cannot truly appreciate anything without understanding contrast.&nbsp;</span></p><p><span >If we have never experienced the heat of summer, then how can we enjoy the coolness of autumn? &nbsp;</span></p><p><span >If we have not experienced the times of having lack, how can we cherish the experience of having abundance? &nbsp;</span></p><p><span >And most importantly, if we have not experienced pain and suffering, then how can we appreciate the experience of joy and love?&nbsp;</span></p><p><span >Understanding that all of our life’s challenges will come to pass, it is imperative that we learn how to find a rainbow in the storm.&nbsp;<br />&nbsp;</span></p><p><strong><span >Finding A Rainbow</span></strong><span >&nbsp;</span></p><p><span >Meditation and the practice of mindfulness train us to be aware of our thoughts and emotions.&nbsp; This awareness teaches us how to identify and quickly let go of any thoughts or emotions that disrupt our sense of peace.</span></p><p><span >Our mindfulness practice forms the foundation that will keep us grounded when the hurricane winds threaten to blow the sense of our well-being away. &nbsp;</span></p><p><span >And none of us are immune to the cascade of negative thoughts and emotions when we unexpectedly find ourselves in the eye of the storm. &nbsp;</span></p><p><span >The question is how will we respond when the chaos is bearing down on us?&nbsp;</span></p><p><span >Without a foundation of mindfulness, the deluge of negative thoughts and emotions becomes paralyzing.&nbsp; We then operate out of fear and are unable to focus on what the best course of action is in the present moment. &nbsp;</span></p><p><span >In this state, we increase the suffering by doing and saying things that we will later regret; causing us to miss the beauty in the storm.&nbsp;</span></p><p><span >On the contrary, by practicing mindfulness, we focus on creating positive thoughts and emotions. Our actions and words come from the heart, and the results relieve the suffering around us.&nbsp; &nbsp;</span></p><p><span >In this state, we simply endure until we discover a rainbow originating from the storm.</span><br /><!--EndFragment--></p>
+                <blockquote class="pull-quote"><p>"Character cannot be developed in ease and quiet. Only through experience of trial and suffering can the soul be strengthened, ambition inspired, and success achieved."</p><cite>&mdash; Helen Keller</cite></blockquote><p ><span >&nbsp;&nbsp;</span></p><p><span >We all experience times in our life where it seems like our world is getting flipped upside down and nothing is going our way.&nbsp;</span></p><p><span >In these most trying of times, we must remember that nothing happens by chance; and that everything that does happen is part the divine plan for our personal and spiritual growth.&nbsp;</span></p><p><span >I have found that one of the easiest ways to gain perspective on pain and suffering is to understand the law of contrast.&nbsp;</span></p><p><span >We cannot truly appreciate anything without understanding contrast.&nbsp;</span></p><p><span >If we have never experienced the heat of summer, then how can we enjoy the coolness of autumn? &nbsp;</span></p><p><span >If we have not experienced the times of having lack, how can we cherish the experience of having abundance? &nbsp;</span></p><p><span >And most importantly, if we have not experienced pain and suffering, then how can we appreciate the experience of joy and love?&nbsp;</span></p><p><span >Understanding that all of our life's challenges will come to pass, it is imperative that we learn how to find a rainbow in the storm.&nbsp;<br />&nbsp;</span></p><p><strong><span >Finding A Rainbow</span></strong><span >&nbsp;</span></p><p><span >Meditation and the practice of mindfulness train us to be aware of our thoughts and emotions.&nbsp; This awareness teaches us how to identify and quickly let go of any thoughts or emotions that disrupt our sense of peace.</span></p><p><span >Our mindfulness practice forms the foundation that will keep us grounded when the hurricane winds threaten to blow the sense of our well-being away. &nbsp;</span></p><p><span >And none of us are immune to the cascade of negative thoughts and emotions when we unexpectedly find ourselves in the eye of the storm. &nbsp;</span></p><p><span >The question is how will we respond when the chaos is bearing down on us?&nbsp;</span></p><p><span >Without a foundation of mindfulness, the deluge of negative thoughts and emotions becomes paralyzing.&nbsp; We then operate out of fear and are unable to focus on what the best course of action is in the present moment. &nbsp;</span></p><p><span >In this state, we increase the suffering by doing and saying things that we will later regret; causing us to miss the beauty in the storm.&nbsp;</span></p><p><span >On the contrary, by practicing mindfulness, we focus on creating positive thoughts and emotions. Our actions and words come from the heart, and the results relieve the suffering around us.&nbsp; &nbsp;</span></p><p><span >In this state, we simply endure until we discover a rainbow originating from the storm.</span><br /><!--EndFragment--></p>
             </div>
         </article>
         

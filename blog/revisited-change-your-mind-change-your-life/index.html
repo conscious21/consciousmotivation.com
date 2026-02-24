@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revisited: Change Your Mind, Change Your Life | Conscious Motivation</title>
-    <meta name="description" content="– Dalai LamaI recently posted an Instagram photo with the Conscious Motivation tagline, &quot;Change your mind. Change your life.&quot; Almost immediately...">
+    <meta name="description" content="&quot;If a person&#x27;s basic state of mind is serene and calm, then it is possible for this inner peace to overwhelm a painful physical experience&quot;– Dalai...">
     
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Revisited: Change Your Mind, Change Your Life">
-    <meta property="og:description" content="– Dalai LamaI recently posted an Instagram photo with the Conscious Motivation tagline, &quot;Change your mind. Change your life.&quot; Almost immediately...">
+    <meta property="og:description" content="&quot;If a person&#x27;s basic state of mind is serene and calm, then it is possible for this inner peace to overwhelm a painful physical experience&quot;– Dalai...">
     <meta property="og:url" content="https://consciousmotivation.com/blog/revisited-change-your-mind-change-your-life">
     <meta property="og:site_name" content="Conscious Motivation">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Revisited: Change Your Mind, Change Your Life">
-    <meta name="twitter:description" content="– Dalai LamaI recently posted an Instagram photo with the Conscious Motivation tagline, &quot;Change your mind. Change your life.&quot; Almost immediately...">
+    <meta name="twitter:description" content="&quot;If a person&#x27;s basic state of mind is serene and calm, then it is possible for this inner peace to overwhelm a painful physical experience&quot;– Dalai...">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +52,7 @@
             background-color: var(--bone);
             border-bottom: 1px solid #e8dcc8;
             padding: 2rem 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         header h1 {
@@ -79,124 +79,104 @@
             padding: 0 1rem 3rem;
         }
         
-        article {
-            margin-bottom: 4rem;
-        }
-        
         article h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
             line-height: 1.2;
-            color: var(--ash);
         }
         
         .post-meta {
             color: var(--slate);
             font-size: 0.95rem;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e8dcc8;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .post-content {
-            margin-bottom: 3rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            font-size: 16px;
         }
         
         .post-content p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .post-content h2,
-        .post-content h3,
-        .post-content h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--charcoal);
+            margin-bottom: 1.25rem;
         }
         
         .post-content h2 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
         }
         
         .post-content h3 {
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.75rem;
         }
         
-        .post-content h4 {
-            font-size: 1.25rem;
+        .post-content strong {
+            font-weight: 600;
+            color: var(--ash);
         }
         
-        .post-content blockquote {
-            border-left: 4px solid var(--ember);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            color: var(--charcoal);
+        .post-content em {
             font-style: italic;
-        }
-        
-        .post-content ul,
-        .post-content ol {
-            margin: 1.5rem 0 1.5rem 1.5rem;
-        }
-        
-        .post-content li {
-            margin-bottom: 0.75rem;
         }
         
         .post-content a {
             color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(232, 83, 14, 0.3);
-            transition: border-color 0.3s ease;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .post-content a:hover {
-            border-bottom-color: var(--ember);
+            color: var(--ash);
         }
         
-        .post-content img {
-            max-width: 100%;
-            height: auto;
+        /* Pull quotes */
+        .pull-quote {
+            border-left: 3px solid var(--gold);
+            padding-left: 1.5rem;
             margin: 2rem 0;
-            border-radius: 4px;
+            font-style: normal;
         }
         
-        .post-content figure {
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .post-content figcaption {
-            font-size: 0.9rem;
-            color: var(--slate);
-            margin-top: 0.75rem;
+        .pull-quote p {
             font-style: italic;
+            font-size: 1.1em;
+            color: var(--charcoal);
+            margin: 0;
         }
         
-        /* Author Bio Section */
+        .pull-quote cite {
+            display: block;
+            font-size: 0.9em;
+            color: var(--slate);
+            font-style: normal;
+            margin-top: 0.75rem;
+        }
+        
+        /* Author bio section */
         .author-bio {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             align-items: flex-start;
-            padding: 2rem 0;
-            margin: 3rem 0;
-            border-top: 2px solid var(--gold);
-            border-bottom: 1px solid #e8dcc8;
-        }
-        
-        .author-bio-image {
-            flex-shrink: 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e8dcc8;
         }
         
         .author-bio-image img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
             object-fit: cover;
             display: block;
         }
@@ -207,60 +187,60 @@
         
         .author-bio-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: var(--ash);
             margin-bottom: 0.5rem;
         }
         
         .author-bio-text {
             color: var(--charcoal);
+            margin-bottom: 1rem;
             font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 1rem;
         }
         
         .author-bio-links {
             display: flex;
             gap: 1.5rem;
-            font-size: 0.9rem;
         }
         
         .author-bio-links a {
-            color: var(--gold);
+            color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .author-bio-links a:hover {
-            border-bottom-color: var(--gold);
+            color: var(--ash);
         }
         
-        /* Post Navigation */
+        /* Post navigation */
         .post-navigation {
             display: flex;
             justify-content: space-between;
             gap: 2rem;
-            padding: 2rem 0;
-            margin: 3rem 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
             border-top: 1px solid #e8dcc8;
-            border-bottom: 1px solid #e8dcc8;
-            flex-wrap: wrap;
         }
         
-        .nav-prev,
-        .nav-next {
-            color: var(--gold);
+        .post-navigation a {
+            color: var(--ash);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
             font-size: 0.95rem;
+            flex: 1;
+            padding: 1rem;
+            background-color: var(--warmth);
+            border: 1px solid #e8dcc8;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
         
-        .nav-prev:hover,
-        .nav-next:hover {
-            border-bottom-color: var(--gold);
+        .post-navigation a:hover {
+            border-color: var(--ember);
+            background-color: rgba(232, 83, 14, 0.05);
         }
         
         .nav-next {
@@ -372,7 +352,7 @@
                 <span>by Keenan Benjamin</span>
             </div>
             <div class="post-content">
-                <figure ><blockquote  >&mdash; Dalai Lama</figcaption></figure><p>I recently posted an <a href="https://www.instagram.com/p/BR73f8aAOek/">Instagram photo</a> with the Conscious Motivation tagline, "Change your mind. Change your life." Almost immediately after posting, one of my most dedicated followers asked me this question:</p><p>"Is that quote really for everybody or just people like you who are privileged?"</p><p>He was implying the quote reflected my ability to leave a career behind to chase my dreams, and this was a luxury only afforded to the privileged with resources.</p><p>I gave thought to this question. However, ultimately, I realized that I could not agree.</p><p>You see, the quote is not about quitting your career—though that may be one way to change your life.</p><p>It is about the transformative power of learning to quiet your mind so that you can control your thoughts and live from a place of well-being, love, and optimism.</p><p>The alternative is a mind full of noise with no control of your thoughts and living from a place of suffering, fear, and pessimism.</p><p>These life-changing benefits are universal, regardless of where you are in life: <a href="https://www.davidlynchfoundation.org/homeless-shelters.html">homeless</a>, <a href="mailto:https://www.davidlynchfoundation.org/prisons.html">in prison</a>, or <a href="http://consciousmotivation.com/blog//the-secret-of-top-performers">performing at the top level of entertainment, sports, and business</a>.</p><p>Today, I wanted to revisit the theme behind Conscious Motivation's first blog, "<a href="http://www.consciousmotivation.com/blog/change-your-mind-change-your-life">Change Your Mind, Change Your Life</a>."<br /></p><p><strong>A Fundamental Truth</strong></p><p>Regardless of where we are in life, living in poverty or great wealth, we will suffer if we spend our time focusing on regrets of the past, fears of the future, and anxieties in the present.&nbsp;</p><p>The only moment we have for creating positive change in our life is the present moment.</p><p>We can begin the journey of transcending our suffering by quieting the noise of our mind through mindfulness and aligning our every thought and action with the present moment.</p><p>When we bring mindfulness into the present moment, we gain the freedom to choose happiness, love and compassion. Our fears, regrets, and anxieties fall away quite naturally and we can recognize the desires of our heart.</p><p>This fundamental truth inspired Conscious Motivation.&nbsp;And, I believe with every ounce of my being that by practicing mindfulness exercises, like meditation, we shift the paradigm from living out of fear to living out of love.<strong>&nbsp;</strong></p><p><br /><strong>Experience The Truth Yourself</strong></p><p>It is not enough to accept this as truth because we say it here; you can, and must, experience it yourself.</p><p>But do not be one of those people that try meditating once and give up because they found it impossible to quiet their thoughts, even for a second.</p><p>Expecting to quiet your mind the first time you sat down for a meditation is no different than expecting to complete a marathon the first time you tried out jogging.</p><p>Utterly unrealistic.</p><p>It takes patience to experience this truth, but you can start by dedicating five minutes a day to building a meditation practice.</p><p>These simple steps can guide you in beginning your practice:</p><ul dir="ltr"><li>Find a comfortable place.</li><li>Sit with your back and neck straight, and your shoulders relaxed.</li><li>Close your eyes.</li><li>Focus on abdominal breathing: feel your stomach expand as you breathe in and contract as you breathe out. &nbsp;(This is a game changer for relaxing your nervous system.)</li><li>Direct your attention to a mantra: a word or phrase that means something to you.</li><li>Silently repeat that mantra in your head for 5 minutes.&nbsp; (15-20 minutes per morning was my sweet spot in the first year, but this varies for each person.)</li><li>Do not get frustrated if you get distracted by a barrage of thoughts; watch those thoughts be born and then fade away.</li><li>Continue to gently bring your awareness back to your mantra.</li></ul><p>Five minutes a day may seem like a small investment, but in time you will see that the returns are life-changing.</p>
+                <blockquote class="pull-quote"><p>"If a person's basic state of mind is serene and calm, then it is possible for this inner peace to overwhelm a painful physical experience"</p><cite>&mdash; Dalai Lama</cite></blockquote><p>I recently posted an <a href="https://www.instagram.com/p/BR73f8aAOek/">Instagram photo</a> with the Conscious Motivation tagline, "Change your mind. Change your life." Almost immediately after posting, one of my most dedicated followers asked me this question:</p><p>"Is that quote really for everybody or just people like you who are privileged?"</p><p>He was implying the quote reflected my ability to leave a career behind to chase my dreams, and this was a luxury only afforded to the privileged with resources.</p><p>I gave thought to this question. However, ultimately, I realized that I could not agree.</p><p>You see, the quote is not about quitting your career—though that may be one way to change your life.</p><p>It is about the transformative power of learning to quiet your mind so that you can control your thoughts and live from a place of well-being, love, and optimism.</p><p>The alternative is a mind full of noise with no control of your thoughts and living from a place of suffering, fear, and pessimism.</p><p>These life-changing benefits are universal, regardless of where you are in life: <a href="https://www.davidlynchfoundation.org/homeless-shelters.html">homeless</a>, <a href="mailto:https://www.davidlynchfoundation.org/prisons.html">in prison</a>, or <a href="http://consciousmotivation.com/blog//the-secret-of-top-performers">performing at the top level of entertainment, sports, and business</a>.</p><p>Today, I wanted to revisit the theme behind Conscious Motivation's first blog, "<a href="http://www.consciousmotivation.com/blog/change-your-mind-change-your-life">Change Your Mind, Change Your Life</a>."<br /></p><p><strong>A Fundamental Truth</strong></p><p>Regardless of where we are in life, living in poverty or great wealth, we will suffer if we spend our time focusing on regrets of the past, fears of the future, and anxieties in the present.&nbsp;</p><p>The only moment we have for creating positive change in our life is the present moment.</p><p>We can begin the journey of transcending our suffering by quieting the noise of our mind through mindfulness and aligning our every thought and action with the present moment.</p><p>When we bring mindfulness into the present moment, we gain the freedom to choose happiness, love and compassion. Our fears, regrets, and anxieties fall away quite naturally and we can recognize the desires of our heart.</p><p>This fundamental truth inspired Conscious Motivation.&nbsp;And, I believe with every ounce of my being that by practicing mindfulness exercises, like meditation, we shift the paradigm from living out of fear to living out of love.<strong>&nbsp;</strong></p><p><br /><strong>Experience The Truth Yourself</strong></p><p>It is not enough to accept this as truth because we say it here; you can, and must, experience it yourself.</p><p>But do not be one of those people that try meditating once and give up because they found it impossible to quiet their thoughts, even for a second.</p><p>Expecting to quiet your mind the first time you sat down for a meditation is no different than expecting to complete a marathon the first time you tried out jogging.</p><p>Utterly unrealistic.</p><p>It takes patience to experience this truth, but you can start by dedicating five minutes a day to building a meditation practice.</p><p>These simple steps can guide you in beginning your practice:</p><ul dir="ltr"><li>Find a comfortable place.</li><li>Sit with your back and neck straight, and your shoulders relaxed.</li><li>Close your eyes.</li><li>Focus on abdominal breathing: feel your stomach expand as you breathe in and contract as you breathe out. &nbsp;(This is a game changer for relaxing your nervous system.)</li><li>Direct your attention to a mantra: a word or phrase that means something to you.</li><li>Silently repeat that mantra in your head for 5 minutes.&nbsp; (15-20 minutes per morning was my sweet spot in the first year, but this varies for each person.)</li><li>Do not get frustrated if you get distracted by a barrage of thoughts; watch those thoughts be born and then fade away.</li><li>Continue to gently bring your awareness back to your mantra.</li></ul><p>Five minutes a day may seem like a small investment, but in time you will see that the returns are life-changing.</p>
             </div>
         </article>
         

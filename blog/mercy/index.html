@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mercy | Conscious Motivation</title>
-    <meta name="description" content="– Abraham LincolnMercy is a virtue that is severely lacking in modern society. Defined as &quot;compassion or forgiveness shown towards someone whom it is...">
+    <meta name="description" content="&quot;I have always found that mercy bears richer fruits than strict justice.&quot;– Abraham LincolnMercy is a virtue that is severely lacking in modern...">
     
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Mercy">
-    <meta property="og:description" content="– Abraham LincolnMercy is a virtue that is severely lacking in modern society. Defined as &quot;compassion or forgiveness shown towards someone whom it is...">
+    <meta property="og:description" content="&quot;I have always found that mercy bears richer fruits than strict justice.&quot;– Abraham LincolnMercy is a virtue that is severely lacking in modern...">
     <meta property="og:url" content="https://consciousmotivation.com/blog/mercy">
     <meta property="og:site_name" content="Conscious Motivation">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Mercy">
-    <meta name="twitter:description" content="– Abraham LincolnMercy is a virtue that is severely lacking in modern society. Defined as &quot;compassion or forgiveness shown towards someone whom it is...">
+    <meta name="twitter:description" content="&quot;I have always found that mercy bears richer fruits than strict justice.&quot;– Abraham LincolnMercy is a virtue that is severely lacking in modern...">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +52,7 @@
             background-color: var(--bone);
             border-bottom: 1px solid #e8dcc8;
             padding: 2rem 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         header h1 {
@@ -79,124 +79,104 @@
             padding: 0 1rem 3rem;
         }
         
-        article {
-            margin-bottom: 4rem;
-        }
-        
         article h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
             line-height: 1.2;
-            color: var(--ash);
         }
         
         .post-meta {
             color: var(--slate);
             font-size: 0.95rem;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e8dcc8;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .post-content {
-            margin-bottom: 3rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            font-size: 16px;
         }
         
         .post-content p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .post-content h2,
-        .post-content h3,
-        .post-content h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--charcoal);
+            margin-bottom: 1.25rem;
         }
         
         .post-content h2 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
         }
         
         .post-content h3 {
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.75rem;
         }
         
-        .post-content h4 {
-            font-size: 1.25rem;
+        .post-content strong {
+            font-weight: 600;
+            color: var(--ash);
         }
         
-        .post-content blockquote {
-            border-left: 4px solid var(--ember);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            color: var(--charcoal);
+        .post-content em {
             font-style: italic;
-        }
-        
-        .post-content ul,
-        .post-content ol {
-            margin: 1.5rem 0 1.5rem 1.5rem;
-        }
-        
-        .post-content li {
-            margin-bottom: 0.75rem;
         }
         
         .post-content a {
             color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(232, 83, 14, 0.3);
-            transition: border-color 0.3s ease;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .post-content a:hover {
-            border-bottom-color: var(--ember);
+            color: var(--ash);
         }
         
-        .post-content img {
-            max-width: 100%;
-            height: auto;
+        /* Pull quotes */
+        .pull-quote {
+            border-left: 3px solid var(--gold);
+            padding-left: 1.5rem;
             margin: 2rem 0;
-            border-radius: 4px;
+            font-style: normal;
         }
         
-        .post-content figure {
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .post-content figcaption {
-            font-size: 0.9rem;
-            color: var(--slate);
-            margin-top: 0.75rem;
+        .pull-quote p {
             font-style: italic;
+            font-size: 1.1em;
+            color: var(--charcoal);
+            margin: 0;
         }
         
-        /* Author Bio Section */
+        .pull-quote cite {
+            display: block;
+            font-size: 0.9em;
+            color: var(--slate);
+            font-style: normal;
+            margin-top: 0.75rem;
+        }
+        
+        /* Author bio section */
         .author-bio {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             align-items: flex-start;
-            padding: 2rem 0;
-            margin: 3rem 0;
-            border-top: 2px solid var(--gold);
-            border-bottom: 1px solid #e8dcc8;
-        }
-        
-        .author-bio-image {
-            flex-shrink: 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e8dcc8;
         }
         
         .author-bio-image img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
             object-fit: cover;
             display: block;
         }
@@ -207,60 +187,60 @@
         
         .author-bio-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: var(--ash);
             margin-bottom: 0.5rem;
         }
         
         .author-bio-text {
             color: var(--charcoal);
+            margin-bottom: 1rem;
             font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 1rem;
         }
         
         .author-bio-links {
             display: flex;
             gap: 1.5rem;
-            font-size: 0.9rem;
         }
         
         .author-bio-links a {
-            color: var(--gold);
+            color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .author-bio-links a:hover {
-            border-bottom-color: var(--gold);
+            color: var(--ash);
         }
         
-        /* Post Navigation */
+        /* Post navigation */
         .post-navigation {
             display: flex;
             justify-content: space-between;
             gap: 2rem;
-            padding: 2rem 0;
-            margin: 3rem 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
             border-top: 1px solid #e8dcc8;
-            border-bottom: 1px solid #e8dcc8;
-            flex-wrap: wrap;
         }
         
-        .nav-prev,
-        .nav-next {
-            color: var(--gold);
+        .post-navigation a {
+            color: var(--ash);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
             font-size: 0.95rem;
+            flex: 1;
+            padding: 1rem;
+            background-color: var(--warmth);
+            border: 1px solid #e8dcc8;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
         
-        .nav-prev:hover,
-        .nav-next:hover {
-            border-bottom-color: var(--gold);
+        .post-navigation a:hover {
+            border-color: var(--ember);
+            background-color: rgba(232, 83, 14, 0.05);
         }
         
         .nav-next {
@@ -372,7 +352,7 @@
                 <span>by Keenan Benjamin</span>
             </div>
             <div class="post-content">
-                <figure ><blockquote  >&mdash; Abraham Lincoln</figcaption></figure><p><span >Mercy is a virtue that is severely lacking in modern society.&nbsp;</span></p><p><span >Defined as "compassion or forgiveness shown towards someone whom it is within one's power to punish or harm”; mercy is something that we all hope to receive from others when we make mistakes. &nbsp;</span></p><p><span >Yet, we often fail to offer this mercy when others make mistakes that affect us. &nbsp;</span></p><p><span >The predominant reason for this is because of our inability to look past the discomfort or pain experienced by our ego and to be mindful of the fact that the other person could be suffering.&nbsp;</span></p><p><span >Their suffering could be the reason for the actions that brought us unhappiness, but that is often irrelevant to us. This person did not meet our expectations and we want them to pay for it.</span></p><p><span >If we wish to maintain a life of happiness, we must let the negative energy from our experiences pass through us. We can learn to do this by practicing mindfulness in every moment, and consciously releasing our pain and suffering as and when we experience it. &nbsp;</span></p><p><span >When we are able to let negativity pass through us, we will find ourselves quite naturally showing others mercy. And when we show others mercy, we will find that our own suffering lessens ever further. &nbsp;</span></p><p><span >To show mercy does not mean to not act. Rather, it means to act from a place of compassion and love. &nbsp;</span></p><p><span >By showing mercy, we allow ourselves to come back to the present moment and return to our natural state of happiness.</span><br /></p><p><strong><span >Lack of Mercy </span></strong><span >&nbsp;</span></p><p><span >We need to look no further than the booming industry of online review sites for an example of where many of us fail to show mercy.&nbsp;</span></p><p><span >While eating lunch with a group coworkers last year, I overheard one of them mention that he had "flamed" (critically reviewed) a restaurant on Yelp (a popular U.S.-based review website) because the food and service was not as great as it had been in the past.&nbsp;</span></p><p><span >He was so proud of himself for having written such a bad review that the owner of the restaurant replied and offered him a free meal. However, this coworker did not even want the meal. He was just so proud of himself for having given the restaurant owner a piece of his mind.&nbsp;</span></p><p><span >I tried to let it go, but could not sit there and let him be so critical without asking him why he needed to leave such a review. &nbsp;</span></p><p><span >If the restaurant had always been great before, why did he not mention it to the manager as he left the restaurant?&nbsp;</span></p><p><span >If he was so upset with the food, why did he not gladly accept the offer for a free meal?&nbsp;</span></p><p><span >He responded to each one of these questions in a way that demonstrated that he was more interested in showing them who "was the boss" than actually helping them with their food quality or service issues. &nbsp;</span></p><p><span >And my belief is that he did not accept the free meal because he subconsciously felt guilty about his critical remarks.&nbsp;</span></p><p><span >But this leads me to a broader question: Why are we as a society so eager to publicly criticize another person/business instead of trying to help them?&nbsp;</span></p><p><span >For all we know, the restaurant may have been short-staffed in the kitchen due to illness. The chef/server could have had a family member in the hospital or recent death in the family, and their mind may have been elsewhere.&nbsp; &nbsp;</span></p><p><span >If my coworker had personally spoken with the manager, he may have learned the real reason the food and service did not meet his expectations that day. Instead, he acted in a way that showed no mercy, jeopardizing the restaurant and all of its employees who depended on their job to pay their bills.<br />&nbsp;</span></p><p><strong><span >Universal Law of Reciprocity</span></strong><span >&nbsp;</span></p><p><span >The universal law of reciprocity states that we should "treat others as we would want to be treated."&nbsp;</span></p><p><span >If this law is valid, we must ask ourselves:&nbsp; If I was having a bad day at work because of a personal issue, would I want somebody to come into my place of employment and negatively review my every move because I failed to meet their expectations? </span></p><p><span >The majority of us would answer “absolutely not”.&nbsp;</span></p><p><span >And if we would not want this from others, we must learn to practice mindfulness, release negative energy, and show mercy. &nbsp;</span></p><p><span >Our small acts of mercy will go a long way in lessening our own suffering and that of others.</span></p>
+                <blockquote class="pull-quote"><p>"I have always found that mercy bears richer fruits than strict justice."</p><cite>&mdash; Abraham Lincoln</cite></blockquote><p><span >Mercy is a virtue that is severely lacking in modern society.&nbsp;</span></p><p><span >Defined as "compassion or forgiveness shown towards someone whom it is within one's power to punish or harm"; mercy is something that we all hope to receive from others when we make mistakes. &nbsp;</span></p><p><span >Yet, we often fail to offer this mercy when others make mistakes that affect us. &nbsp;</span></p><p><span >The predominant reason for this is because of our inability to look past the discomfort or pain experienced by our ego and to be mindful of the fact that the other person could be suffering.&nbsp;</span></p><p><span >Their suffering could be the reason for the actions that brought us unhappiness, but that is often irrelevant to us. This person did not meet our expectations and we want them to pay for it.</span></p><p><span >If we wish to maintain a life of happiness, we must let the negative energy from our experiences pass through us. We can learn to do this by practicing mindfulness in every moment, and consciously releasing our pain and suffering as and when we experience it. &nbsp;</span></p><p><span >When we are able to let negativity pass through us, we will find ourselves quite naturally showing others mercy. And when we show others mercy, we will find that our own suffering lessens ever further. &nbsp;</span></p><p><span >To show mercy does not mean to not act. Rather, it means to act from a place of compassion and love. &nbsp;</span></p><p><span >By showing mercy, we allow ourselves to come back to the present moment and return to our natural state of happiness.</span><br /></p><p><strong><span >Lack of Mercy </span></strong><span >&nbsp;</span></p><p><span >We need to look no further than the booming industry of online review sites for an example of where many of us fail to show mercy.&nbsp;</span></p><p><span >While eating lunch with a group coworkers last year, I overheard one of them mention that he had "flamed" (critically reviewed) a restaurant on Yelp (a popular U.S.-based review website) because the food and service was not as great as it had been in the past.&nbsp;</span></p><p><span >He was so proud of himself for having written such a bad review that the owner of the restaurant replied and offered him a free meal. However, this coworker did not even want the meal. He was just so proud of himself for having given the restaurant owner a piece of his mind.&nbsp;</span></p><p><span >I tried to let it go, but could not sit there and let him be so critical without asking him why he needed to leave such a review. &nbsp;</span></p><p><span >If the restaurant had always been great before, why did he not mention it to the manager as he left the restaurant?&nbsp;</span></p><p><span >If he was so upset with the food, why did he not gladly accept the offer for a free meal?&nbsp;</span></p><p><span >He responded to each one of these questions in a way that demonstrated that he was more interested in showing them who "was the boss" than actually helping them with their food quality or service issues. &nbsp;</span></p><p><span >And my belief is that he did not accept the free meal because he subconsciously felt guilty about his critical remarks.&nbsp;</span></p><p><span >But this leads me to a broader question: Why are we as a society so eager to publicly criticize another person/business instead of trying to help them?&nbsp;</span></p><p><span >For all we know, the restaurant may have been short-staffed in the kitchen due to illness. The chef/server could have had a family member in the hospital or recent death in the family, and their mind may have been elsewhere.&nbsp; &nbsp;</span></p><p><span >If my coworker had personally spoken with the manager, he may have learned the real reason the food and service did not meet his expectations that day. Instead, he acted in a way that showed no mercy, jeopardizing the restaurant and all of its employees who depended on their job to pay their bills.<br />&nbsp;</span></p><p><strong><span >Universal Law of Reciprocity</span></strong><span >&nbsp;</span></p><p><span >The universal law of reciprocity states that we should "treat others as we would want to be treated."&nbsp;</span></p><p><span >If this law is valid, we must ask ourselves:&nbsp; If I was having a bad day at work because of a personal issue, would I want somebody to come into my place of employment and negatively review my every move because I failed to meet their expectations? </span></p><p><span >The majority of us would answer "absolutely not".&nbsp;</span></p><p><span >And if we would not want this from others, we must learn to practice mindfulness, release negative energy, and show mercy. &nbsp;</span></p><p><span >Our small acts of mercy will go a long way in lessening our own suffering and that of others.</span></p>
             </div>
         </article>
         

@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercises in Mindfulness | Conscious Motivation</title>
-    <meta name="description" content="– Marianne WilliamsonMany of us begin each new year with personal growth goals that we would like to achieve in the upcoming year. We create these...">
+    <meta name="description" content="&quot;The present moment, if you think about it, is the only time there is. No matter what time it is, it is always now.&quot;– Marianne WilliamsonMany of us...">
     
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Exercises in Mindfulness">
-    <meta property="og:description" content="– Marianne WilliamsonMany of us begin each new year with personal growth goals that we would like to achieve in the upcoming year. We create these...">
+    <meta property="og:description" content="&quot;The present moment, if you think about it, is the only time there is. No matter what time it is, it is always now.&quot;– Marianne WilliamsonMany of us...">
     <meta property="og:url" content="https://consciousmotivation.com/blog/exercises-in-mindfulness">
     <meta property="og:site_name" content="Conscious Motivation">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Exercises in Mindfulness">
-    <meta name="twitter:description" content="– Marianne WilliamsonMany of us begin each new year with personal growth goals that we would like to achieve in the upcoming year. We create these...">
+    <meta name="twitter:description" content="&quot;The present moment, if you think about it, is the only time there is. No matter what time it is, it is always now.&quot;– Marianne WilliamsonMany of us...">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +52,7 @@
             background-color: var(--bone);
             border-bottom: 1px solid #e8dcc8;
             padding: 2rem 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         header h1 {
@@ -79,124 +79,104 @@
             padding: 0 1rem 3rem;
         }
         
-        article {
-            margin-bottom: 4rem;
-        }
-        
         article h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
             line-height: 1.2;
-            color: var(--ash);
         }
         
         .post-meta {
             color: var(--slate);
             font-size: 0.95rem;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e8dcc8;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .post-content {
-            margin-bottom: 3rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            font-size: 16px;
         }
         
         .post-content p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .post-content h2,
-        .post-content h3,
-        .post-content h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--charcoal);
+            margin-bottom: 1.25rem;
         }
         
         .post-content h2 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
         }
         
         .post-content h3 {
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.75rem;
         }
         
-        .post-content h4 {
-            font-size: 1.25rem;
+        .post-content strong {
+            font-weight: 600;
+            color: var(--ash);
         }
         
-        .post-content blockquote {
-            border-left: 4px solid var(--ember);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            color: var(--charcoal);
+        .post-content em {
             font-style: italic;
-        }
-        
-        .post-content ul,
-        .post-content ol {
-            margin: 1.5rem 0 1.5rem 1.5rem;
-        }
-        
-        .post-content li {
-            margin-bottom: 0.75rem;
         }
         
         .post-content a {
             color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(232, 83, 14, 0.3);
-            transition: border-color 0.3s ease;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .post-content a:hover {
-            border-bottom-color: var(--ember);
+            color: var(--ash);
         }
         
-        .post-content img {
-            max-width: 100%;
-            height: auto;
+        /* Pull quotes */
+        .pull-quote {
+            border-left: 3px solid var(--gold);
+            padding-left: 1.5rem;
             margin: 2rem 0;
-            border-radius: 4px;
+            font-style: normal;
         }
         
-        .post-content figure {
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .post-content figcaption {
-            font-size: 0.9rem;
-            color: var(--slate);
-            margin-top: 0.75rem;
+        .pull-quote p {
             font-style: italic;
+            font-size: 1.1em;
+            color: var(--charcoal);
+            margin: 0;
         }
         
-        /* Author Bio Section */
+        .pull-quote cite {
+            display: block;
+            font-size: 0.9em;
+            color: var(--slate);
+            font-style: normal;
+            margin-top: 0.75rem;
+        }
+        
+        /* Author bio section */
         .author-bio {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             align-items: flex-start;
-            padding: 2rem 0;
-            margin: 3rem 0;
-            border-top: 2px solid var(--gold);
-            border-bottom: 1px solid #e8dcc8;
-        }
-        
-        .author-bio-image {
-            flex-shrink: 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e8dcc8;
         }
         
         .author-bio-image img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
             object-fit: cover;
             display: block;
         }
@@ -207,60 +187,60 @@
         
         .author-bio-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: var(--ash);
             margin-bottom: 0.5rem;
         }
         
         .author-bio-text {
             color: var(--charcoal);
+            margin-bottom: 1rem;
             font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 1rem;
         }
         
         .author-bio-links {
             display: flex;
             gap: 1.5rem;
-            font-size: 0.9rem;
         }
         
         .author-bio-links a {
-            color: var(--gold);
+            color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .author-bio-links a:hover {
-            border-bottom-color: var(--gold);
+            color: var(--ash);
         }
         
-        /* Post Navigation */
+        /* Post navigation */
         .post-navigation {
             display: flex;
             justify-content: space-between;
             gap: 2rem;
-            padding: 2rem 0;
-            margin: 3rem 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
             border-top: 1px solid #e8dcc8;
-            border-bottom: 1px solid #e8dcc8;
-            flex-wrap: wrap;
         }
         
-        .nav-prev,
-        .nav-next {
-            color: var(--gold);
+        .post-navigation a {
+            color: var(--ash);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
             font-size: 0.95rem;
+            flex: 1;
+            padding: 1rem;
+            background-color: var(--warmth);
+            border: 1px solid #e8dcc8;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
         
-        .nav-prev:hover,
-        .nav-next:hover {
-            border-bottom-color: var(--gold);
+        .post-navigation a:hover {
+            border-color: var(--ember);
+            background-color: rgba(232, 83, 14, 0.05);
         }
         
         .nav-next {
@@ -372,7 +352,7 @@
                 <span>by Keenan Benjamin</span>
             </div>
             <div class="post-content">
-                <figure ><blockquote  >&mdash; Marianne Williamson</figcaption></figure><p><!--StartFragment--></p><p><span >Many of us begin each new year with personal growth goals that we would like to achieve in the upcoming year.&nbsp;</span></p><p><span >We create these goals with a desire to attain a higher state of well-being</span><span >—</span><span >both health and happiness.&nbsp;</span></p><p><span >Three-quarters of the way through the year, the majority of people have completely given up on those goals.&nbsp;</span></p><p><span >Their failure resides in the inability to stay aware of their goals (short-term &amp; long-term) on a daily basis.&nbsp;</span></p><p><span >They are usually too distracted—either by regrets of the past or worries about the future—to focus on the present moment.</span></p><p><span >On the other hand, the most successful people have a knack for taking advantage of opportunities in the present moment.&nbsp; &nbsp;</span></p><p><span >They stay singular focused on the pursuit of their goals and did not get distracted by things that are unimportant. &nbsp;</span></p><p><span >For some, this focus comes naturally. For others, they must develop the ability to stay singularly focused on the task at hand.</span></p><p><span >Do not be discouraged if you fall into the latter category.&nbsp;</span></p><p><span >The following mindfulness exercises will help you become more singular focused on achieving your goals.</span><br /><br /><br /><strong><span >Put Your Phone Down</span></strong><span >&nbsp;</span></p><p><span >Mobile phones have become the greatest single inhibitor for people trying to stay focused in the present moment. &nbsp;</span></p><p><span >Whether it is checking email, text messages, social media, or watching videos, our focus on the present moment is constantly diluted by what is taking place on our phone.&nbsp;</span></p><p><span >When spending time with your family or friends, give them your undivided attention by putting your phone down (and on mute). Time moves so quickly that we often regret not being more present with others when we had the chance. &nbsp;</span></p><p><span >So ask yourself, "is what I'm focusing on really more important than giving this person/these people my undivided attention?"&nbsp;</span></p><p><span >The answer is usually “no.” &nbsp;</span></p><p><span >So, put the phone down.</span></p><p><span >I promise you that none of the emails or texts are going anywhere.</span><br /></p><p><strong><span >Remember You Are Breathing</span></strong><span >&nbsp;</span></p><p><span >It is easy to get so caught up in our daily responsibilities that the day seems to fly by as if it was a blur. &nbsp;</span></p><p><span >If you want to be mindful of the present moment, all you must do is be conscious of the fact that you are breathing.&nbsp;</span></p><p><span >To do this, practice taking a deep breath at least once or twice per hour.&nbsp;</span></p><p><span >These deep breaths will allow you to re-center yourself in the present moment, and focus on what is the most important next move.&nbsp;&nbsp;</span><br /><br /><br /><strong><span >Smile &amp; Appreciate The Moment</span></strong><br /><br /><span >There is beauty all around us, but we fail to see it when our focus is on the excessive thoughts of our mind.</span></p><p><span >For those of you that find yourself in this situation often, I recommend a poem by Thich Nhat Hanh:</span><span >&nbsp;</span></p><p><em><span >Breathing in, I calm my body.</span></em><br /><em><span >Breathing out, I smile.</span></em><br /><em><span >Dwelling in the present moment</span></em><br /><em><span >I know this is a wonderful moment.</span></em></p><p><span >I used this poem to find the present moment during the most stressful times of my consulting career. And, the results were amazing. &nbsp;</span></p><p><span >And like magic, after repeating the poem in my head, I would always return to the present moment and notice something wonderful around me to appreciate.&nbsp;</span><br /><br /><br /><strong><span >Begin Practicing Today</span></strong></p><p><span >It will progressively become easier for us to come back to the present moment by practicing these mindfulness exercises.&nbsp;</span></p><p><span >At this moment, anything is achievable if you can stay singularly focused on what small steps are available to pursue your goals.</span></p><p><!--EndFragment--></p>
+                <blockquote class="pull-quote"><p>"The present moment, if you think about it, is the only time there is. <br/>No matter what time it is, it is always now."</p><cite>&mdash; Marianne Williamson</cite></blockquote><p><!--StartFragment--></p><p><span >Many of us begin each new year with personal growth goals that we would like to achieve in the upcoming year.&nbsp;</span></p><p><span >We create these goals with a desire to attain a higher state of well-being</span><span >—</span><span >both health and happiness.&nbsp;</span></p><p><span >Three-quarters of the way through the year, the majority of people have completely given up on those goals.&nbsp;</span></p><p><span >Their failure resides in the inability to stay aware of their goals (short-term &amp; long-term) on a daily basis.&nbsp;</span></p><p><span >They are usually too distracted—either by regrets of the past or worries about the future—to focus on the present moment.</span></p><p><span >On the other hand, the most successful people have a knack for taking advantage of opportunities in the present moment.&nbsp; &nbsp;</span></p><p><span >They stay singular focused on the pursuit of their goals and did not get distracted by things that are unimportant. &nbsp;</span></p><p><span >For some, this focus comes naturally. For others, they must develop the ability to stay singularly focused on the task at hand.</span></p><p><span >Do not be discouraged if you fall into the latter category.&nbsp;</span></p><p><span >The following mindfulness exercises will help you become more singular focused on achieving your goals.</span><br /><br /><br /><strong><span >Put Your Phone Down</span></strong><span >&nbsp;</span></p><p><span >Mobile phones have become the greatest single inhibitor for people trying to stay focused in the present moment. &nbsp;</span></p><p><span >Whether it is checking email, text messages, social media, or watching videos, our focus on the present moment is constantly diluted by what is taking place on our phone.&nbsp;</span></p><p><span >When spending time with your family or friends, give them your undivided attention by putting your phone down (and on mute). Time moves so quickly that we often regret not being more present with others when we had the chance. &nbsp;</span></p><p><span >So ask yourself, "is what I'm focusing on really more important than giving this person/these people my undivided attention?"&nbsp;</span></p><p><span >The answer is usually "no." &nbsp;</span></p><p><span >So, put the phone down.</span></p><p><span >I promise you that none of the emails or texts are going anywhere.</span><br /></p><p><strong><span >Remember You Are Breathing</span></strong><span >&nbsp;</span></p><p><span >It is easy to get so caught up in our daily responsibilities that the day seems to fly by as if it was a blur. &nbsp;</span></p><p><span >If you want to be mindful of the present moment, all you must do is be conscious of the fact that you are breathing.&nbsp;</span></p><p><span >To do this, practice taking a deep breath at least once or twice per hour.&nbsp;</span></p><p><span >These deep breaths will allow you to re-center yourself in the present moment, and focus on what is the most important next move.&nbsp;&nbsp;</span><br /><br /><br /><strong><span >Smile &amp; Appreciate The Moment</span></strong><br /><br /><span >There is beauty all around us, but we fail to see it when our focus is on the excessive thoughts of our mind.</span></p><p><span >For those of you that find yourself in this situation often, I recommend a poem by Thich Nhat Hanh:</span><span >&nbsp;</span></p><p><em><span >Breathing in, I calm my body.</span></em><br /><em><span >Breathing out, I smile.</span></em><br /><em><span >Dwelling in the present moment</span></em><br /><em><span >I know this is a wonderful moment.</span></em></p><p><span >I used this poem to find the present moment during the most stressful times of my consulting career. And, the results were amazing. &nbsp;</span></p><p><span >And like magic, after repeating the poem in my head, I would always return to the present moment and notice something wonderful around me to appreciate.&nbsp;</span><br /><br /><br /><strong><span >Begin Practicing Today</span></strong></p><p><span >It will progressively become easier for us to come back to the present moment by practicing these mindfulness exercises.&nbsp;</span></p><p><span >At this moment, anything is achievable if you can stay singularly focused on what small steps are available to pursue your goals.</span></p><p><!--EndFragment--></p>
             </div>
         </article>
         

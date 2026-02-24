@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overcoming a World of Media Distractions | Conscious Motivation</title>
-    <meta name="description" content="– Oscar WildeI often get asked how I gained the confidence to make such dramatic life changes in pursuit of my dreams. Though we have written in...">
+    <meta name="description" content="&quot;It is what you read when you don&#x27;t have to that determines what you will be when you can&#x27;t help it.&quot;– Oscar WildeI often get asked how I gained the...">
     
     <!-- Open Graph -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="Overcoming a World of Media Distractions">
-    <meta property="og:description" content="– Oscar WildeI often get asked how I gained the confidence to make such dramatic life changes in pursuit of my dreams. Though we have written in...">
+    <meta property="og:description" content="&quot;It is what you read when you don&#x27;t have to that determines what you will be when you can&#x27;t help it.&quot;– Oscar WildeI often get asked how I gained the...">
     <meta property="og:url" content="https://consciousmotivation.com/blog/overcoming-a-world-of-media-distractions">
     <meta property="og:site_name" content="Conscious Motivation">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Overcoming a World of Media Distractions">
-    <meta name="twitter:description" content="– Oscar WildeI often get asked how I gained the confidence to make such dramatic life changes in pursuit of my dreams. Though we have written in...">
+    <meta name="twitter:description" content="&quot;It is what you read when you don&#x27;t have to that determines what you will be when you can&#x27;t help it.&quot;– Oscar WildeI often get asked how I gained the...">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +52,7 @@
             background-color: var(--bone);
             border-bottom: 1px solid #e8dcc8;
             padding: 2rem 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         header h1 {
@@ -79,124 +79,104 @@
             padding: 0 1rem 3rem;
         }
         
-        article {
-            margin-bottom: 4rem;
-        }
-        
         article h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
             line-height: 1.2;
-            color: var(--ash);
         }
         
         .post-meta {
             color: var(--slate);
             font-size: 0.95rem;
-            margin-bottom: 2.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid #e8dcc8;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
         .post-content {
-            margin-bottom: 3rem;
+            color: var(--charcoal);
+            line-height: 1.8;
+            font-size: 16px;
         }
         
         .post-content p {
-            margin-bottom: 1.5rem;
-        }
-        
-        .post-content h2,
-        .post-content h3,
-        .post-content h4 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--charcoal);
+            margin-bottom: 1.25rem;
         }
         
         .post-content h2 {
+            font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
+            font-weight: 700;
+            margin: 2rem 0 1rem;
         }
         
         .post-content h3 {
-            font-size: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.75rem;
         }
         
-        .post-content h4 {
-            font-size: 1.25rem;
+        .post-content strong {
+            font-weight: 600;
+            color: var(--ash);
         }
         
-        .post-content blockquote {
-            border-left: 4px solid var(--ember);
-            padding-left: 1.5rem;
-            margin: 2rem 0;
-            color: var(--charcoal);
+        .post-content em {
             font-style: italic;
-        }
-        
-        .post-content ul,
-        .post-content ol {
-            margin: 1.5rem 0 1.5rem 1.5rem;
-        }
-        
-        .post-content li {
-            margin-bottom: 0.75rem;
         }
         
         .post-content a {
             color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(232, 83, 14, 0.3);
-            transition: border-color 0.3s ease;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .post-content a:hover {
-            border-bottom-color: var(--ember);
+            color: var(--ash);
         }
         
-        .post-content img {
-            max-width: 100%;
-            height: auto;
+        /* Pull quotes */
+        .pull-quote {
+            border-left: 3px solid var(--gold);
+            padding-left: 1.5rem;
             margin: 2rem 0;
-            border-radius: 4px;
+            font-style: normal;
         }
         
-        .post-content figure {
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .post-content figcaption {
-            font-size: 0.9rem;
-            color: var(--slate);
-            margin-top: 0.75rem;
+        .pull-quote p {
             font-style: italic;
+            font-size: 1.1em;
+            color: var(--charcoal);
+            margin: 0;
         }
         
-        /* Author Bio Section */
+        .pull-quote cite {
+            display: block;
+            font-size: 0.9em;
+            color: var(--slate);
+            font-style: normal;
+            margin-top: 0.75rem;
+        }
+        
+        /* Author bio section */
         .author-bio {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             align-items: flex-start;
-            padding: 2rem 0;
-            margin: 3rem 0;
-            border-top: 2px solid var(--gold);
-            border-bottom: 1px solid #e8dcc8;
-        }
-        
-        .author-bio-image {
-            flex-shrink: 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e8dcc8;
         }
         
         .author-bio-image img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
             object-fit: cover;
             display: block;
         }
@@ -207,60 +187,60 @@
         
         .author-bio-name {
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            color: var(--ash);
             margin-bottom: 0.5rem;
         }
         
         .author-bio-text {
             color: var(--charcoal);
+            margin-bottom: 1rem;
             font-size: 0.95rem;
             line-height: 1.6;
-            margin-bottom: 1rem;
         }
         
         .author-bio-links {
             display: flex;
             gap: 1.5rem;
-            font-size: 0.9rem;
         }
         
         .author-bio-links a {
-            color: var(--gold);
+            color: var(--ember);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--ember);
+            transition: color 0.3s ease;
         }
         
         .author-bio-links a:hover {
-            border-bottom-color: var(--gold);
+            color: var(--ash);
         }
         
-        /* Post Navigation */
+        /* Post navigation */
         .post-navigation {
             display: flex;
             justify-content: space-between;
             gap: 2rem;
-            padding: 2rem 0;
-            margin: 3rem 0;
+            margin-top: 3rem;
+            padding-top: 2rem;
             border-top: 1px solid #e8dcc8;
-            border-bottom: 1px solid #e8dcc8;
-            flex-wrap: wrap;
         }
         
-        .nav-prev,
-        .nav-next {
-            color: var(--gold);
+        .post-navigation a {
+            color: var(--ash);
             text-decoration: none;
-            border-bottom: 1px solid rgba(196, 154, 108, 0.3);
-            transition: border-color 0.3s ease;
             font-size: 0.95rem;
+            flex: 1;
+            padding: 1rem;
+            background-color: var(--warmth);
+            border: 1px solid #e8dcc8;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
         
-        .nav-prev:hover,
-        .nav-next:hover {
-            border-bottom-color: var(--gold);
+        .post-navigation a:hover {
+            border-color: var(--ember);
+            background-color: rgba(232, 83, 14, 0.05);
         }
         
         .nav-next {
@@ -372,7 +352,7 @@
                 <span>by Keenan Benjamin</span>
             </div>
             <div class="post-content">
-                <figure ><blockquote  >&mdash; Oscar Wilde</figcaption></figure><p></p><p><span >I often get asked how I gained the <a href="http://consciousmotivation.com/about/">confidence to make such dramatic life changes in pursuit of my dreams</a>. &nbsp;Though we have written in great detail about the transformative power of focusing inward through mindfulness and meditation, we have yet to focus in detail on the importance of pursuing knowledge through external sources. </span></p><p><span >In the year 2016, there is guaranteed to be a thoughtful book written, video created, or podcast recorded on how to overcome whatever challenges we may be facing in our lives.&nbsp; &nbsp;</span></p><p><span >While it is true that the answers to our challenges lie within us, external sources can serve as mirrors that reflect these internal answers back to us so that we can consciously and intentionally break free of our limiting negative thinking.&nbsp; </span></p><p><br /><strong><span >World of Media Distractions</span></strong></p><p><span >Many of us often feel that we are too busy to pursue our passions and to read books, watch videos, and listen to podcasts that will enrich us.&nbsp; Why is it that so many of us fail to find the time to pursue this knowledge? &nbsp;The answer is quite simple: distracting media content is continuously draining our mental energy.&nbsp; Here are just a few examples of such content:</span></p><p><span >1)</span><span >&nbsp;&nbsp;</span><span >Social Media:&nbsp; &nbsp;</span></p><p><span >There are literally not enough hours in the day to keep up with new posts on Facebook, Twitter, Pinterest, LinkedIn, Instagram, Snapchat, etc.&nbsp; However, that does not stop some of us from trying.&nbsp; &nbsp;</span></p><p><span >Though this form of media would be crucial if our purpose was to record the lives of our friends, family, and celebrities, this is most likely not our purpose. </span></p><p><span >Thus, social media is one of our greatest daily distractions.&nbsp;</span></p><p><span >How many hours of social media do you consume a day?</span><br /><span >&nbsp;</span></p><p><!--[if !supportLists]--><span >2)</span><span >&nbsp;&nbsp;</span><span >Irresistible Television Programming:&nbsp; </span></p><p><span >Television producers are amazing at their jobs.&nbsp; They know how to take account of the public’s greatest interests and create programming (news/reality shows/television series) that keeps us tuning in. </span></p><p><span >Though I cut my cable a few years ago, I recently noticed that Crossfit is now prominently featured on ESPN, there is television channel exclusively for dogs, and there is a Real Housewives reality show program for nearly every major city in the U.S. &nbsp;&nbsp;</span></p><p><span >There are also news channels cycling through stories that touch our greatest fears, because their <a href="http://consciousmotivation.com/motivation/why-i-turned-off-the-news">producers know we cannot turn away and that is great for ratings</a>.</span></p><p><span >If you are looking for television programming that relates to your greatest passion, fears, or vices, you can find it on one of the ~1000+ cable channels.</span></p><p><span >However, is focusing on our fears instead of our dreams the best way to accelerate our development?</span><br /><strong><span >&nbsp;</span></strong></p><p><!--[if !supportLists]--><span >3)</span><span >&nbsp;&nbsp;</span><span >Streaming Media: </span><span >&nbsp;</span></p><p><span >Every minute of our favorite movies, TV shows, and documentaries (historic and current) are now available on one of the top streaming services like Netflix, Hulu, Amazon, and HBO Go. </span><strong><span >&nbsp;</span></strong></p><p><span >In the past we would have to wait a week to watch the next episode our favorite show.&nbsp; Today, we have the entire catalogue of episodes and series at our fingertips.&nbsp;</span></p><p><span >The luxury of having every episode available at once makes it easy for us to binge watch multiple episodes back-to-back.&nbsp;</span></p><p><span >I am speaking from experience; having binge watched the entire Lost series (~90 hours) in a matter of several weeks in 2013.</span></p><p><span >What books related to my personal development could I have read during that time?</span></p><p><!--[if !supportLists]--><br /><span >4)</span><span >&nbsp;&nbsp;</span><span >Sports:&nbsp; </span></p><p><span >There is always something intriguing going on in sports throughout the year.&nbsp;</span></p><p><span >If I was not watching the NFL (Monday, Thursday, Sunday), it was NCAA March Madness, NBA Playoffs, MLB Playoffs, NHL Playoffs, PGA Tour Majors, ATP Tennis Grand Slam tournaments, Olympics, Men’s &amp; Women’s World Cup, and so on.</span></p><p><span >For those of us who love high-level competition, this makes it very hard to turn away.</span></p><p><span >However, we must ask ourselves how much of what happened on the court/field will matter in 1, 3, 5 years time?&nbsp;&nbsp;</span></p><p><span >Would sacrificing that time, in order to find and pursue our purpose, provide greater return down the road?</span><br /></p><p><!--[if !supportLists]--><span >5)</span><span >&nbsp;&nbsp;</span><span >Video Games </span></p><p><span >Video gaming entertainment has evolved as fast as any other type of electronic media.&nbsp; The game-play and graphics now make us feel like we are actually witnessing reality on our TV, tablet, and phone screens.&nbsp; &nbsp;</span></p><p><span >This evolutionary level of game play offers us an escape from our own reality.&nbsp; For some of us, this escape is the most enjoyable period of our day. And for that reason, we choose to spend as much time in this reality as possible.&nbsp;</span><br /><br /><span >The world’s newest gaming obsession is Pokemon Go.&nbsp; A game that augments reality and inspires people to walk around using their phone’s GPS &amp; camera to train, find, battle, and capture virtual creatures. &nbsp;</span></p><p><span >Maybe the game will turn out to be an excellent way to exercise and meet new people.&nbsp; However, as adults, we must ask if this is really the best use of our time and mental energy?</span><br /></p><p><strong><span >Strategies For Overcoming Media Distractions</span></strong></p><p><span >We have the ability to conserve our mental energy by resisting these distractions, but it takes a strategy and willpower.&nbsp; </span></p><p><span >Here are a few strategies for overcoming media distractions:</span></p><ul><li><span >Elimination: Delete any social media/gaming apps from your phone that are especially distracting and only access them from desktop/laptop computers.</span><br /></li><li><span >Scheduling: Set a time of day (6am, 9am, 12pm, 5pm, or 8pm) that you will allow for these media distractions.</span><br /></li><li><span >Limitation:&nbsp; Set a limit of time (1-3 hours on weekdays and 3-6 hours on weekend days) that you are willing to concede for surfing social media, streaming your favorite television shows/movies, and watching your favorite sports.</span><br /></li><li><span ><span >Prioritize:&nbsp; Ask yourself, “Before I play Pokemon Go, is there anything more important on my to-do-list that I have yet to complete?”</span></span></li></ul><p><span >Implementing these strategies may be challenging at first, but our willpower grows stronger every time we resist the urge to be distracted.</span></p><p><span >We must reprioritize our time and focus on pursuing knowledge important for our growth.&nbsp; The knowledge we need to live a life of joy and happiness will be readily available to us, should we commit to seeking it.&nbsp;</span></p><p><!--EndFragment--></p>
+                <blockquote class="pull-quote"><p>"It is what you read when you don't have to that determines what you will be when you can't help it."</p><cite>&mdash; Oscar Wilde</cite></blockquote><p></p><p><span >I often get asked how I gained the <a href="http://consciousmotivation.com/about/">confidence to make such dramatic life changes in pursuit of my dreams</a>. &nbsp;Though we have written in great detail about the transformative power of focusing inward through mindfulness and meditation, we have yet to focus in detail on the importance of pursuing knowledge through external sources. </span></p><p><span >In the year 2016, there is guaranteed to be a thoughtful book written, video created, or podcast recorded on how to overcome whatever challenges we may be facing in our lives.&nbsp; &nbsp;</span></p><p><span >While it is true that the answers to our challenges lie within us, external sources can serve as mirrors that reflect these internal answers back to us so that we can consciously and intentionally break free of our limiting negative thinking.&nbsp; </span></p><p><br /><strong><span >World of Media Distractions</span></strong></p><p><span >Many of us often feel that we are too busy to pursue our passions and to read books, watch videos, and listen to podcasts that will enrich us.&nbsp; Why is it that so many of us fail to find the time to pursue this knowledge? &nbsp;The answer is quite simple: distracting media content is continuously draining our mental energy.&nbsp; Here are just a few examples of such content:</span></p><p><span >1)</span><span >&nbsp;&nbsp;</span><span >Social Media:&nbsp; &nbsp;</span></p><p><span >There are literally not enough hours in the day to keep up with new posts on Facebook, Twitter, Pinterest, LinkedIn, Instagram, Snapchat, etc.&nbsp; However, that does not stop some of us from trying.&nbsp; &nbsp;</span></p><p><span >Though this form of media would be crucial if our purpose was to record the lives of our friends, family, and celebrities, this is most likely not our purpose. </span></p><p><span >Thus, social media is one of our greatest daily distractions.&nbsp;</span></p><p><span >How many hours of social media do you consume a day?</span><br /><span >&nbsp;</span></p><p><!--[if !supportLists]--><span >2)</span><span >&nbsp;&nbsp;</span><span >Irresistible Television Programming:&nbsp; </span></p><p><span >Television producers are amazing at their jobs.&nbsp; They know how to take account of the public's greatest interests and create programming (news/reality shows/television series) that keeps us tuning in. </span></p><p><span >Though I cut my cable a few years ago, I recently noticed that Crossfit is now prominently featured on ESPN, there is television channel exclusively for dogs, and there is a Real Housewives reality show program for nearly every major city in the U.S. &nbsp;&nbsp;</span></p><p><span >There are also news channels cycling through stories that touch our greatest fears, because their <a href="http://consciousmotivation.com/motivation/why-i-turned-off-the-news">producers know we cannot turn away and that is great for ratings</a>.</span></p><p><span >If you are looking for television programming that relates to your greatest passion, fears, or vices, you can find it on one of the ~1000+ cable channels.</span></p><p><span >However, is focusing on our fears instead of our dreams the best way to accelerate our development?</span><br /><strong><span >&nbsp;</span></strong></p><p><!--[if !supportLists]--><span >3)</span><span >&nbsp;&nbsp;</span><span >Streaming Media: </span><span >&nbsp;</span></p><p><span >Every minute of our favorite movies, TV shows, and documentaries (historic and current) are now available on one of the top streaming services like Netflix, Hulu, Amazon, and HBO Go. </span><strong><span >&nbsp;</span></strong></p><p><span >In the past we would have to wait a week to watch the next episode our favorite show.&nbsp; Today, we have the entire catalogue of episodes and series at our fingertips.&nbsp;</span></p><p><span >The luxury of having every episode available at once makes it easy for us to binge watch multiple episodes back-to-back.&nbsp;</span></p><p><span >I am speaking from experience; having binge watched the entire Lost series (~90 hours) in a matter of several weeks in 2013.</span></p><p><span >What books related to my personal development could I have read during that time?</span></p><p><!--[if !supportLists]--><br /><span >4)</span><span >&nbsp;&nbsp;</span><span >Sports:&nbsp; </span></p><p><span >There is always something intriguing going on in sports throughout the year.&nbsp;</span></p><p><span >If I was not watching the NFL (Monday, Thursday, Sunday), it was NCAA March Madness, NBA Playoffs, MLB Playoffs, NHL Playoffs, PGA Tour Majors, ATP Tennis Grand Slam tournaments, Olympics, Men's &amp; Women's World Cup, and so on.</span></p><p><span >For those of us who love high-level competition, this makes it very hard to turn away.</span></p><p><span >However, we must ask ourselves how much of what happened on the court/field will matter in 1, 3, 5 years time?&nbsp;&nbsp;</span></p><p><span >Would sacrificing that time, in order to find and pursue our purpose, provide greater return down the road?</span><br /></p><p><!--[if !supportLists]--><span >5)</span><span >&nbsp;&nbsp;</span><span >Video Games </span></p><p><span >Video gaming entertainment has evolved as fast as any other type of electronic media.&nbsp; The game-play and graphics now make us feel like we are actually witnessing reality on our TV, tablet, and phone screens.&nbsp; &nbsp;</span></p><p><span >This evolutionary level of game play offers us an escape from our own reality.&nbsp; For some of us, this escape is the most enjoyable period of our day. And for that reason, we choose to spend as much time in this reality as possible.&nbsp;</span><br /><br /><span >The world's newest gaming obsession is Pokemon Go.&nbsp; A game that augments reality and inspires people to walk around using their phone's GPS &amp; camera to train, find, battle, and capture virtual creatures. &nbsp;</span></p><p><span >Maybe the game will turn out to be an excellent way to exercise and meet new people.&nbsp; However, as adults, we must ask if this is really the best use of our time and mental energy?</span><br /></p><p><strong><span >Strategies For Overcoming Media Distractions</span></strong></p><p><span >We have the ability to conserve our mental energy by resisting these distractions, but it takes a strategy and willpower.&nbsp; </span></p><p><span >Here are a few strategies for overcoming media distractions:</span></p><ul><li><span >Elimination: Delete any social media/gaming apps from your phone that are especially distracting and only access them from desktop/laptop computers.</span><br /></li><li><span >Scheduling: Set a time of day (6am, 9am, 12pm, 5pm, or 8pm) that you will allow for these media distractions.</span><br /></li><li><span >Limitation:&nbsp; Set a limit of time (1-3 hours on weekdays and 3-6 hours on weekend days) that you are willing to concede for surfing social media, streaming your favorite television shows/movies, and watching your favorite sports.</span><br /></li><li><span ><span >Prioritize:&nbsp; Ask yourself, "Before I play Pokemon Go, is there anything more important on my to-do-list that I have yet to complete?"</span></span></li></ul><p><span >Implementing these strategies may be challenging at first, but our willpower grows stronger every time we resist the urge to be distracted.</span></p><p><span >We must reprioritize our time and focus on pursuing knowledge important for our growth.&nbsp; The knowledge we need to live a life of joy and happiness will be readily available to us, should we commit to seeking it.&nbsp;</span></p><p><!--EndFragment--></p>
             </div>
         </article>
         
