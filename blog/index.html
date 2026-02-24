@@ -91,8 +91,32 @@
         }
         
         .post-entry {
+            display: flex;
+            gap: 1.5rem;
             padding-bottom: 2rem;
             border-bottom: 1px solid #e8dcc8;
+            align-items: flex-start;
+        }
+        
+        .post-entry-image {
+            flex-shrink: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #f0ebe2;
+        }
+        
+        .post-entry-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+        }
+        
+        .post-entry-content {
+            flex: 1;
         }
         
         .post-entry:last-child {
@@ -188,6 +212,17 @@
                 font-size: 1.5rem;
             }
             
+            .post-entry {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .post-entry-image {
+                width: 100px;
+                height: 100px;
+            }
+            
             .post-entry h2 {
                 font-size: 1.25rem;
             }
@@ -211,214 +246,340 @@
         
         <div class="posts-list">
         <article class="post-entry">
-            <h2><a href="/blog/dont-stop-doing-the-hard-stuff">Don&#x27;t Stop Doing The Hard Stuff</a></h2>
-            <div class="post-entry-meta">July 19, 2021</div>
-            <p class="post-entry-excerpt">While watching media coverage leading up to Game 5 of the NBA Finals, I heard a powerful quote by Phoenix Suns Head Coach, Monty Williams.Williams...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/dont-stop-doing-the-hard-stuff.jpg" alt="Don&#x27;t Stop Doing The Hard Stuff" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/dont-stop-doing-the-hard-stuff">Don&#x27;t Stop Doing The Hard Stuff</a></h2>
+                <div class="post-entry-meta">July 19, 2021</div>
+                <p class="post-entry-excerpt">While watching media coverage leading up to Game 5 of the NBA Finals, I heard a powerful quote by Phoenix Suns Head Coach, Monty Williams.Williams...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/balance-the-secret-to-success">Balance: The Secret to Success</a></h2>
-            <div class="post-entry-meta">June 07, 2018</div>
-            <p class="post-entry-excerpt">When my clients ask me to summarize success in one word, my reply is always: balance.My life experiences have taught me that fulfillment is much more...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/balance-the-secret-to-success.jpg" alt="Balance: The Secret to Success" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/balance-the-secret-to-success">Balance: The Secret to Success</a></h2>
+                <div class="post-entry-meta">June 07, 2018</div>
+                <p class="post-entry-excerpt">When my clients ask me to summarize success in one word, my reply is always: balance.My life experiences have taught me that fulfillment is much more...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/vipassana">Vipassana: How I Spent 10 Days in Silence</a></h2>
-            <div class="post-entry-meta">December 05, 2017</div>
-            <p class="post-entry-excerpt">“The greatest rewards come from the greatest sacrifices.” – Keenan Benjamin There are times when you realize that an experience is going to change...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/vipassana.jpg" alt="Vipassana: How I Spent 10 Days in Silence" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/vipassana">Vipassana: How I Spent 10 Days in Silence</a></h2>
+                <div class="post-entry-meta">December 05, 2017</div>
+                <p class="post-entry-excerpt">“The greatest rewards come from the greatest sacrifices.” – Keenan Benjamin There are times when you realize that an experience is going to change...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/4-reasons-i-support-you-being-selfish">4 Reasons I Support You Being Selfish</a></h2>
-            <div class="post-entry-meta">July 19, 2017</div>
-            <p class="post-entry-excerpt">“Too many of us never realize our greatness because we get sidetracked by secondary activity.” – Og Mandino Have you ever been called “selfish” for...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/4-reasons-i-support-you-being-selfish.jpg" alt="4 Reasons I Support You Being Selfish" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/4-reasons-i-support-you-being-selfish">4 Reasons I Support You Being Selfish</a></h2>
+                <div class="post-entry-meta">July 19, 2017</div>
+                <p class="post-entry-excerpt">“Too many of us never realize our greatness because we get sidetracked by secondary activity.” – Og Mandino Have you ever been called “selfish” for...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/finding-the-path-out-of-suffering">Finding the Path Out of Suffering</a></h2>
-            <div class="post-entry-meta">June 13, 2017</div>
-            <p class="post-entry-excerpt">“You are not a human being in search of a spiritual experience. You are a spiritual being immersed in a human experience.” – Teilhard de Chardin Do...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/finding-the-path-out-of-suffering.jpg" alt="Finding the Path Out of Suffering" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/finding-the-path-out-of-suffering">Finding the Path Out of Suffering</a></h2>
+                <div class="post-entry-meta">June 13, 2017</div>
+                <p class="post-entry-excerpt">“You are not a human being in search of a spiritual experience. You are a spiritual being immersed in a human experience.” – Teilhard de Chardin Do...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/anger-and-the-flight-attendant">Anger &amp; The Flight Attendant</a></h2>
-            <div class="post-entry-meta">May 01, 2017</div>
-            <p class="post-entry-excerpt">“Holding onto anger is like drinking poison and expecting the other person to die.” – Buddha People often use the phrase “I hate (fill in the...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/anger-and-the-flight-attendant.jpg" alt="Anger &amp; The Flight Attendant" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/anger-and-the-flight-attendant">Anger &amp; The Flight Attendant</a></h2>
+                <div class="post-entry-meta">May 01, 2017</div>
+                <p class="post-entry-excerpt">“Holding onto anger is like drinking poison and expecting the other person to die.” – Buddha People often use the phrase “I hate (fill in the...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/thank-you-7-facts-about-conscious-motivation">Thank You &amp; 7 Facts About Conscious Motivation</a></h2>
-            <div class="post-entry-meta">April 12, 2017</div>
-            <p class="post-entry-excerpt">Thank YouToday marks Conscious Motivation’s one-year anniversary.Thank you very much for your support in this journey thus far. This is a meaningful...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/thank-you-7-facts-about-conscious-motivation.jpg" alt="Thank You &amp; 7 Facts About Conscious Motivation" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/thank-you-7-facts-about-conscious-motivation">Thank You &amp; 7 Facts About Conscious Motivation</a></h2>
+                <div class="post-entry-meta">April 12, 2017</div>
+                <p class="post-entry-excerpt">Thank YouToday marks Conscious Motivation’s one-year anniversary.Thank you very much for your support in this journey thus far. This is a meaningful...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/revisited-change-your-mind-change-your-life">Revisited: Change Your Mind, Change Your Life</a></h2>
-            <div class="post-entry-meta">March 30, 2017</div>
-            <p class="post-entry-excerpt">“If a person’s basic state of mind is serene and calm, then it is possible for this inner peace to overwhelm a painful physical experience” – Dalai...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/revisited-change-your-mind-change-your-life.jpg" alt="Revisited: Change Your Mind, Change Your Life" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/revisited-change-your-mind-change-your-life">Revisited: Change Your Mind, Change Your Life</a></h2>
+                <div class="post-entry-meta">March 30, 2017</div>
+                <p class="post-entry-excerpt">“If a person’s basic state of mind is serene and calm, then it is possible for this inner peace to overwhelm a painful physical experience” – Dalai...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/5-ways-to-find-harmony-in-your-relationship">5 Ways To Find Harmony In Your Relationship</a></h2>
-            <div class="post-entry-meta">March 12, 2017</div>
-            <p class="post-entry-excerpt">“Truth is everybody is going to hurt you: you just gotta find the ones worth suffering for.” – Bob Marley Any couple that has been in a long-term...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/5-ways-to-find-harmony-in-your-relationship.jpg" alt="5 Ways To Find Harmony In Your Relationship" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/5-ways-to-find-harmony-in-your-relationship">5 Ways To Find Harmony In Your Relationship</a></h2>
+                <div class="post-entry-meta">March 12, 2017</div>
+                <p class="post-entry-excerpt">“Truth is everybody is going to hurt you: you just gotta find the ones worth suffering for.” – Bob Marley Any couple that has been in a long-term...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/10-reasons-you-could-use-a-life-coach">10 Reasons You Could Use A Life Coach</a></h2>
-            <div class="post-entry-meta">February 24, 2017</div>
-            <p class="post-entry-excerpt">“The key to growth is the introduction of higher dimensions of consciousness into our awareness.” – Lao Tzu Most people have either never heard of...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/10-reasons-you-could-use-a-life-coach.jpg" alt="10 Reasons You Could Use A Life Coach" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/10-reasons-you-could-use-a-life-coach">10 Reasons You Could Use A Life Coach</a></h2>
+                <div class="post-entry-meta">February 24, 2017</div>
+                <p class="post-entry-excerpt">“The key to growth is the introduction of higher dimensions of consciousness into our awareness.” – Lao Tzu Most people have either never heard of...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/learning-to-pivot">Learning to Pivot</a></h2>
-            <div class="post-entry-meta">January 24, 2017</div>
-            <p class="post-entry-excerpt">“Failed plans should not be interpreted as a failed vision. Visions don’t change, they are only refined. Plans rarely stay the same, and are scrapped...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/learning-to-pivot.jpg" alt="Learning to Pivot" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/learning-to-pivot">Learning to Pivot</a></h2>
+                <div class="post-entry-meta">January 24, 2017</div>
+                <p class="post-entry-excerpt">“Failed plans should not be interpreted as a failed vision. Visions don’t change, they are only refined. Plans rarely stay the same, and are scrapped...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/serendipity-on-a-plane">Serendipity on a Plane</a></h2>
-            <div class="post-entry-meta">October 25, 2016</div>
-            <p class="post-entry-excerpt">“The older you get, the more you realize how happenstance... has helped to determine your path through life.” – Rowan Atkinson Serendipity has played...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/serendipity-on-a-plane.jpg" alt="Serendipity on a Plane" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/serendipity-on-a-plane">Serendipity on a Plane</a></h2>
+                <div class="post-entry-meta">October 25, 2016</div>
+                <p class="post-entry-excerpt">“The older you get, the more you realize how happenstance... has helped to determine your path through life.” – Rowan Atkinson Serendipity has played...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/discovering-a-rainbow-in-the-storm">Discovering a Rainbow in the Storm</a></h2>
-            <div class="post-entry-meta">October 18, 2016</div>
-            <p class="post-entry-excerpt">“Character cannot be developed in ease and quiet. Only through experience of trial and suffering can the soul be strengthened, ambition inspired, and...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/discovering-a-rainbow-in-the-storm.jpg" alt="Discovering a Rainbow in the Storm" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/discovering-a-rainbow-in-the-storm">Discovering a Rainbow in the Storm</a></h2>
+                <div class="post-entry-meta">October 18, 2016</div>
+                <p class="post-entry-excerpt">“Character cannot be developed in ease and quiet. Only through experience of trial and suffering can the soul be strengthened, ambition inspired, and...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/the-4-stages-of-personal-evolution">The Four Stages of Personal Evolution</a></h2>
-            <div class="post-entry-meta">October 11, 2016</div>
-            <p class="post-entry-excerpt">“I have accepted fear as part of life – specifically the fear of change. I have gone ahead despite the pounding in the heart that says: turn back.” –...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/the-4-stages-of-personal-evolution.jpg" alt="The Four Stages of Personal Evolution" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/the-4-stages-of-personal-evolution">The Four Stages of Personal Evolution</a></h2>
+                <div class="post-entry-meta">October 11, 2016</div>
+                <p class="post-entry-excerpt">“I have accepted fear as part of life – specifically the fear of change. I have gone ahead despite the pounding in the heart that says: turn back.” –...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/expanding-horizons-through-books">Expanding Horizons Through Books</a></h2>
-            <div class="post-entry-meta">October 04, 2016</div>
-            <p class="post-entry-excerpt">“No matter how busy you may think you are, you must find time for reading, or surrender yourself to self-chosen ignorance.” – Confucius There are...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/expanding-horizons-through-books.jpg" alt="Expanding Horizons Through Books" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/expanding-horizons-through-books">Expanding Horizons Through Books</a></h2>
+                <div class="post-entry-meta">October 04, 2016</div>
+                <p class="post-entry-excerpt">“No matter how busy you may think you are, you must find time for reading, or surrender yourself to self-chosen ignorance.” – Confucius There are...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/exercises-in-mindfulness">Exercises in Mindfulness</a></h2>
-            <div class="post-entry-meta">September 27, 2016</div>
-            <p class="post-entry-excerpt">“The present moment, if you think about it, is the only time there is. No matter what time it is, it is always now.” – Marianne Williamson Normal 0...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/exercises-in-mindfulness.jpg" alt="Exercises in Mindfulness" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/exercises-in-mindfulness">Exercises in Mindfulness</a></h2>
+                <div class="post-entry-meta">September 27, 2016</div>
+                <p class="post-entry-excerpt">“The present moment, if you think about it, is the only time there is. No matter what time it is, it is always now.” – Marianne Williamson Normal 0...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/materialisms-momentary-happiness">Materialism&#x27;s Momentary Happiness</a></h2>
-            <div class="post-entry-meta">September 20, 2016</div>
-            <p class="post-entry-excerpt">“Any so-called material thing that you want is merely a symbol: you want it not for itself, but because it will content your spirit for the moment.”...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/materialisms-momentary-happiness.jpg" alt="Materialism&#x27;s Momentary Happiness" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/materialisms-momentary-happiness">Materialism&#x27;s Momentary Happiness</a></h2>
+                <div class="post-entry-meta">September 20, 2016</div>
+                <p class="post-entry-excerpt">“Any so-called material thing that you want is merely a symbol: you want it not for itself, but because it will content your spirit for the moment.”...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/finding-calm-through-adversity">Finding Calm Through Adversity</a></h2>
-            <div class="post-entry-meta">September 13, 2016</div>
-            <p class="post-entry-excerpt">“If you want to conquer the anxiety of life, live in the moment, live in the breath.” – Amit Ray Normal 0 false false false EN-US JA X-NONE /* Style...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/finding-calm-through-adversity.jpg" alt="Finding Calm Through Adversity" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/finding-calm-through-adversity">Finding Calm Through Adversity</a></h2>
+                <div class="post-entry-meta">September 13, 2016</div>
+                <p class="post-entry-excerpt">“If you want to conquer the anxiety of life, live in the moment, live in the breath.” – Amit Ray Normal 0 false false false EN-US JA X-NONE /* Style...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/why-are-you-not-smiling">Why Are You Not Smiling?</a></h2>
-            <div class="post-entry-meta">September 06, 2016</div>
-            <p class="post-entry-excerpt">“Sometimes your joy is the source of your smile, but sometimes your smile can be the source of your joy.” – Thich Nhat Hanh Normal 0 false false...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/why-are-you-not-smiling.jpg" alt="Why Are You Not Smiling?" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/why-are-you-not-smiling">Why Are You Not Smiling?</a></h2>
+                <div class="post-entry-meta">September 06, 2016</div>
+                <p class="post-entry-excerpt">“Sometimes your joy is the source of your smile, but sometimes your smile can be the source of your joy.” – Thich Nhat Hanh Normal 0 false false...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/mercy">Mercy</a></h2>
-            <div class="post-entry-meta">August 30, 2016</div>
-            <p class="post-entry-excerpt">“I have always found that mercy bears richer fruits than strict justice.” – Abraham Lincoln Mercy is a virtue that is severely lacking in modern...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/mercy.jpg" alt="Mercy" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/mercy">Mercy</a></h2>
+                <div class="post-entry-meta">August 30, 2016</div>
+                <p class="post-entry-excerpt">“I have always found that mercy bears richer fruits than strict justice.” – Abraham Lincoln Mercy is a virtue that is severely lacking in modern...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/the-secret-of-top-performers">The Secret of Top Performers</a></h2>
-            <div class="post-entry-meta">August 23, 2016</div>
-            <p class="post-entry-excerpt">“People think of meditation as a huge undertaking. Don’t think of it like that.” – Deepak Chopra Normal 0 false false false EN-US JA X-NONE /* Style...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/the-secret-of-top-performers.jpeg" alt="The Secret of Top Performers" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/the-secret-of-top-performers">The Secret of Top Performers</a></h2>
+                <div class="post-entry-meta">August 23, 2016</div>
+                <p class="post-entry-excerpt">“People think of meditation as a huge undertaking. Don’t think of it like that.” – Deepak Chopra Normal 0 false false false EN-US JA X-NONE /* Style...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/selfless-acts-of-kindness">Selfless Acts of Kindness</a></h2>
-            <div class="post-entry-meta">August 16, 2016</div>
-            <p class="post-entry-excerpt">“Carry out a random act of kindness, with no expectation of reward, safe in the knowledge that one day someone might do the same for you. ” –...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/selfless-acts-of-kindness.jpg" alt="Selfless Acts of Kindness" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/selfless-acts-of-kindness">Selfless Acts of Kindness</a></h2>
+                <div class="post-entry-meta">August 16, 2016</div>
+                <p class="post-entry-excerpt">“Carry out a random act of kindness, with no expectation of reward, safe in the knowledge that one day someone might do the same for you. ” –...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/liberation-from-the-opinions-of-others">Liberation from the Opinions of Others</a></h2>
-            <div class="post-entry-meta">August 02, 2016</div>
-            <p class="post-entry-excerpt">“Why should we worry about what others think of us, do we have more confidence in their opinions than we do our own?” – Brigham Young Normal 0 false...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/liberation-from-the-opinions-of-others.jpg" alt="Liberation from the Opinions of Others" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/liberation-from-the-opinions-of-others">Liberation from the Opinions of Others</a></h2>
+                <div class="post-entry-meta">August 02, 2016</div>
+                <p class="post-entry-excerpt">“Why should we worry about what others think of us, do we have more confidence in their opinions than we do our own?” – Brigham Young Normal 0 false...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/everything-happens-for-a-reason">Everything Happens For A Reason</a></h2>
-            <div class="post-entry-meta">July 26, 2016</div>
-            <p class="post-entry-excerpt">“You do not understand now what I am doing, but later you will understand.” – Jesus Christ Normal 0 false false false EN-US JA X-NONE /* Style...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/everything-happens-for-a-reason.jpg" alt="Everything Happens For A Reason" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/everything-happens-for-a-reason">Everything Happens For A Reason</a></h2>
+                <div class="post-entry-meta">July 26, 2016</div>
+                <p class="post-entry-excerpt">“You do not understand now what I am doing, but later you will understand.” – Jesus Christ Normal 0 false false false EN-US JA X-NONE /* Style...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/nature-nourishment-for-the-spirit">Nature: Nourishment for the Spirit</a></h2>
-            <div class="post-entry-meta">July 19, 2016</div>
-            <p class="post-entry-excerpt">“Wilderness is not a luxury but a necessity for the human spirit” – Edward Abbey Normal 0 false false false EN-US JA X-NONE /* Style Definitions */...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/nature-nourishment-for-the-spirit.jpg" alt="Nature: Nourishment for the Spirit" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/nature-nourishment-for-the-spirit">Nature: Nourishment for the Spirit</a></h2>
+                <div class="post-entry-meta">July 19, 2016</div>
+                <p class="post-entry-excerpt">“Wilderness is not a luxury but a necessity for the human spirit” – Edward Abbey Normal 0 false false false EN-US JA X-NONE /* Style Definitions */...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/overcoming-a-world-of-media-distractions">Overcoming a World of Media Distractions</a></h2>
-            <div class="post-entry-meta">July 12, 2016</div>
-            <p class="post-entry-excerpt">“It is what you read when you don’t have to that determines what you will be when you can’t help it.” – Oscar Wilde I often get asked how I gained...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/overcoming-a-world-of-media-distractions.jpg" alt="Overcoming a World of Media Distractions" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/overcoming-a-world-of-media-distractions">Overcoming a World of Media Distractions</a></h2>
+                <div class="post-entry-meta">July 12, 2016</div>
+                <p class="post-entry-excerpt">“It is what you read when you don’t have to that determines what you will be when you can’t help it.” – Oscar Wilde I often get asked how I gained...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/why-i-turned-off-the-news">Why I Turned Off The News</a></h2>
-            <div class="post-entry-meta">July 05, 2016</div>
-            <p class="post-entry-excerpt">“The only thing we have to fear is fear itself.” – Franklin D. Roosevelt Normal 0 false false false EN-US JA X-NONE /* Style Definitions */...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/why-i-turned-off-the-news.jpg" alt="Why I Turned Off The News" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/why-i-turned-off-the-news">Why I Turned Off The News</a></h2>
+                <div class="post-entry-meta">July 05, 2016</div>
+                <p class="post-entry-excerpt">“The only thing we have to fear is fear itself.” – Franklin D. Roosevelt Normal 0 false false false EN-US JA X-NONE /* Style Definitions */...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/the-art-of-listening">The Art Of Listening</a></h2>
-            <div class="post-entry-meta">June 28, 2016</div>
-            <p class="post-entry-excerpt">“When people talk, listen completely. Most people never listen.” – Ernest Hemingway Listening is an art. It requires us to be fully present in our...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/the-art-of-listening.jpeg" alt="The Art Of Listening" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/the-art-of-listening">The Art Of Listening</a></h2>
+                <div class="post-entry-meta">June 28, 2016</div>
+                <p class="post-entry-excerpt">“When people talk, listen completely. Most people never listen.” – Ernest Hemingway Listening is an art. It requires us to be fully present in our...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/law-of-attraction">The Law Of Attraction</a></h2>
-            <div class="post-entry-meta">June 21, 2016</div>
-            <p class="post-entry-excerpt">“The game of life is a game of boomerangs. Our thoughts, deeds and words return to us sooner or later with astounding accuracy.” – Florence Scovell...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/law-of-attraction.jpg" alt="The Law Of Attraction" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/law-of-attraction">The Law Of Attraction</a></h2>
+                <div class="post-entry-meta">June 21, 2016</div>
+                <p class="post-entry-excerpt">“The game of life is a game of boomerangs. Our thoughts, deeds and words return to us sooner or later with astounding accuracy.” – Florence Scovell...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/the-unreal-others">The Unreal Others</a></h2>
-            <div class="post-entry-meta">June 14, 2016</div>
-            <p class="post-entry-excerpt">“You must not lose faith in humanity. Humanity is an ocean; if a few drops of the ocean are dirty, the ocean does not become dirty.” – Mahatma Gandhi...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/the-unreal-others.jpg" alt="The Unreal Others" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/the-unreal-others">The Unreal Others</a></h2>
+                <div class="post-entry-meta">June 14, 2016</div>
+                <p class="post-entry-excerpt">“You must not lose faith in humanity. Humanity is an ocean; if a few drops of the ocean are dirty, the ocean does not become dirty.” – Mahatma Gandhi...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/healthy-body-healthy-mind">Healthy Body, Healthy Mind</a></h2>
-            <div class="post-entry-meta">June 07, 2016</div>
-            <p class="post-entry-excerpt">“To keep the body in good health is a duty, otherwise we shall not be able to keep our mind strong and clear.” – Buddha Normal 0 false false false...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/healthy-body-healthy-mind.jpg" alt="Healthy Body, Healthy Mind" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/healthy-body-healthy-mind">Healthy Body, Healthy Mind</a></h2>
+                <div class="post-entry-meta">June 07, 2016</div>
+                <p class="post-entry-excerpt">“To keep the body in good health is a duty, otherwise we shall not be able to keep our mind strong and clear.” – Buddha Normal 0 false false false...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/the-alchemy-of-compassion">The Alchemy of Compassion: Healing Those We Love</a></h2>
-            <div class="post-entry-meta">May 31, 2016</div>
-            <p class="post-entry-excerpt">“If you want others to be happy, practice compassion. If you want to be happy, practice compassion. ” – Dalai Lama Normal 0 false false false EN-US...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/the-alchemy-of-compassion.jpg" alt="The Alchemy of Compassion: Healing Those We Love" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/the-alchemy-of-compassion">The Alchemy of Compassion: Healing Those We Love</a></h2>
+                <div class="post-entry-meta">May 31, 2016</div>
+                <p class="post-entry-excerpt">“If you want others to be happy, practice compassion. If you want to be happy, practice compassion. ” – Dalai Lama Normal 0 false false false EN-US...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/we-are-not-our-thoughts">We Are Not Our Thoughts</a></h2>
-            <div class="post-entry-meta">May 24, 2016</div>
-            <p class="post-entry-excerpt">Normal 0 false false false EN-US JA X-NONE /* Style Definitions */ table.MsoNormalTable {mso-style-name:&quot;Table Normal&quot;; mso-tstyle-rowband-size:0;...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/we-are-not-our-thoughts.jpeg" alt="We Are Not Our Thoughts" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/we-are-not-our-thoughts">We Are Not Our Thoughts</a></h2>
+                <div class="post-entry-meta">May 24, 2016</div>
+                <p class="post-entry-excerpt">Normal 0 false false false EN-US JA X-NONE /* Style Definitions */ table.MsoNormalTable {mso-style-name:&quot;Table Normal&quot;; mso-tstyle-rowband-size:0;...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/the-power-of-selfless-service">The Power of Selfless Service</a></h2>
-            <div class="post-entry-meta">May 17, 2016</div>
-            <p class="post-entry-excerpt">“Be of service. Whether you make yourself available to a friend or co-worker, or you make time every month to do volunteer work, there is nothing...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/the-power-of-selfless-service.jpg" alt="The Power of Selfless Service" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/the-power-of-selfless-service">The Power of Selfless Service</a></h2>
+                <div class="post-entry-meta">May 17, 2016</div>
+                <p class="post-entry-excerpt">“Be of service. Whether you make yourself available to a friend or co-worker, or you make time every month to do volunteer work, there is nothing...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/love-is">Love is...</a></h2>
-            <div class="post-entry-meta">May 10, 2016</div>
-            <p class="post-entry-excerpt">“Love is life. And if you miss love, you miss life.” – Leo Buscaglia Normal 0 false false false EN-US JA X-NONE /* Style Definitions */...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/love-is.jpg" alt="Love is..." loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/love-is">Love is...</a></h2>
+                <div class="post-entry-meta">May 10, 2016</div>
+                <p class="post-entry-excerpt">“Love is life. And if you miss love, you miss life.” – Leo Buscaglia Normal 0 false false false EN-US JA X-NONE /* Style Definitions */...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/finding-your-purpose-taking-action">Finding Your Purpose: Taking Action</a></h2>
-            <div class="post-entry-meta">May 05, 2016</div>
-            <p class="post-entry-excerpt">“You can’t just sit there and wait for people to give you that golden dream. You’ve got to get out there and make it happen for yourself.” – Diana...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/finding-your-purpose-taking-action.jpeg" alt="Finding Your Purpose: Taking Action" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/finding-your-purpose-taking-action">Finding Your Purpose: Taking Action</a></h2>
+                <div class="post-entry-meta">May 05, 2016</div>
+                <p class="post-entry-excerpt">“You can’t just sit there and wait for people to give you that golden dream. You’ve got to get out there and make it happen for yourself.” – Diana...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/finding-your-purpose-breaking-the-chains-of-complacency">Finding Your Purpose: Breaking The Chains Of Complacency</a></h2>
-            <div class="post-entry-meta">May 03, 2016</div>
-            <p class="post-entry-excerpt">“Of all the possible avenues of life there are to live for, complacency should be viewed as the switch that killed the will to build.” – Gillis...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/finding-your-purpose-breaking-the-chains-of-complacency.jpg" alt="Finding Your Purpose: Breaking The Chains Of Complacency" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/finding-your-purpose-breaking-the-chains-of-complacency">Finding Your Purpose: Breaking The Chains Of Complacency</a></h2>
+                <div class="post-entry-meta">May 03, 2016</div>
+                <p class="post-entry-excerpt">“Of all the possible avenues of life there are to live for, complacency should be viewed as the switch that killed the will to build.” – Gillis...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/people-are-suffering-stop-taking-it-personally">People Are Suffering: Stop Taking It Personally</a></h2>
-            <div class="post-entry-meta">April 28, 2016</div>
-            <p class="post-entry-excerpt">Normal 0 false false false EN-US JA X-NONE /* Style Definitions */ table.MsoNormalTable {mso-style-name:&quot;Table Normal&quot;; mso-tstyle-rowband-size:0;...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/people-are-suffering-stop-taking-it-personally.jpg" alt="People Are Suffering: Stop Taking It Personally" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/people-are-suffering-stop-taking-it-personally">People Are Suffering: Stop Taking It Personally</a></h2>
+                <div class="post-entry-meta">April 28, 2016</div>
+                <p class="post-entry-excerpt">Normal 0 false false false EN-US JA X-NONE /* Style Definitions */ table.MsoNormalTable {mso-style-name:&quot;Table Normal&quot;; mso-tstyle-rowband-size:0;...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/stand-watch-at-your-minds-door">Stand Watch At Your Mind&#x27;s Door</a></h2>
-            <div class="post-entry-meta">April 26, 2016</div>
-            <p class="post-entry-excerpt">Normal 0 false false false EN-US JA X-NONE /* Style Definitions */ table.MsoNormalTable {mso-style-name:&quot;Table Normal&quot;; mso-tstyle-rowband-size:0;...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/stand-watch-at-your-minds-door.jpg" alt="Stand Watch At Your Mind&#x27;s Door" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/stand-watch-at-your-minds-door">Stand Watch At Your Mind&#x27;s Door</a></h2>
+                <div class="post-entry-meta">April 26, 2016</div>
+                <p class="post-entry-excerpt">Normal 0 false false false EN-US JA X-NONE /* Style Definitions */ table.MsoNormalTable {mso-style-name:&quot;Table Normal&quot;; mso-tstyle-rowband-size:0;...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/7-ways-meditation-will-change-your-life">7 Ways Meditation Will Change Your Life</a></h2>
-            <div class="post-entry-meta">April 21, 2016</div>
-            <p class="post-entry-excerpt">Normal 0 false false false EN-US JA X-NONE /* Style Definitions */ table.MsoNormalTable {mso-style-name:&quot;Table Normal&quot;; mso-tstyle-rowband-size:0;...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/7-ways-meditation-will-change-your-life.jpg" alt="7 Ways Meditation Will Change Your Life" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/7-ways-meditation-will-change-your-life">7 Ways Meditation Will Change Your Life</a></h2>
+                <div class="post-entry-meta">April 21, 2016</div>
+                <p class="post-entry-excerpt">Normal 0 false false false EN-US JA X-NONE /* Style Definitions */ table.MsoNormalTable {mso-style-name:&quot;Table Normal&quot;; mso-tstyle-rowband-size:0;...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/decisions-follow-your-heart">Decisions: Follow Your Heart</a></h2>
-            <div class="post-entry-meta">April 19, 2016</div>
-            <p class="post-entry-excerpt">Normal 0 false false false EN-US JA X-NONE /* Style Definitions */ table.MsoNormalTable {mso-style-name:&quot;Table Normal&quot;; mso-tstyle-rowband-size:0;...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/decisions-follow-your-heart.jpg" alt="Decisions: Follow Your Heart" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/decisions-follow-your-heart">Decisions: Follow Your Heart</a></h2>
+                <div class="post-entry-meta">April 19, 2016</div>
+                <p class="post-entry-excerpt">Normal 0 false false false EN-US JA X-NONE /* Style Definitions */ table.MsoNormalTable {mso-style-name:&quot;Table Normal&quot;; mso-tstyle-rowband-size:0;...</p>
+            </div>
         </article>
         <article class="post-entry">
-            <h2><a href="/blog/change-your-mind-change-your-life">Change Your Mind, Change Your Life</a></h2>
-            <div class="post-entry-meta">April 12, 2016</div>
-            <p class="post-entry-excerpt">Normal 0 false false false EN-US JA X-NONE /* Style Definitions */ table.MsoNormalTable {mso-style-name:&quot;Table Normal&quot;; mso-tstyle-rowband-size:0;...</p>
+            <div class="post-entry-image"><img src="/blog/assets/covers/change-your-mind-change-your-life.jpg" alt="Change Your Mind, Change Your Life" loading="lazy"></div>
+            <div class="post-entry-content">
+                <h2><a href="/blog/change-your-mind-change-your-life">Change Your Mind, Change Your Life</a></h2>
+                <div class="post-entry-meta">April 12, 2016</div>
+                <p class="post-entry-excerpt">Normal 0 false false false EN-US JA X-NONE /* Style Definitions */ table.MsoNormalTable {mso-style-name:&quot;Table Normal&quot;; mso-tstyle-rowband-size:0;...</p>
+            </div>
         </article>
         </div>
     </main>
@@ -429,7 +590,6 @@
                 <a href="https://consciousmotivation.com">Conscious Motivation</a>
                 <a href="https://keenanbenjamin.com">Walk Through Fire</a>
                 <a href="https://www.instagram.com/consciousmotivation" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="https://www.linkedin.com/in/keenanbenjamin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
             <div class="footer-copyright">
                 &copy; 2026 Conscious Motivation
