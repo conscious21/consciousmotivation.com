@@ -518,6 +518,43 @@
     line-height: 1.7;
   }
 
+  .merch-strip {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .merch-strip-item {
+    flex: 1;
+    max-width: 280px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .merch-strip-item:hover {
+    border-color: var(--gold);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+  }
+
+  .merch-strip-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .merch-strip-item:hover img {
+    transform: scale(1.05);
+  }
+
   .wear-shipping {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.7rem;
@@ -1038,6 +1075,17 @@
       padding: 5rem 1.5rem;
     }
 
+    .merch-strip {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .merch-strip-item {
+      max-width: 280px;
+      width: 100%;
+    }
+
     .vault {
       padding: 5rem 1.5rem;
     }
@@ -1186,9 +1234,21 @@
 
     <p class="wear-sub" data-scroll data-scroll-delay="2">Physical reminders of the work you're doing.<br>Phoenix-marked. Ashes-honored. Next-level embodied.</p>
 
-    <p class="wear-shipping" data-scroll data-scroll-delay="3">Free shipping on orders over $75</p>
+    <div class="merch-strip" data-scroll data-scroll-delay="3">
+      <div class="merch-strip-item">
+        <img src="/merch/images/tee.jpg" alt="Still Rising Tee" loading="lazy">
+      </div>
+      <div class="merch-strip-item">
+        <img src="/merch/images/hoodie.jpg" alt="Still Rising Hoodie" loading="lazy">
+      </div>
+      <div class="merch-strip-item">
+        <img src="/merch/images/hat.jpg" alt="Still Rising Cap" loading="lazy">
+      </div>
+    </div>
 
-    <div data-scroll data-scroll-delay="4">
+    <p class="wear-shipping" data-scroll data-scroll-delay="4">Free shipping on orders over $75</p>
+
+    <div data-scroll data-scroll-delay="5">
       <a href="https://shop.consciousmotivation.com" class="cta-secondary" target="_blank" rel="noopener noreferrer">Shop the Collection</a>
     </div>
   </div>
